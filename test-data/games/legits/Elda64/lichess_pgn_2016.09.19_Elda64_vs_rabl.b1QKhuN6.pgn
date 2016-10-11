@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/b1QKhuN6"]
+[Date "2016.09.19"]
+[White "Elda64"]
+[Black "rabl"]
+[Result "1-0"]
+[WhiteElo "2488"]
+[BlackElo "2130"]
+[PlyCount "43"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "D31"]
+[Opening "Queen's Gambit Declined: Queen's Knight Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 e6 2. c4 d5 3. Nc3 { D31 Queen's Gambit Declined: Queen's Knight Variation } f5 4. cxd5 exd5 5. Bf4 c6 6. e4 Bd6 7. e5 Bb4 8. h4 Ne7 9. h5 O-O 10. h6 Ng6 11. hxg7 Rf7 12. Bh6 f4 13. Nf3 Bxc3+ 14. bxc3 Bf5 15. Bd3 Qd7 16. Ng5 Rxg7 17. Bxg7 Qxg7 18. Bxf5 Nxe5 19. Bxh7+ Kf8 20. Ne6+ Kf7 21. Nxg7 Kxg7 22. Bg6 { Black resigns } 1-0

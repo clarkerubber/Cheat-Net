@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/QLCMA88Q"]
+[Date "2015.12.08"]
+[White "TVEDAS"]
+[Black "john_boone"]
+[Result "1-0"]
+[WhiteElo "2466"]
+[BlackElo "2225"]
+[PlyCount "53"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "D08"]
+[Opening "Queen's Gambit Refused: Albin Countergambit, Normal Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 d5 2. c4 e5 3. dxe5 d4 4. Nf3 { D08 Queen's Gambit Refused: Albin Countergambit, Normal Line } Nc6 5. a3 Bg4 6. Bf4 Nge7 7. b4 Ng6 8. Bg3 Qe7 9. Nbd2 O-O-O 10. Qb3 Ncxe5 11. O-O-O h5 12. h3 Bf5 13. Nxe5 Nxe5 14. Nf3 d3 15. Nxe5 d2+ 16. Rxd2 Rxd2 17. Kxd2 g5 18. h4 Bh6 19. e3 g4 20. Bd3 Rd8 21. Ke2 Qe6 22. Rd1 Bxd3+ 23. Rxd3 Rxd3 24. Qxd3 f6 25. Qg6 Bf8 26. Qf7 Qxf7 27. Nxf7 { Black resigns } 1-0

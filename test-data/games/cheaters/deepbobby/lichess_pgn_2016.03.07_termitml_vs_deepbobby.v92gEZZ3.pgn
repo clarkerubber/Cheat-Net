@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/v92gEZZ3"]
+[Date "2016.03.07"]
+[White "termitml"]
+[Black "deepbobby"]
+[Result "0-1"]
+[WhiteElo "2106"]
+[BlackElo "1872"]
+[PlyCount "80"]
+[Variant "Standard"]
+[TimeControl "480+8"]
+[ECO "E85"]
+[Opening "King's Indian Defense: Saemisch Variation, Orthodox Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 g6 3. f3 Bg7 4. Nc3 O-O 5. e4 d6 6. Be3 e5 { E85 King's Indian Defense: Saemisch Variation, Orthodox Variation } 7. Nge2 Nc6 8. d5 Nb8 9. Qd2 Nbd7 10. g4 b6 11. Ng3 Nc5 12. b4 Ncd7 13. h4 a5 14. b5 Nc5 15. h5 Re8 16. hxg6 fxg6 17. g5 Nfd7 18. Bh3 Nf8 19. Ke2 Qe7 20. Bxc8 Raxc8 21. Rag1 Qf7 22. Qd1 Rcd8 23. Qf1 Re7 24. Qh3 Rde8 25. Bxc5 bxc5 26. Nf5 gxf5 27. exf5 e4 28. Nxe4 Rxe4+ 29. fxe4 Rxe4+ 30. Kd2 Rd4+ 31. Kc2 Rxc4+ 32. Kb1 Rb4+ 33. Kc1 Bb2+ 34. Kc2 Qxd5 35. g6 Qc4+ 36. Kd2 Qf4+ 37. Ke2 Re4+ 38. Kd3 Rd4+ 39. Kc2 Rd2+ 40. Kb1 Qe4+ { White resigns } 0-1

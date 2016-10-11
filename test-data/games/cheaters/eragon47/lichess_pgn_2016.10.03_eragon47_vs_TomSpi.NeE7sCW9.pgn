@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/NeE7sCW9"]
+[Date "2016.10.03"]
+[White "eragon47"]
+[Black "TomSpi"]
+[Result "1-0"]
+[WhiteElo "1500"]
+[BlackElo "2100"]
+[PlyCount "68"]
+[Variant "Standard"]
+[TimeControl "240+0"]
+[ECO "B33"]
+[Opening "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6 8. Na3 b5 9. Nd5 { B33 Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation } Be7 10. Bxf6 Bxf6 11. c3 Bg5 12. Nc2 Bb7 13. a4 bxa4 14. Rxa4 Ne7 15. Bc4 O-O 16. O-O Qd7 17. Ra5 Qd8 18. Ra4 Nxd5 19. Bxd5 Bxd5 20. Qxd5 Qc7 21. Nb4 Qb6 22. Rfa1 a5 23. Rxa5 Rxa5 24. Qxa5 Qxa5 25. Rxa5 Rc8 26. Ra6 Be7 27. Nd5 Kf8 28. b4 g6 29. b5 Rb8 30. c4 f5 31. Ra7 Re8 32. exf5 gxf5 33. b6 Bg5 34. b7 Rb8 { Black resigns } 1-0

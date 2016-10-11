@@ -1,0 +1,17 @@
+[Event "Weekly Blitz Arena"]
+[Site "https://lichess.org/W7Up3J9H"]
+[Date "2016.08.31"]
+[White "brumia"]
+[Black "Sparklehorse"]
+[Result "0-1"]
+[WhiteElo "1663"]
+[BlackElo "2467"]
+[PlyCount "74"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[ECO "E20"]
+[Opening "Nimzo-Indian Defense: Kmoch Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. f3 { E20 Nimzo-Indian Defense: Kmoch Variation } c5 5. d5 b5 6. e4 O-O 7. cxb5 exd5 8. exd5 Bb7 9. Bc4 d6 10. Ne2 a6 11. bxa6 Nxa6 12. O-O Nc7 13. Bg5 h6 14. Bh4 Nce8 15. Ne4 g5 16. Bg3 Nh7 17. f4 f5 18. N4c3 g4 19. Qe1 Bc8 20. Bh4 Qd7 21. Bb5 Qf7 22. Qd1 Ba6 23. Bc6 Rb8 24. Qa4 Bxc3 25. Nxc3 Bxf1 26. Rxf1 Rxb2 27. Nb5 Nhf6 28. Bxf6 Qxf6 29. Bxe8 Rxe8 30. Nxd6 Ree2 31. Rd1 Rxg2+ 32. Kf1 Rbf2+ 33. Ke1 Qe7+ 34. Ne4 Qxe4+ 35. Qxe4 fxe4 36. d6 e3 37. d7 Rg1# { White is checkmated } 0-1

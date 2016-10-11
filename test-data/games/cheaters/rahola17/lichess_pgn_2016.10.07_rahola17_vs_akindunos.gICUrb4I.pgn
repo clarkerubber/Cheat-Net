@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/gICUrb4I"]
+[Date "2016.10.07"]
+[White "rahola17"]
+[Black "akindunos"]
+[Result "1-0"]
+[WhiteElo "1576"]
+[BlackElo "2023"]
+[PlyCount "47"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B40"]
+[Opening "Sicilian Defense: French Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 e6 { B40 Sicilian Defense: French Variation } 3. Nc3 Nc6 4. Be2 Nf6 5. O-O Be7 6. d4 cxd4 7. Nxd4 Qb6 8. Ndb5 O-O 9. Be3 Qd8 10. Nd6 Bxd6 11. Qxd6 Qe7 12. Rfd1 Qxd6 13. Rxd6 Rd8 14. Rad1 Nb4 15. Bg5 Nxc2 16. e5 b6 17. exf6 gxf6 18. Bxf6 Re8 19. R1d3 Nb4 20. Rg3+ Kf8 21. Rg7 Nd5 22. Nxd5 exd5 23. Rxh7 Kg8 24. Rh8# { Black is checkmated } 1-0

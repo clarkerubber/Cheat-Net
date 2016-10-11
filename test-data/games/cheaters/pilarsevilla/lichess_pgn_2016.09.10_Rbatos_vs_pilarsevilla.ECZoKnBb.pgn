@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/ECZoKnBb"]
+[Date "2016.09.10"]
+[White "Rbatos"]
+[Black "pilarsevilla"]
+[Result "0-1"]
+[WhiteElo "1674"]
+[BlackElo "2105"]
+[PlyCount "40"]
+[Variant "Standard"]
+[TimeControl "900+0"]
+[ECO "C24"]
+[Opening "Bishop's Opening: Berlin Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Bc4 Nf6 { C24 Bishop's Opening: Berlin Defense } 3. d3 Nc6 4. a3 d6 5. h3 Be7 6. Nc3 Be6 7. Nd5 O-O 8. Bg5 Nxd5 9. Bxe7 Ndxe7 10. Bxe6 fxe6 11. Nf3 Ng6 12. Qd2 Nf4 13. Rh2 Nxg2+ 14. Rxg2 Rxf3 15. O-O-O Qf6 16. Rdg1 Rf8 17. Rxg7+ Qxg7 18. Rxg7+ Kxg7 19. Qg5+ Kh8 20. Qh6 Nd4 { White resigns } 0-1

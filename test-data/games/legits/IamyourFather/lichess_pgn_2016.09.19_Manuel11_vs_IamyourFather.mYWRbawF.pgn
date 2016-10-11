@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/mYWRbawF"]
+[Date "2016.09.19"]
+[White "Manuel11"]
+[Black "IamyourFather"]
+[Result "1-0"]
+[WhiteElo "2641"]
+[BlackElo "2562"]
+[PlyCount "51"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, Adams Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. h3 { B90 Sicilian Defense: Najdorf Variation, Adams Attack } e6 7. g4 d5 8. exd5 Nxd5 9. Bd2 Bc5 10. Nb3 Ba7 11. Bg2 O-O 12. Qe2 Nxc3 13. Bxc3 Nc6 14. Rd1 Qg5 15. Nd2 e5 16. Bxc6 bxc6 17. Nf3 Qe7 18. Qxe5 Re8 19. O-O Qxe5 20. Nxe5 Be6 21. Nxc6 Bxa2 22. Rd7 Bc5 23. b3 Rac8 24. Na5 Bf8 25. Nc4 Re2 26. Rd2 { Black resigns } 1-0

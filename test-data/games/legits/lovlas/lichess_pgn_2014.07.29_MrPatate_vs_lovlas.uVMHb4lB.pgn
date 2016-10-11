@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/uVMHb4lB"]
+[Date "2014.07.29"]
+[White "MrPatate"]
+[Black "lovlas"]
+[Result "0-1"]
+[WhiteElo "1945"]
+[BlackElo "2477"]
+[PlyCount "22"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B03"]
+[Opening "Alekhine Defense: Four Pawns Attack, 6...Nc6"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 Nf6 2. e5 Nd5 3. c4 Nb6 4. d4 d6 5. f4 dxe5 6. fxe5 Nc6 { B03 Alekhine Defense: Four Pawns Attack, 6...Nc6 } 7. Nf3 Bg4 8. Be3 e6 9. Nc3 Bb4 10. Be2 O-O 11. b3 Bxc3+ { White resigns } 0-1

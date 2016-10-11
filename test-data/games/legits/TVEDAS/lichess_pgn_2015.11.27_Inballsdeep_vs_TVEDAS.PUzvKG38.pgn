@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/PUzvKG38"]
+[Date "2015.11.27"]
+[White "Inballsdeep"]
+[Black "TVEDAS"]
+[Result "0-1"]
+[WhiteElo "2098"]
+[BlackElo "2282"]
+[PlyCount "66"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "E61"]
+[Opening "King's Indian Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 g6 2. c4 Bg7 3. Nc3 Nf6 { E61 King's Indian Defense } 4. Nf3 O-O 5. g4 Nxg4 6. e4 Nf6 7. Bd3 d6 8. e5 dxe5 9. dxe5 Ng4 10. h3 Nxe5 11. Nxe5 Bxe5 12. O-O Nc6 13. Qf3 Nd4 14. Qe4 Qd6 15. Nb5 Qf6 16. f4 Bd6 17. Nxd4 Bc5 18. Be3 Bxh3 19. Rf3 Bg4 20. Rg3 h5 21. f5 Rad8 22. fxg6 Bxd4 23. gxf7+ Rxf7 24. Bxd4 Rxd4 25. Qe3 Rg7 26. Rf1 Qd6 27. Bc2 Rd2 28. Bb1 h4 29. Rg2 Rxg2+ 30. Kxg2 Be2+ 31. Kf2 Bxf1 32. Kxf1 Qd1+ 33. Qe1 Rg1+ { White resigns } 0-1

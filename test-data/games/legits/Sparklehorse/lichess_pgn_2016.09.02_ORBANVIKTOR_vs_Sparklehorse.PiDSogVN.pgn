@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/PiDSogVN"]
+[Date "2016.09.02"]
+[White "ORBANVIKTOR"]
+[Black "Sparklehorse"]
+[Result "0-1"]
+[WhiteElo "1409"]
+[BlackElo "2474"]
+[PlyCount "40"]
+[Variant "Standard"]
+[TimeControl "420+5"]
+[ECO "B50"]
+[Opening "Sicilian Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 d6 { B50 Sicilian Defense } 3. Nc3 Nc6 4. Bc4 Nf6 5. Ng5 e6 6. a3 h6 7. Nf3 e5 8. d3 g6 9. O-O Bg7 10. b4 b6 11. bxc5 bxc5 12. Rb1 O-O 13. h3 Be6 14. Bxe6 fxe6 15. Nh4 Kh7 16. Rb7 Rb8 17. Rxb8 Nxb8 18. Nb5 Nc6 19. Be3 a6 20. Nc3 Ne7 { White resigns } 0-1

@@ -1,0 +1,17 @@
+[Event "Hourly Bullet Arena"]
+[Site "https://lichess.org/DJlwL9fy"]
+[Date "2016.10.04"]
+[White "Fanatist"]
+[Black "Makia0406"]
+[Result "1-0"]
+[WhiteElo "2217"]
+[BlackElo "1652"]
+[PlyCount "49"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "C44"]
+[Opening "Scotch Game"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 { C44 Scotch Game } d6 4. dxe5 dxe5 5. Qxd8+ Kxd8 6. Bc4 f6 7. Nc3 Nh6 8. Bxh6 gxh6 9. O-O-O+ Ke7 10. Nd5+ Ke8 11. Nxf6+ Ke7 12. Nd5+ Kf7 13. Nxc7+ Kg6 14. Nxa8 Bg4 15. Nc7 Bxf3 16. gxf3 Bc5 17. Rhg1+ Kf6 18. Nd5+ Kf7 19. Ne3+ Kf6 20. c3 b6 21. b4 Be7 22. Rd7 Re8 23. Nd5+ Kf7 24. Nxe7+ Kf8 25. Rg8# { Black is checkmated } 1-0

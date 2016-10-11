@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/opIFQ9H9"]
+[Date "2016.09.27"]
+[White "dontjudgemyplaystyle"]
+[Black "andrewrun"]
+[Result "0-1"]
+[WhiteElo "2120"]
+[BlackElo "2236"]
+[PlyCount "54"]
+[Variant "Standard"]
+[TimeControl "30+0"]
+[ECO "B33"]
+[Opening "Sicilian Defense: Open"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 { B33 Sicilian Defense: Open } 5. Nc3 g6 6. Be3 Bg7 7. f3 Nxd4 8. Qd2 Nc6 9. Kd1 O-O 10. Kc1 Qc7 11. Kd1 d6 12. Kc1 Be6 13. Kb1 Ne5 14. a3 Nc4 15. Bxc4 Bxc4 16. b3 Be6 17. Kb2 b5 18. Rad1 a6 19. b4 Rac8 20. Nd5 Bxd5 21. exd5 Qc4 22. Bd4 Rc7 23. Qd3 Rfc8 24. Qxc4 Rxc4 25. Bxf6 Bxf6+ 26. Kb3 Rxc2 27. Rd2 R8c3# { White is checkmated } 0-1

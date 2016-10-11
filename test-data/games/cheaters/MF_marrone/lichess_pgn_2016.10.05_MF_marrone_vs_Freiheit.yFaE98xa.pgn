@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/yFaE98xa"]
+[Date "2016.10.05"]
+[White "MF_marrone"]
+[Black "Freiheit"]
+[Result "1-0"]
+[WhiteElo "2328"]
+[BlackElo "2348"]
+[PlyCount "53"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B95"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Nf6 6. Bg5 e6 { B95 Sicilian Defense: Najdorf Variation } 7. Be2 Be7 8. O-O O-O 9. Qd3 Nbd7 10. Qg3 Kh8 11. Rad1 Qc7 12. Be3 b5 13. Nd5 Nxd5 14. exd5 e5 15. Nc6 Bf6 16. Qf3 Bb7 17. c4 bxc4 18. Bxc4 Rfe8 19. Bd3 Nc5 20. Bxc5 dxc5 21. Qf5 e4 22. Bxe4 Rxe4 23. Qxe4 Bxb2 24. Rfe1 h6 25. Qe7 Rc8 26. Qxc7 Rxc7 27. Ne5 { Black resigns } 1-0

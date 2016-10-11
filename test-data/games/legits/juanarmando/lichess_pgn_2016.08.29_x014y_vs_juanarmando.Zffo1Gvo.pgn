@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Zffo1Gvo"]
+[Date "2016.08.29"]
+[White "x014y"]
+[Black "juanarmando"]
+[Result "0-1"]
+[WhiteElo "1973"]
+[BlackElo "2509"]
+[PlyCount "40"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B21"]
+[Opening "Sicilian Defense: McDonnell Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. f4 { B21 Sicilian Defense: McDonnell Attack } d5 3. e5 Nc6 4. d3 Nh6 5. Be3 Nf5 6. Bf2 h5 7. g3 e6 8. h3 Qb6 9. b3 Bd7 10. Nd2 Be7 11. Bg2 h4 12. g4 Ng3 13. Bxg3 hxg3 14. Ngf3 Nd4 15. O-O c4 16. bxc4 Nxf3+ 17. Kh1 Nxd2 18. Qxd2 dxc4 19. dxc4 Bc6 20. Rab1 Rxh3# { White is checkmated } 0-1

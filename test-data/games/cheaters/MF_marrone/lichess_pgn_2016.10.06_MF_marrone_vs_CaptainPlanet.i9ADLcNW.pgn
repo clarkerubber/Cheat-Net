@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/i9ADLcNW"]
+[Date "2016.10.06"]
+[White "MF_marrone"]
+[Black "CaptainPlanet"]
+[Result "1-0"]
+[WhiteElo "2446"]
+[BlackElo "2367"]
+[PlyCount "65"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c6 2. d4 d5 3. e5 c5 { B12 Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense } 4. Nf3 Nc6 5. c3 Bg4 6. Bb5 Bxf3 7. Qxf3 e6 8. Be3 cxd4 9. cxd4 Qa5+ 10. Nc3 Bb4 11. Bxc6+ bxc6 12. Bd2 Ne7 13. O-O Nf5 14. a3 Bxc3 15. Bxc3 Qb6 16. Rfd1 O-O 17. Qd3 a5 18. g4 Ne7 19. b4 a4 20. Bd2 f5 21. exf6 gxf6 22. Bh6 Rfe8 23. Qf3 Kf7 24. Bg5 Ng8 25. Bf4 Ra7 26. g5 Qd8 27. Rac1 Kg7 28. gxf6+ Nxf6 29. Kh1 Ne4 30. Rg1+ Kf7 31. Qh5+ Ke7 32. Qxh7+ Kf8 33. Rg8# { Black is checkmated } 1-0

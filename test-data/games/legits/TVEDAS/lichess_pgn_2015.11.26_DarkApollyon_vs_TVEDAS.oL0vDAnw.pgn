@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/oL0vDAnw"]
+[Date "2015.11.26"]
+[White "DarkApollyon"]
+[Black "TVEDAS"]
+[Result "0-1"]
+[WhiteElo "2304"]
+[BlackElo "2388"]
+[PlyCount "51"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B06"]
+[Opening "Modern Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 g6 { B06 Modern Defense } 2. c4 Bg7 3. Nc3 d6 4. g3 c5 5. Bg2 Nc6 6. Nge2 e6 7. O-O Nge7 8. d3 O-O 9. Be3 Nd4 10. f4 Rb8 11. Rc1 a6 12. b3 b5 13. h3 bxc4 14. dxc4 e5 15. Qd2 Kh8 16. fxe5 dxe5 17. Na4 Qd6 18. Nec3 f5 19. Rf2 Bd7 20. Nb2 Rf7 21. Rcf1 Rbf8 22. Bh6 Bxh6 23. Qxh6 f4 24. gxf4 exf4 25. Nba4 f3 26. Bxf3 { White resigns } 0-1

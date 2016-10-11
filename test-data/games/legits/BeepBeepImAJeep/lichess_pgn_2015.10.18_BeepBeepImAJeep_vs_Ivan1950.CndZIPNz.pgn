@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/CndZIPNz"]
+[Date "2015.10.18"]
+[White "BeepBeepImAJeep"]
+[Black "Ivan1950"]
+[Result "1-0"]
+[WhiteElo "2181"]
+[BlackElo "2095"]
+[PlyCount "59"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[ECO "A00"]
+[Opening "Polish Opening: Czech Defense"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. b4 e5 2. Bb2 d6 { A00 Polish Opening: Czech Defense } 3. e3 Nd7 4. c4 g6 5. a4 Bg7 6. b5 Ne7 7. Nc3 O-O 8. Nf3 f5 9. Be2 e4 10. Ng5 Ne5 11. f4 exf3 12. Nxf3 Be6 13. Qb3 h6 14. O-O Qe8 15. Nd4 Bf7 16. Nc2 Rb8 17. d4 Nd7 18. e4 Kh7 19. a5 fxe4 20. Nxe4 Nf5 21. Bd3 Qd8 22. a6 b6 23. Rae1 Qh4 24. g3 Qd8 25. g4 Ne7 26. Nb4 Be8 27. d5 Ne5 28. Rxf8 Bxf8 29. Nf6+ Kg7 30. Rxe5 { Black forfeits on time } 1-0

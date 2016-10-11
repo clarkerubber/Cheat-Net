@@ -1,0 +1,17 @@
+[Event "Daily HyperBullet Arena"]
+[Site "https://lichess.org/nFSUOWrU"]
+[Date "2016.10.05"]
+[White "Kingscrusher-YouTube"]
+[Black "karpovs_putzfrau"]
+[Result "0-1"]
+[WhiteElo "2378"]
+[BlackElo "2351"]
+[PlyCount "84"]
+[Variant "Standard"]
+[TimeControl "30+0"]
+[ECO "A40"]
+[Opening "Englund Gambit"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. d4 e5 { A40 Englund Gambit } 2. Nc3 Nc6 3. dxe5 d6 4. Nf3 Bg4 5. e4 Qd7 6. Bb5 dxe5 7. Qxd7+ Bxd7 8. Bxc6 Bxc6 9. Nxe5 Ne7 10. Be3 f6 11. Nxc6 Nxc6 12. O-O-O Bb4 13. Nd5 Bd6 14. f4 O-O 15. Rhe1 Rae8 16. Bf2 Ne7 17. c4 Nxd5 18. cxd5 Bxf4+ 19. Kb1 Bd6 20. Bd4 f5 21. e5 Be7 22. e6 Bd6 23. Be5 Re7 24. Bxd6 cxd6 25. Rc1 Rfe8 26. Rc4 g5 27. Rec1 Kg7 28. Rc7 Kf6 29. Rxe7 Rxe7 30. Rc8 Ke5 31. Rf8 Kxd5 32. Rxf5+ Kxe6 33. Rxg5 Kd7 34. Rh5 Re1+ 35. Kc2 Re2+ 36. Kc3 Rxg2 37. Rxh7+ Kc6 38. h4 Rg3+ 39. Kc4 Rh3 40. b4 b5+ 41. Kd4 a6 42. a3 Kb6 { White forfeits on time } 0-1

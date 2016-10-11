@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/i8OHGv4n"]
+[Date "2016.10.01"]
+[White "Iolandacatanduva"]
+[Black "BigH"]
+[Result "1-0"]
+[WhiteElo "2381"]
+[BlackElo "2361"]
+[PlyCount "41"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Mieses-Kotroc Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 d5 2. exd5 Qxd5 { B01 Scandinavian Defense: Mieses-Kotroc Variation } 3. Nc3 Qd8 4. Bc4 Nf6 5. Nf3 a6 6. d4 b5 7. Be2 Bb7 8. O-O e6 9. Ne5 Be7 10. Bf3 Qc8 11. Re1 O-O 12. Bg5 h6 13. Bh4 Rd8 14. d5 Nbd7 15. Nxf7 Rf8 16. dxe6 Nc5 17. Bxf6 Bxf6 18. Nd5 Bxd5 19. Qxd5 c6 20. Qxc5 Ra7 21. Qxa7 { Black resigns } 1-0

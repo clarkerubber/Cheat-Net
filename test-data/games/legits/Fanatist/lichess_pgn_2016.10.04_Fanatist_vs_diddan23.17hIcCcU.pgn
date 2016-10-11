@@ -1,0 +1,17 @@
+[Event "Hourly Bullet Arena"]
+[Site "https://lichess.org/17hIcCcU"]
+[Date "2016.10.04"]
+[White "Fanatist"]
+[Black "diddan23"]
+[Result "1-0"]
+[WhiteElo "2231"]
+[BlackElo "1867"]
+[PlyCount "57"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation, Adams Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. h3 { B90 Sicilian Defense: Najdorf Variation, Adams Attack } e5 7. Nde2 Be6 8. g4 Be7 9. Bg2 Nbd7 10. Ng3 Nc5 11. Be3 b5 12. Nf5 Bxf5 13. exf5 Rc8 14. O-O Qc7 15. g5 Nh5 16. Nd5 Qd8 17. Qxh5 g6 18. Qh6 Bf8 19. Qh4 Be7 20. f6 Bf8 21. Rad1 Qd7 22. Nb6 Qd8 23. Nxc8 Qxc8 24. Bxc5 Qxc5 25. Qe4 h6 26. Qa8+ Kd7 27. Qb7+ Qc7 28. Bc6+ Kd8 29. Qa8+ { Black resigns } 1-0

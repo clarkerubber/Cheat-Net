@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/tAXICrvz"]
+[Date "2015.03.15"]
+[White "lovlas"]
+[Black "skopje123"]
+[Result "1-0"]
+[WhiteElo "2519"]
+[BlackElo "2302"]
+[PlyCount "49"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A43"]
+[Opening "Benoni Defense: Old Benoni"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 c5 2. d5 d6 { A43 Benoni Defense: Old Benoni } 3. Nc3 e6 4. e4 e5 5. f4 Nf6 6. Nf3 exf4 7. Bxf4 Be7 8. Be2 O-O 9. O-O Nfd7 10. a4 Ne5 11. Nxe5 dxe5 12. Bxe5 Nd7 13. Bg3 Bh4 14. Bf4 Bg5 15. Bg3 Bh4 16. Bf4 Bg5 17. Bd6 Be7 18. Bxe7 Qxe7 19. Qd3 Ne5 20. Qg3 f6 21. Rad1 Qd6 22. Nb5 Qb6 23. Kh1 a6 24. Na3 Qb3 25. Qxb3 { Black resigns } 1-0

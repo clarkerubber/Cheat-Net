@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/AyKW9vYg"]
+[Date "2016.09.21"]
+[White "shrekdavid"]
+[Black "penguingim1"]
+[Result "0-1"]
+[WhiteElo "2705"]
+[BlackElo "2793"]
+[PlyCount "43"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Harrwitz Attack, Two Knights Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. Nf3 d5 2. c4 e6 3. d4 Nf6 4. Nc3 Be7 5. Bf4 O-O 6. e3 Nbd7 { D37 Queen's Gambit Declined: Harrwitz Attack, Two Knights Defense } 7. Rc1 c5 8. Bd3 cxd4 9. exd4 dxc4 10. Bxc4 Nb6 11. Bb3 Bd7 12. Ne5 Rc8 13. O-O Be8 14. Qf3 Qxd4 15. Rfd1 Qb4 16. Bd2 Qh4 17. Qxb7 Bd6 18. g3 Qh5 19. Nd3 Bc6 20. Qxa7 Qh3 21. f3 Bxf3 22. Be1 { White resigns } 0-1

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/u4s0rqcw"]
+[Date "2016.10.03"]
+[White "gagi59"]
+[Black "TheSindar"]
+[Result "0-1"]
+[WhiteElo "1661"]
+[BlackElo "1877"]
+[PlyCount "42"]
+[Variant "Standard"]
+[TimeControl "480+0"]
+[ECO "C24"]
+[Opening "Bishop's Opening: Berlin Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Bc4 Nf6 { C24 Bishop's Opening: Berlin Defense } 3. Qf3 Nc6 4. Qf5 d5 5. exd5 Bxf5 6. dxc6 Bxc2 7. cxb7 Rb8 8. Nc3 Bd3 9. Ba6 Bxa6 10. Nf3 Bc5 11. Nxe5 Bxf2+ 12. Kxf2 Qd4+ 13. Ke1 Qxe5+ 14. Kd1 Ng4 15. Re1 Nf2+ 16. Kc2 Bd3+ 17. Kb3 Qxe1 18. Nd5 Qe6 19. Ka3 Qa6+ 20. Kb3 Rxb7+ 21. Kc3 Qc4# { White is checkmated } 0-1

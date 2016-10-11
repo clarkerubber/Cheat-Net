@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/u9j3Eew7"]
+[Date "2016.09.11"]
+[White "pilarsevilla"]
+[Black "Tunisia-Sousse2016"]
+[Result "1-0"]
+[WhiteElo "2122"]
+[BlackElo "2011"]
+[PlyCount "45"]
+[Variant "Standard"]
+[TimeControl "900+0"]
+[ECO "A45"]
+[Opening "Indian Game"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 { A45 Indian Game } 2. e3 c5 3. Nf3 Nc6 4. d5 Nb4 5. Nc3 e6 6. e4 exd5 7. e5 Ne4 8. Nxd5 Nxd5 9. Qxd5 Qa5+ 10. c3 Nxc3 11. Qd2 c4 12. bxc3 Bc5 13. Bxc4 O-O 14. O-O b5 15. Bd5 Rb8 16. Ng5 Bb7 17. Qd3 g6 18. Bxf7+ Rxf7 19. Nxf7 Kxf7 20. Qxd7+ Kg8 21. Bh6 Bf8 22. Bxf8 Kxf8 23. Qd6+ { Black resigns } 1-0

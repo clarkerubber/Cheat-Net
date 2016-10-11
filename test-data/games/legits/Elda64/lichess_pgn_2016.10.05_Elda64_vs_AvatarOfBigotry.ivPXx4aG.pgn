@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/ivPXx4aG"]
+[Date "2016.10.05"]
+[White "Elda64"]
+[Black "AvatarOfBigotry"]
+[Result "1-0"]
+[WhiteElo "2586"]
+[BlackElo "2347"]
+[PlyCount "57"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A00"]
+[Opening "Ware Opening"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. a4 { A00 Ware Opening } h5 2. a5 g5 3. Ra3 f5 4. h4 g4 5. e4 fxe4 6. d3 e5 7. dxe4 Bxa3 8. Nxa3 d6 9. Bc4 Qe7 10. Ne2 Be6 11. Qd3 Bxc4 12. Qxc4 Nc6 13. a6 Qd7 14. axb7 Rb8 15. Ng3 Rxb7 16. O-O Nge7 17. Bg5 Ng6 18. Nb5 a6 19. Nc3 Nd4 20. Nd5 O-O 21. Nf6+ Kg7 22. Nxd7 Rxb2 23. Nxf8 Rxc2 24. Nxh5+ Kxf8 25. Bh6+ Ke8 26. Qxa6 Nxh4 27. Qc8+ Kf7 28. Qf8+ Ke6 29. Qe8# { Black is checkmated } 1-0

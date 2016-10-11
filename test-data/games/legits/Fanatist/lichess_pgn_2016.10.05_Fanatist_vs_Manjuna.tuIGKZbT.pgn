@@ -1,0 +1,17 @@
+[Event "Daily Bullet Arena"]
+[Site "https://lichess.org/tuIGKZbT"]
+[Date "2016.10.05"]
+[White "Fanatist"]
+[Black "Manjuna"]
+[Result "1-0"]
+[WhiteElo "2299"]
+[BlackElo "1949"]
+[PlyCount "69"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B05"]
+[Opening "Alekhine Defense: Modern Variation, Main Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3 Bg4 { B05 Alekhine Defense: Modern Variation, Main Line } 5. Be2 e6 6. exd6 Bxd6 7. c4 Nb6 8. h3 Bxf3 9. Bxf3 Be7 10. Bxb7 N8d7 11. Bxa8 Qxa8 12. O-O O-O 13. b3 c5 14. Bb2 cxd4 15. Bxd4 e5 16. Be3 Nc5 17. Nc3 Ne6 18. Qe2 Bf6 19. Rad1 Nd4 20. Bxd4 exd4 21. Ne4 Be5 22. Qf3 f5 23. Ng5 Qd8 24. Ne6 Qf6 25. Nxf8 Qxf8 26. Rfe1 Bb8 27. a4 h6 28. a5 Nd7 29. Qd5+ Kh7 30. Qxd7 Qf6 31. Qxd4 Qf7 32. Qd5 Qc7 33. g3 f4 34. Qf5+ Kg8 35. Re8# { Black is checkmated } 1-0

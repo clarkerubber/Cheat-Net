@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/39xZw9dz"]
+[Date "2016.10.06"]
+[White "torri_tentori"]
+[Black "TheSindar"]
+[Result "0-1"]
+[WhiteElo "2014"]
+[BlackElo "2013"]
+[PlyCount "20"]
+[Variant "Standard"]
+[TimeControl "2100+6"]
+[ECO "B33"]
+[Opening "Sicilian Defense: Lasker-Pelikan Variation, Retreat Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 e5 5. Nf3 Nf6 6. Nc3 { B33 Sicilian Defense: Lasker-Pelikan Variation, Retreat Variation } Bb4 7. Bd3 d5 8. Qe2 d4 9. a3 Qa5 10. Ra2 dxc3 { White resigns } 0-1

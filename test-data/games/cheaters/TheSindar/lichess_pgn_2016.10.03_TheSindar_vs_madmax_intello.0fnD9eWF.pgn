@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/0fnD9eWF"]
+[Date "2016.10.03"]
+[White "TheSindar"]
+[Black "madmax_intello"]
+[Result "1-0"]
+[WhiteElo "1734"]
+[BlackElo "1826"]
+[PlyCount "43"]
+[Variant "Standard"]
+[TimeControl "480+4"]
+[ECO "C42"]
+[Opening "Russian Game: Classical Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 { C42 Russian Game: Classical Attack } Qe7 6. Be3 Bg4 7. Bd3 Nc6 8. c3 Kd8 9. d5 Ne5 10. Bxe4 Nc4 11. Qd3 Bxf3 12. Bxf3 Nxb2 13. Qb5 c6 14. Qxb2 c5 15. O-O Qh4 16. Qxb7 Rc8 17. Qxf7 Rc7 18. Qe6 Re7 19. Qxd6+ Rd7 20. Qb8+ Ke7 21. Qe5+ Kf7 22. Qe6# { Black is checkmated } 1-0

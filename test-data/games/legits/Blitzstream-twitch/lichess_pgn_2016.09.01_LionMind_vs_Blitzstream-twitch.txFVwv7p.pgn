@@ -1,0 +1,17 @@
+[Event "Daily HyperBullet Arena"]
+[Site "https://lichess.org/txFVwv7p"]
+[Date "2016.09.01"]
+[White "LionMind"]
+[Black "Blitzstream-twitch"]
+[Result "0-1"]
+[WhiteElo "2409"]
+[BlackElo "2555"]
+[PlyCount "58"]
+[Variant "Standard"]
+[TimeControl "30+0"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 d5 { D00 Queen's Pawn Game } 2. c3 c6 3. Bf4 Nf6 4. e3 Bf5 5. Nf3 Bg6 6. Nbd2 e6 7. Be2 Nbd7 8. O-O Ne4 9. Ne5 Nxe5 10. Bxe5 f6 11. Bg3 Bd6 12. f3 Nxg3 13. hxg3 Bxg3 14. f4 h5 15. Rf3 h4 16. Nf1 Bh5 17. Rxg3 Bxe2 18. Qxe2 hxg3 19. Nxg3 Qe7 20. e4 O-O-O 21. e5 f5 22. Qf3 Qh4 23. a4 Qg4 24. Qf2 Rh4 25. a5 Rdh8 26. a6 b6 27. b4 Qxf4 28. Qe2 Qxg3 29. b5 Rh1# { White is checkmated } 0-1

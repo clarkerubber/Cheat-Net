@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/AtSUYPBE"]
+[Date "2015.12.06"]
+[White "HappyCruncher"]
+[Black "TVEDAS"]
+[Result "0-1"]
+[WhiteElo "2359"]
+[BlackElo "2493"]
+[PlyCount "76"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A96"]
+[Opening "Dutch Defense: Classical Variation, Buenos Aires Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. Nf3 f5 2. g3 Nf6 3. Bg2 e6 4. d4 Be7 5. O-O O-O 6. c4 d6 7. Nc3 a5 { A96 Dutch Defense: Classical Variation, Buenos Aires Variation } 8. b3 Qe8 9. Bb2 Bd8 10. Qc2 Nc6 11. e4 Nb4 12. Qb1 fxe4 13. Nxe4 Nxe4 14. Qxe4 e5 15. dxe5 c6 16. e6 Qxe6 17. Qxe6+ Bxe6 18. Nd4 Bg4 19. h3 Bh5 20. Ne6 Rf7 21. Nxd8 Rxd8 22. g4 Bg6 23. a3 Nd3 24. Bc3 Nf4 25. Bxa5 Rdf8 26. Bd2 Nxg2 27. Kxg2 Be4+ 28. Kg1 Rf3 29. Rfe1 d5 30. Bb4 R8f4 31. Bd6 Rxh3 32. Rxe4 Rxe4 33. cxd5 Rxb3 34. dxc6 Rxg4+ 35. Bg3 bxc6 36. a4 Rbb4 37. a5 Ra4 38. Rc1 Rgc4 { White resigns } 0-1

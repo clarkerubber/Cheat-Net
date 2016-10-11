@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/hqBHnuU5"]
+[Date "2015.12.29"]
+[White "berval"]
+[Black "BeWater"]
+[Result "1-0"]
+[WhiteElo "2377"]
+[BlackElo "2446"]
+[PlyCount "55"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C07"]
+[Opening "French Defense: Tarrasch Variation, Open System, Euwe-Keres Line"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. d4 d5 3. Nd2 c5 4. Ngf3 { C07 French Defense: Tarrasch Variation, Open System, Euwe-Keres Line } Nc6 5. Bb5 cxd4 6. Nxd4 Bd7 7. Bxc6 bxc6 8. c4 c5 9. N4f3 d4 10. O-O f6 11. e5 f5 12. b4 Bc6 13. Nb3 cxb4 14. Nbxd4 Bd7 15. h4 h6 16. a3 a5 17. axb4 axb4 18. Rxa8 Qxa8 19. Nb5 Bxb5 20. cxb5 Bc5 21. Qb3 Kf7 22. Be3 Bxe3 23. fxe3 Qe4 24. Nd4 Qd5 25. Rxf5+ Kg6 26. Qxd5 exd5 27. Rf8 Kh7 28. b6 { Black forfeits on time } 1-0

@@ -1,0 +1,17 @@
+[Event "Hourly Classical Arena"]
+[Site "https://lichess.org/t9cXBRml"]
+[Date "2016.10.02"]
+[White "Mbatha"]
+[Black "fenerlitugi"]
+[Result "0-1"]
+[WhiteElo "1765"]
+[BlackElo "1956"]
+[PlyCount "78"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D05"]
+[Opening "Colle System"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. Nf3 Nf6 2. d4 d5 3. e3 e6 { D05 Colle System } 4. Be2 Bd6 5. O-O O-O 6. Nbd2 b6 7. b3 c5 8. Bb2 Qc7 9. Rc1 Nc6 10. c4 Rd8 11. cxd5 exd5 12. dxc5 bxc5 13. Bxf6 gxf6 14. Bb5 Rb8 15. Bxc6 Qxc6 16. Nd4 Qa6 17. Nc2 Kh8 18. Qf3 Be5 19. a4 Rg8 20. Qh5 Bg4 21. Qxf7 Qd3 22. f4 Rg7 23. Qxg7+ Kxg7 24. fxe5 Qxd2 25. exf6+ Kf7 26. b4 Be2 27. Rfe1 cxb4 28. Nd4 Qxe3+ 29. Kh1 Qxd4 30. Rxe2 b3 31. Re7+ Kxf6 32. Rec7 b2 33. R1c6+ Kf5 34. Rf7+ Ke4 35. Re6+ Kd3 36. Rf3+ Kd2 37. h3 b1=Q+ 38. Kh2 Qbg1+ 39. Kg3 Rg8+ { White resigns } 0-1

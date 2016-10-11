@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/VqSvhSf7"]
+[Date "2016.05.30"]
+[White "jonmagal"]
+[Black "Paramos"]
+[Result "0-1"]
+[WhiteElo "2253"]
+[BlackElo "2501"]
+[PlyCount "54"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A85"]
+[Opening "Dutch Defense: Queen's Knight Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 f5 2. c4 Nf6 3. Nc3 { A85 Dutch Defense: Queen's Knight Variation } e6 4. Bg5 Bb4 5. Qc2 h6 6. Bxf6 Qxf6 7. e3 O-O 8. Bd3 d6 9. Ne2 e5 10. f3 Qg5 11. a3 Bxc3+ 12. bxc3 Qxe3 13. Qd2 Qxd2+ 14. Kxd2 Nc6 15. Rab1 b6 16. Rhe1 Bd7 17. g3 Rae8 18. f4 e4 19. Bc2 Na5 20. Bb3 Kh7 21. Ba2 Bc8 22. c5 Ba6 23. Rb4 dxc5 24. dxc5 Rd8+ 25. Kc1 Rd3 26. cxb6 cxb6 27. Rd4 Rf3 { White resigns } 0-1

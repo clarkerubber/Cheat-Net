@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/EhISh8cC"]
+[Date "2016.01.28"]
+[White "penguingim1"]
+[Black "LongGamer"]
+[Result "1-0"]
+[WhiteElo "2897"]
+[BlackElo "2548"]
+[PlyCount "27"]
+[Variant "Standard"]
+[TimeControl "30+0"]
+[ECO "E81"]
+[Opening "King's Indian Defense: Saemisch Variation, Bobotsov-Korchnoi-Petrosian Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 d6 2. c4 Nf6 3. Nc3 g6 4. e4 Bg7 5. f3 O-O 6. Nge2 { E81 King's Indian Defense: Saemisch Variation, Bobotsov-Korchnoi-Petrosian Variation } Bd7 7. Bg5 c5 8. d5 Qc8 9. Qd2 h6 10. Bxh6 Bxh6 11. Qxh6 Nh7 12. h4 f5 13. h5 Rf6 14. hxg6 { Black resigns } 1-0

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/wLmu50Jh"]
+[Date "2016.09.18"]
+[White "Davigator"]
+[Black "chessclinic"]
+[Result "0-1"]
+[WhiteElo "2236"]
+[BlackElo "2344"]
+[PlyCount "60"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation, Tal Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 { B12 Caro-Kann Defense: Advance Variation, Tal Variation } h5 5. c4 dxc4 6. Bxc4 e6 7. Nc3 Nd7 8. Nge2 Nb6 9. Bd3 Bxd3 10. Qxd3 Ne7 11. Bg5 Qd7 12. O-O Nf5 13. Rfd1 Be7 14. Ne4 Bxg5 15. hxg5 Qe7 16. a3 Rd8 17. b4 Nd5 18. Rac1 a6 19. g3 Qd7 20. Kg2 Kf8 21. Rb1 Nde7 22. a4 Ng6 23. b5 cxb5 24. axb5 a5 25. b6 Kg8 26. Rb5 a4 27. Ra5 Qc6 28. Qb5 Qxe4+ 29. f3 Qc2 30. Qd3 Qxd1 { White resigns } 0-1

@@ -1,0 +1,17 @@
+[Event "Monthly Classical Arena"]
+[Site "https://lichess.org/bbNH4Nmz"]
+[Date "2016.09.29"]
+[White "MeneerMandje"]
+[Black "aliringo777"]
+[Result "1-0"]
+[WhiteElo "2470"]
+[BlackElo "2050"]
+[PlyCount "49"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 { B30 Sicilian Defense: Nyezhmetdinov-Rossolimo Attack } e6 4. O-O a6 5. Bxc6 bxc6 6. b3 d5 7. Re1 h6 8. Bb2 Nf6 9. Nc3 Be7 10. d4 dxe4 11. Nxe4 Nxe4 12. Rxe4 Bf6 13. Ba3 cxd4 14. Nxd4 Qc7 15. Nf5 Be5 16. Rxe5 Qxe5 17. Nd6+ Ke7 18. Nc4+ Kf6 19. Nxe5 Kxe5 20. Bb2+ Kf5 21. Qf3+ Kg6 22. Qg3+ Kf5 23. Qf3+ Kg6 24. Qg4+ Kh7 25. Qxg7# { Black is checkmated } 1-0

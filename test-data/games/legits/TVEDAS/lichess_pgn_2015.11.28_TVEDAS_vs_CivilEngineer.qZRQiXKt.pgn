@@ -1,0 +1,17 @@
+[Event "Weekly Bullet Arena"]
+[Site "https://lichess.org/qZRQiXKt"]
+[Date "2015.11.28"]
+[White "TVEDAS"]
+[Black "CivilEngineer"]
+[Result "1-0"]
+[WhiteElo "2331"]
+[BlackElo "1757"]
+[PlyCount "75"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "E76"]
+[Opening "King's Indian Defense: Steiner Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Bg5 { E76 King's Indian Defense: Steiner Attack } h6 7. Be3 c5 8. d5 b5 9. Nxb5 a6 10. Nc3 Nbd7 11. Qd2 Rb8 12. Rb1 Bb7 13. Bxh6 Bxh6 14. Qxh6 Nb6 15. Bd3 Nh7 16. Nge2 f6 17. Qxg6+ Kh8 18. e5 f5 19. Bxf5 Rxf5 20. Qxf5 Qf8 21. Qxf8+ Rxf8 22. exd6 exd6 23. b3 a5 24. Ne4 Bc8 25. Nxd6 Bf5 26. Nxf5 Rxf5 27. O-O Kg7 28. Ng3 Rf6 29. Rfe1 Ng5 30. Ne4 Nxe4 31. Rxe4 Nd7 32. Rbe1 Nf8 33. Re7+ Rf7 34. d6 Rxe7 35. dxe7 Nd7 36. e8=Q Nf6 37. Qe7+ Kg6 38. Re6 { Black resigns } 1-0

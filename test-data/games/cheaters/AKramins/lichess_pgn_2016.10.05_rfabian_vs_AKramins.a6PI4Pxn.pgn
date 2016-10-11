@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/a6PI4Pxn"]
+[Date "2016.10.05"]
+[White "rfabian"]
+[Black "AKramins"]
+[Result "0-1"]
+[WhiteElo "1613"]
+[BlackElo "1511"]
+[PlyCount "47"]
+[Variant "Standard"]
+[TimeControl "600+8"]
+[ECO "C50"]
+[Opening "Italian Game: Giuoco Pianissimo"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. d3 { C50 Italian Game: Giuoco Pianissimo } d6 5. Ng5 Nh6 6. Qh5 Bg4 7. Bxf7+ Kd7 8. Be6+ Bxe6 9. Nxe6 Kxe6 10. Bxh6 gxh6 11. Qxh6+ Qf6 12. Qh3+ Ke7 13. O-O Raf8 14. Nc3 Bxf2+ 15. Kh1 Qh4 16. Nd5+ Kd8 17. Qe6 Nd4 18. Qh3 Qxh3 19. gxh3 c6 20. Nc3 Nxc2 21. Rac1 Ne3 22. Rxf2 Rxf2 23. Kg1 Rhf8 24. Nd1 { White resigns } 0-1

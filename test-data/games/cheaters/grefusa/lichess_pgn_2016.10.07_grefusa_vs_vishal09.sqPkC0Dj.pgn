@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/sqPkC0Dj"]
+[Date "2016.10.07"]
+[White "grefusa"]
+[Black "vishal09"]
+[Result "1-0"]
+[WhiteElo "2694"]
+[BlackElo "1992"]
+[PlyCount "41"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "D12"]
+[Opening "Slav Defense: Exchange Variation, Schallopp Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e3 d5 2. d4 Nf6 3. c4 c6 4. Nf3 Bf5 5. cxd5 cxd5 6. Nc3 { D12 Slav Defense: Exchange Variation, Schallopp Variation } Nc6 7. Bb5 e6 8. Ne5 Rc8 9. g4 Bg6 10. h4 h5 11. Nxg6 fxg6 12. g5 Nd7 13. Qd3 Kf7 14. O-O Bd6 15. e4 dxe4 16. Qxe4 Qc7 17. Bd3 Nf8 18. d5 exd5 19. Qxd5+ Ke7 20. Re1+ Kd8 21. Nb5 { Black resigns } 1-0

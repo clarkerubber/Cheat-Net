@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/DLkGwOIC"]
+[Date "2015.10.21"]
+[White "berval"]
+[Black "BeepBeepImAJeep"]
+[Result "1/2-1/2"]
+[WhiteElo "2372"]
+[BlackElo "2563"]
+[PlyCount "105"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C63"]
+[Opening "Ruy Lopez: Schliemann Defense, Classical Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 f5 4. Nc3 fxe4 5. Nxe4 d5 6. Nxe5 dxe4 7. Nxc6 Qg5 { C63 Ruy Lopez: Schliemann Defense, Classical Variation } 8. Nd4+ c6 9. Bf1 Nf6 10. d3 Qe5 11. dxe4 Qxe4+ 12. Be3 Bg4 13. Qd3 Qxd3 14. Bxd3 O-O-O 15. f3 Bd7 16. Ne2 Bd6 17. Bxa7 Kc7 18. Bf2 Rhe8 19. O-O Ra8 20. a3 g6 21. Rfe1 Nd5 22. Nd4 Nf4 23. Rxe8 Rxe8 24. Bf1 Be5 25. g3 Bxd4 26. Bxd4 Ne2+ 27. Bxe2 Rxe2 28. Rc1 Bh3 29. Bf2 Bf5 30. Kf1 Rxc2 31. Rxc2 Bxc2 32. Ke2 Kd6 33. Ke3 c5 34. g4 b5 35. Kf4 Bd1 36. h4 Kd5 37. Be3 Be2 38. Bf2 Bd1 39. Ke3 Bb3 40. Be1 Bd1 41. Bc3 Bb3 42. Bg7 Bd1 43. Kf4 Be2 44. Bf8 Bd1 45. h5 c4 46. h6 Be2 47. Bg7 Bd1 48. Bc3 Be2 49. Ke3 Bd1 50. g5 Bc2 51. Kf4 Bf5 52. Bf6 Bd3 53. Bc3 { Draw } 1/2-1/2

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/EKHqHdZI"]
+[Date "2016.10.05"]
+[White "mialterego"]
+[Black "juanarmando"]
+[Result "0-1"]
+[WhiteElo "1905"]
+[BlackElo "2504"]
+[PlyCount "36"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B40"]
+[Opening "Sicilian Defense: Kveinis Variation"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Qb6 { B40 Sicilian Defense: Kveinis Variation } 5. Nc3 Bc5 6. Be3 Nc6 7. Nb3 Bxe3 8. fxe3 Qxe3+ 9. Qe2 Qxe2+ 10. Bxe2 Ke7 11. O-O-O Nf6 12. Rhf1 d6 13. Nb5 Rd8 14. Bf3 a6 15. Nc3 Rb8 16. Na4 b5 17. Nc3 Ne5 18. Ne2 Bb7 { White forfeits on time } 0-1

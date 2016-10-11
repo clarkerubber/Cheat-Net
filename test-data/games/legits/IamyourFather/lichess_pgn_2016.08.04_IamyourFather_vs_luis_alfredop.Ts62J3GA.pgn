@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Ts62J3GA"]
+[Date "2016.08.04"]
+[White "IamyourFather"]
+[Black "luis_alfredop"]
+[Result "1-0"]
+[WhiteElo "2370"]
+[BlackElo "2205"]
+[PlyCount "67"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Classical Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5 4. d4 Bf5 5. Nf3 Nf6 { B01 Scandinavian Defense: Classical Variation } 6. Bc4 e6 7. Bd2 c6 8. Nd5 Qd8 9. Nxf6+ Qxf6 10. Qe2 Bd6 11. O-O-O h6 12. d5 Ba3 13. c3 Bc5 14. dxe6 Bxe6 15. Bxe6 Qxe6 16. Qxe6+ fxe6 17. Rhe1 Ke7 18. Be3 Bxe3+ 19. Rxe3 Nd7 20. Rde1 Nf8 21. Nd4 Rd8 22. Nxe6 Nxe6 23. Rxe6+ Kd7 24. Re7+ Kc8 25. Rxg7 Rhf8 26. f3 Rd7 27. Ree7 Rxe7 28. Rxe7 Rg8 29. g3 Rg6 30. f4 Rf6 31. Kd2 a5 32. Ke3 Rd6 33. f5 b5 34. Re6 { Black resigns } 1-0

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/fPwCwqTi"]
+[Date "2016.06.18"]
+[White "On_Fire21"]
+[Black "jozarov"]
+[Result "1-0"]
+[WhiteElo "2224"]
+[BlackElo "2208"]
+[PlyCount "43"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B21"]
+[Opening "Sicilian Defense: Smith-Morra Gambit Declined, Push Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. d4 cxd4 3. c3 d3 { B21 Sicilian Defense: Smith-Morra Gambit Declined, Push Variation } 4. Bxd3 g6 5. Nf3 Bg7 6. c4 Nc6 7. Nc3 d6 8. O-O Nf6 9. h3 O-O 10. Nd5 Nd7 11. Rb1 a5 12. b3 Nc5 13. Bc2 e6 14. Ne3 b6 15. Bb2 Qc7 16. Bxg7 Kxg7 17. Qd2 Bb7 18. Rfd1 Rad8 19. Qc3+ e5 20. a3 Nd4 21. Nxd4 exd4 22. Qxd4+ { Black resigns } 1-0

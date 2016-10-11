@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/FFJ2J3Uc"]
+[Date "2016.10.03"]
+[White "bmw318"]
+[Black "O-Dannyboy"]
+[Result "1-0"]
+[WhiteElo "2115"]
+[BlackElo "1935"]
+[PlyCount "61"]
+[Variant "Standard"]
+[TimeControl "120+0"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nc3 { B23 Sicilian Defense: Closed Variation } d6 3. f4 Nf6 4. e5 dxe5 5. fxe5 Nd5 6. Nf3 Nc6 7. Bc4 Nxc3 8. bxc3 e6 9. O-O Be7 10. d4 O-O 11. Be3 cxd4 12. cxd4 Qc7 13. Qd3 Nb4 14. Qe2 a6 15. Rad1 b5 16. Bb3 Bb7 17. c4 bxc4 18. Qxc4 Qb6 19. Bf2 Bd5 20. Qe2 Rac8 21. Rd2 Rfd8 22. h4 a5 23. Rfd1 a4 24. Bxa4 Nxa2 25. Rxa2 Bxa2 26. Qxa2 Rc3 27. Be1 Ra3 28. Qc2 Ra8 29. Rb1 R8xa4 30. Rxb6 Bb4 31. Rb8+ { Black resigns } 1-0

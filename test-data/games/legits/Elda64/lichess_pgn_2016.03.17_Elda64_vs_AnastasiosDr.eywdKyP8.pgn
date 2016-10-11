@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/eywdKyP8"]
+[Date "2016.03.17"]
+[White "Elda64"]
+[Black "AnastasiosDr"]
+[Result "1-0"]
+[WhiteElo "2582"]
+[BlackElo "2365"]
+[PlyCount "53"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C00"]
+[Opening "French Defense: King's Indian Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. d3 { C00 French Defense: King's Indian Attack } d5 3. Nd2 c5 4. Ngf3 Nc6 5. g3 Bd6 6. Bg2 Nge7 7. O-O O-O 8. c3 b6 9. Qc2 a5 10. Rd1 Qc7 11. Nf1 b5 12. h4 a4 13. exd5 Nxd5 14. Ne3 Nce7 15. a3 Bb7 16. c4 Nxe3 17. Bxe3 bxc4 18. dxc4 Nf5 19. Bd2 Bxf3 20. Bxf3 Nd4 21. Qd3 Nxf3+ 22. Qxf3 Be5 23. Bc3 Bxc3 24. bxc3 Rad8 25. Rxd8 Rxd8 26. Rb1 h6 27. Rb7 { Black resigns } 1-0

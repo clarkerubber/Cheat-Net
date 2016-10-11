@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/DR7FFUpL"]
+[Date "2016.10.06"]
+[White "dmitrisilver"]
+[Black "grefusa"]
+[Result "0-1"]
+[WhiteElo "2469"]
+[BlackElo "2654"]
+[PlyCount "86"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: London System"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. Nf3 d5 3. Bf4 { D02 Queen's Pawn Game: London System } e6 4. c3 Nbd7 5. e3 Be7 6. Nbd2 O-O 7. Bd3 b6 8. O-O Bb7 9. Re1 c5 10. h3 Ne4 11. Ne5 Nxe5 12. Bxe5 f6 13. Bh2 f5 14. Nf3 c4 15. Bc2 b5 16. a3 a5 17. Ne5 Bd6 18. Bxe4 fxe4 19. Qg4 Rf5 20. Rf1 Qe7 21. Qe2 Ra6 22. Qg4 Rb6 23. Qe2 Qc7 24. Qd2 b4 25. axb4 axb4 26. Rfb1 Bc6 27. Rf1 Qb7 28. Qc1 Bb5 29. Re1 Ra6 30. Rf1 Be7 31. Re1 Rf8 32. Rxa6 Qxa6 33. Qa1 Ba4 34. Bg3 Ra8 35. Rc1 Bb5 36. Qxa6 Rxa6 37. Kh2 Ra2 38. Rb1 Ba4 39. cxb4 Bxb4 40. Kg1 Bc2 41. Rc1 Rxb2 42. f3 Ra2 43. Nc6 Bd2 { White resigns } 0-1

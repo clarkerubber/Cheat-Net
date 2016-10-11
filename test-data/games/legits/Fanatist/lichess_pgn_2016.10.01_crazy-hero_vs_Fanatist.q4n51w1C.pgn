@@ -1,0 +1,17 @@
+[Event "BitChess Hyperbullet"]
+[Site "https://lichess.org/q4n51w1C"]
+[Date "2016.10.01"]
+[White "crazy-hero"]
+[Black "Fanatist"]
+[Result "0-1"]
+[WhiteElo "2087"]
+[BlackElo "2152"]
+[PlyCount "54"]
+[Variant "Standard"]
+[TimeControl "30+0"]
+[ECO "A40"]
+[Opening "Horwitz Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 e6 { A40 Horwitz Defense } 2. c3 c5 3. e4 b6 4. e5 cxd4 5. f4 dxc3 6. Nxc3 d5 7. Nf3 Nc6 8. Bb5 Bd7 9. Bxc6 Bxc6 10. O-O Ne7 11. Nd4 Qd7 12. Be3 Nf5 13. Nxf5 exf5 14. Ne2 Bc5 15. Nd4 Bxd4 16. Bxd4 Qe6 17. Re1 Rc8 18. Rc1 g6 19. Qd2 O-O 20. Qe3 Bd7 21. Qf2 Rxc1 22. Be3 Rxe1+ 23. Qxe1 Rc8 24. Qd2 d4 25. Bxd4 Qc4 26. Bc3 Bb5 27. Qd6 Qf1# { White is checkmated } 0-1

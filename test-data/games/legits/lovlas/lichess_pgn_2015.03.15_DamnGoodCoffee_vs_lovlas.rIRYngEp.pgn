@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/rIRYngEp"]
+[Date "2015.03.15"]
+[White "DamnGoodCoffee"]
+[Black "lovlas"]
+[Result "0-1"]
+[WhiteElo "2310"]
+[BlackElo "2545"]
+[PlyCount "52"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "E21"]
+[Opening "Nimzo-Indian Defense: Three Knights Variation, Duchamp Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 e6 2. c4 Nf6 3. Nf3 b6 4. Nc3 Bb4 { E21 Nimzo-Indian Defense: Three Knights Variation, Duchamp Variation } 5. g3 Bb7 6. Bg2 O-O 7. O-O d6 8. Bg5 h6 9. Be3 Nbd7 10. a3 Bxc3 11. bxc3 Rc8 12. Rb1 Re8 13. Qd2 Ng4 14. Bf4 e5 15. Be3 Nxe3 16. Qxe3 exd4 17. Qxd4 Rxe2 18. Rfe1 Rxe1+ 19. Rxe1 Nf8 20. Nh4 Bxg2 21. Kxg2 Ne6 22. Qd3 Qg5 23. Kh1 Re8 24. f4 Qc5 25. f5 Qc6+ 26. Qe4 Nf4 { White resigns } 0-1

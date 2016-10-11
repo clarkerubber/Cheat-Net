@@ -1,0 +1,17 @@
+[Event "Hourly Bullet Arena"]
+[Site "https://lichess.org/tL4ffi1V"]
+[Date "2016.10.04"]
+[White "knightrider49"]
+[Black "andrewrun"]
+[Result "0-1"]
+[WhiteElo "1253"]
+[BlackElo "2215"]
+[PlyCount "40"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A80"]
+[Opening "Dutch Defense: Hopton Attack"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. d4 f5 2. Bg5 { A80 Dutch Defense: Hopton Attack } g6 3. e3 Bg7 4. Nc3 Nf6 5. Nf3 O-O 6. h4 d6 7. h5 Nxh5 8. Be2 Nf6 9. Nh4 Nc6 10. g4 fxg4 11. Bxg4 Bxg4 12. f3 Bd7 13. Nxg6 hxg6 14. f4 e5 15. Qf3 exd4 16. exd4 Bg4 17. Qg3 Qe8+ 18. Kd2 Nxd4 19. Rae1 Qd7 20. Nd5 Nxd5 { White forfeits on time } 0-1

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/IXXHqCG4"]
+[Date "2016.10.06"]
+[White "petrusian"]
+[Black "drmirzaee2554"]
+[Result "0-1"]
+[WhiteElo "1858"]
+[BlackElo "1699"]
+[PlyCount "42"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "C53"]
+[Opening "Italian Game: Classical Variation, Giuoco Pianissimo"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 { C53 Italian Game: Classical Variation, Giuoco Pianissimo } O-O 6. Bg5 h6 7. Bh4 d6 8. h3 a6 9. Nbd2 g5 10. Bg3 b5 11. Bb3 Bb7 12. a4 Nh5 13. Bxe5 dxe5 14. Nxe5 Nxe5 15. Qxh5 Nxd3+ 16. Kd1 Bxe4 17. Qxh6 Nxf2+ 18. Ke2 Qd3+ 19. Ke1 Qe3+ 20. Kf1 Bd3+ 21. Kg1 Ng4# { White is checkmated } 0-1

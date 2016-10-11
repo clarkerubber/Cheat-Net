@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/veausPqe"]
+[Date "2016.08.25"]
+[White "chessforce"]
+[Black "juanarmando"]
+[Result "0-1"]
+[WhiteElo "2266"]
+[BlackElo "2502"]
+[PlyCount "46"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A51"]
+[Opening "Indian Game: Budapest Defense"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. c4 e5 2. d4 Nf6 { A51 Indian Game: Budapest Defense } 3. e3 exd4 4. exd4 Bb4+ 5. Nc3 O-O 6. Bd3 Re8+ 7. Ne2 c6 8. O-O d5 9. c5 Ne4 10. Qc2 Bf5 11. a3 Bxc3 12. Nxc3 Bg6 13. Bf4 Nd7 14. Rae1 Nxc3 15. bxc3 Qf6 16. Bd6 b6 17. h3 bxc5 18. dxc5 Ne5 19. Bxg6 hxg6 20. f4 Nc4 21. Rxe8+ Rxe8 22. Rb1 Nxa3 23. Qxg6 Qxg6 { White forfeits on time } 0-1

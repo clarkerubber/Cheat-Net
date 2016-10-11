@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Ft9pytWN"]
+[Date "2016.10.07"]
+[White "ggeftNakamura"]
+[Black "Strategymaster"]
+[Result "1-0"]
+[WhiteElo "2394"]
+[BlackElo "2315"]
+[PlyCount "39"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A00"]
+[Opening "Grob Opening"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. g4 { A00 Grob Opening } d6 2. g5 e5 3. d4 Nc6 4. d5 Nce7 5. Nc3 h6 6. gxh6 Nxh6 7. Nf3 g6 8. Qd3 Bg7 9. e4 Bd7 10. h3 Neg8 11. Bg5 f6 12. Bd2 Qe7 13. Rg1 O-O-O 14. Nh4 Qf7 15. Nxg6 Rh7 16. Nb5 a6 17. Nxc7 Kxc7 18. Ba5+ b6 19. Qxa6 bxa5 20. Qa7+ { Black resigns } 1-0

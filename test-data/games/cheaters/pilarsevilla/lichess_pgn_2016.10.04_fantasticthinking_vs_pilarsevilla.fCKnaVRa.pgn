@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/fCKnaVRa"]
+[Date "2016.10.04"]
+[White "fantasticthinking"]
+[Black "pilarsevilla"]
+[Result "0-1"]
+[WhiteElo "2064"]
+[BlackElo "2239"]
+[PlyCount "57"]
+[Variant "Standard"]
+[TimeControl "900+0"]
+[ECO "C56"]
+[Opening "Italian Game: Scotch Gambit, Anderssen Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d4 exd4 5. O-O Nxe4 6. Re1 d5 7. Bxd5 Qxd5 8. Nc3 { C56 Italian Game: Scotch Gambit, Anderssen Attack } Qa5 9. Nxe4 Be6 10. Bg5 h6 11. Bd2 Qd5 12. c3 d3 13. c4 Qxc4 14. b3 Qd5 15. Nc3 Qd7 16. a3 Be7 17. b4 a6 18. b5 axb5 19. Nxb5 O-O 20. Bf4 Rfc8 21. Re3 Bf5 22. Qe1 Bc5 23. Ne5 d2 24. Qe2 Nxe5 25. Rxe5 Re8 26. Qxd2 Rxe5 27. Qxd7 Bxd7 28. Nxc7 Re4 29. Nxa8 { White resigns } 0-1

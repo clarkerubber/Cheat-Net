@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/CeYLDit8"]
+[Date "2016.10.05"]
+[White "bageladi"]
+[Black "pilarsevilla"]
+[Result "0-1"]
+[WhiteElo "1840"]
+[BlackElo "2267"]
+[PlyCount "50"]
+[Variant "Standard"]
+[TimeControl "600+3"]
+[ECO "A45"]
+[Opening "Indian Game"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 { A45 Indian Game } 2. b3 c5 3. dxc5 e6 4. Bb2 Bxc5 5. e3 O-O 6. Qf3 Nc6 7. Bd3 e5 8. Qg3 d5 9. Ne2 e4 10. Bb5 Nh5 11. Nd2 Nxg3 12. hxg3 Nb4 13. O-O-O Nxa2+ 14. Kb1 Qa5 15. Ba4 b5 16. Kxa2 bxa4 17. Ra1 axb3+ 18. Kb1 Qxd2 19. cxb3 Qd3+ 20. Ka2 Qxe2 21. f3 Qa6+ 22. Kb1 Qd3+ 23. Ka2 Rb8 24. fxe4 Qxb3+ 25. Kb1 Qxb2# { White is checkmated } 0-1

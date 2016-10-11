@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/bHdlj4P3"]
+[Date "2016.08.15"]
+[White "Sparklehorse"]
+[Black "scotchnchess"]
+[Result "1-0"]
+[WhiteElo "2445"]
+[BlackElo "2028"]
+[PlyCount "83"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[ECO "C78"]
+[Opening "Ruy Lopez: Morphy Defense #2"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O b5 6. Bb3 d6 { C78 Ruy Lopez: Morphy Defense #2 } 7. c3 Be7 8. h3 O-O 9. d4 h6 10. Re1 exd4 11. cxd4 Nh7 12. a3 Re8 13. Bd5 Bb7 14. Nc3 Rb8 15. Qb3 Rf8 16. Qc2 Na5 17. Bxb7 Nxb7 18. Bf4 Ng5 19. Nd2 Re8 20. Rad1 Qc8 21. Bxg5 Bxg5 22. Nf3 Bf4 23. Nd5 Bg5 24. Qxc7 Qxc7 25. Nxc7 Rec8 26. Nxa6 Ra8 27. Nb4 Be7 28. Rc1 Na5 29. Nd5 Bf8 30. Rc3 Rc4 31. Rec1 Rb8 32. Ne3 Rxc3 33. Rxc3 Re8 34. Nd2 f6 35. Rc7 Kh7 36. Kf1 Rb8 37. b4 Nb7 38. Ke2 Nd8 39. d5 Kg6 40. Nf5 Nf7 41. Nh4+ Kg5 42. Ndf3+ { Black resigns } 1-0

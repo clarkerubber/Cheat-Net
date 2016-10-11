@@ -1,0 +1,17 @@
+[Event "Eastern Classical Arena"]
+[Site "https://lichess.org/mt4gWuHY"]
+[Date "2016.10.06"]
+[White "Grandmasterreturn"]
+[Black "Mnaaaa"]
+[Result "0-1"]
+[WhiteElo "2374"]
+[BlackElo "2127"]
+[PlyCount "56"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D55"]
+[Opening "Queen's Gambit Declined: Modern Variation, Normal Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 d5 2. Nf3 Nf6 3. c4 e6 4. Nc3 Be7 5. Bg5 O-O 6. e3 { D55 Queen's Gambit Declined: Modern Variation, Normal Line } b6 7. Bxf6 Bxf6 8. cxd5 exd5 9. h3 Be6 10. Bd3 c5 11. O-O Nc6 12. Rc1 c4 13. Bb1 Rb8 14. a4 a6 15. b3 b5 16. bxc4 bxc4 17. Re1 g6 18. Qe2 Bg7 19. Rcd1 Rb3 20. Qd2 Qa5 21. Rc1 Bh6 22. g4 Rfb8 23. Re2 Rxc3 24. Rxc3 Rxb1+ 25. Kg2 Bf8 26. Ng5 Bb4 27. Nxe6 Bxc3 28. Qc2 Rb2 { White resigns } 0-1

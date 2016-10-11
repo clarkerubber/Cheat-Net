@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/v6zoIcnW"]
+[Date "2016.10.07"]
+[White "grefusa"]
+[Black "vlabor64"]
+[Result "1-0"]
+[WhiteElo "2691"]
+[BlackElo "2224"]
+[PlyCount "57"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C45"]
+[Opening "Scotch Game"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. d4 exd4 3. Nf3 Nc6 4. Nxd4 { C45 Scotch Game } Qf6 5. c3 Bc5 6. Be3 Nge7 7. Bc4 O-O 8. O-O Ne5 9. Be2 d5 10. f4 N5c6 11. e5 Qg6 12. f5 Bxf5 13. Nxf5 Bxe3+ 14. Nxe3 Nxe5 15. Na3 c6 16. Qd4 Nd7 17. Rad1 f5 18. c4 f4 19. Rxf4 Rxf4 20. Qxf4 Rf8 21. Qc7 Qe4 22. Nac2 Nf6 23. Bf3 Qe6 24. Qxb7 dxc4 25. Qxa7 Ned5 26. Nxc4 Qf5 27. Nd4 Qf4 28. Ne6 Qxc4 29. Qxg7# { Black is checkmated } 1-0

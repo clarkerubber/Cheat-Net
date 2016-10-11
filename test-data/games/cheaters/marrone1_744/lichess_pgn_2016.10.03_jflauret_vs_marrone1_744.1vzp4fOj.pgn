@@ -1,0 +1,17 @@
+[Event "Hourly SuperBlitz Arena"]
+[Site "https://lichess.org/1vzp4fOj"]
+[Date "2016.10.03"]
+[White "jflauret"]
+[Black "marrone1_744"]
+[Result "0-1"]
+[WhiteElo "1980"]
+[BlackElo "2097"]
+[PlyCount "40"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C44"]
+[Opening "Ponziani Opening"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. c3 { C44 Ponziani Opening } d5 4. exd5 Qxd5 5. Be2 e4 6. c4 Qd8 7. Ng1 Bc5 8. Bf1 Qd4 9. Qe2 Nb4 10. Na3 Nd3+ 11. Kd1 Nxf2+ 12. Kc2 Nxh1 13. Nf3 Qf2 14. Qxe4+ Ne7 15. Nb5 Qxf1 16. Nxc7+ Kf8 17. Nxa8 Bf5 18. Qxf5 Nxf5 19. d4 Qxc4+ 20. Kb1 Qd3# { White is checkmated } 0-1

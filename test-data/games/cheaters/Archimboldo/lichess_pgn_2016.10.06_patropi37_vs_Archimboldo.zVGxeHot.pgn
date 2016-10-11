@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/zVGxeHot"]
+[Date "2016.10.06"]
+[White "patropi37"]
+[Black "Archimboldo"]
+[Result "0-1"]
+[WhiteElo "2045"]
+[BlackElo "2233"]
+[PlyCount "48"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[ECO "B25"]
+[Opening "Sicilian Defense: Closed Variation"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. d3 d6 6. f4 { B25 Sicilian Defense: Closed Variation } e6 7. Nf3 Nge7 8. O-O O-O 9. Be3 Nd4 10. Rb1 b6 11. Ne2 Nxf3+ 12. Bxf3 Bb7 13. Qd2 f5 14. c3 Qd7 15. Rbe1 fxe4 16. dxe4 Rad8 17. Bf2 d5 18. e5 Ba6 19. Rd1 Bxe5 20. Bg4 Bg7 21. Rfe1 Nf5 22. Nc1 d4 23. cxd4 Qd5 24. Nd3 Bb7 { White forfeits on time } 0-1

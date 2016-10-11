@@ -1,0 +1,17 @@
+[Event "Buckle Arena"]
+[Site "https://lichess.org/5Aj11r6Q"]
+[Date "2016.10.05"]
+[White "Son_of_David"]
+[Black "Mnaaaa"]
+[Result "0-1"]
+[WhiteElo "1803"]
+[BlackElo "1876"]
+[PlyCount "50"]
+[Variant "Standard"]
+[TimeControl "60+2"]
+[ECO "E10"]
+[Opening "Indian Game: Anti-Nimzo-Indian"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 { E10 Indian Game: Anti-Nimzo-Indian } d5 4. g3 Bb4+ 5. Nc3 O-O 6. Bg2 dxc4 7. Ne5 Nd5 8. O-O Bxc3 9. bxc3 Nxc3 10. Qc2 Qxd4 11. Bb2 Qxe5 12. Bxc3 Qh5 13. Bf3 Qc5 14. Rab1 Nc6 15. Bxc6 Qxc6 16. Rfc1 f6 17. Bb4 Rd8 18. Qxc4 Rd1+ 19. Rxd1 Qxc4 20. Rd8+ Kf7 21. Rf8+ Kg6 22. a3 Qc2 23. Re1 Qc6 24. Rd8 b6 25. h4 Bb7 { White forfeits on time } 0-1

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/3S5Deibv"]
+[Date "2016.09.13"]
+[White "Paramos"]
+[Black "victorheredia"]
+[Result "1-0"]
+[WhiteElo "2434"]
+[BlackElo "2247"]
+[PlyCount "81"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Sicilian Invitation"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. Nf3 c5 { A04 Zukertort Opening: Sicilian Invitation } 2. b3 Nc6 3. Bb2 d5 4. e3 Nf6 5. Bb5 Bd7 6. O-O g6 7. Bxc6 Bxc6 8. Ne5 Qc7 9. d3 Bg7 10. Nxc6 Qxc6 11. Nd2 O-O 12. a4 Qc7 13. e4 dxe4 14. dxe4 h5 15. f4 Rad8 16. Qe2 Nxe4 17. Bxg7 Rxd2 18. Qxe4 Kxg7 19. f5 Rd4 20. Qf3 f6 21. fxg6 Kxg6 22. Rab1 Rg8 23. Rbe1 h4 24. c3 Rd7 25. Qg4+ Kf7 26. Qh5+ Kf8 27. Rxf6+ exf6 28. Re8+ Kg7 29. Qg4+ Kh6 30. Qxh4+ Kg7 31. Qg4+ Kh6 32. Rxg8 Rd1+ 33. Qxd1 Qf4 34. Qf3 Qc1+ 35. Kf2 Qd2+ 36. Kg3 Qe1+ 37. Kh3 Qe6+ 38. Qg4 Qe3+ 39. g3 Qg5 40. Rxg5 f5 41. Qxf5 { Black forfeits on time } 1-0

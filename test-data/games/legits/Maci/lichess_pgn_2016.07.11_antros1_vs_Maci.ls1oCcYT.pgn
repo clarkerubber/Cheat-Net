@@ -1,0 +1,17 @@
+[Event "Hourly Bullet Arena"]
+[Site "https://lichess.org/ls1oCcYT"]
+[Date "2016.07.11"]
+[White "antros1"]
+[Black "Maci"]
+[Result "0-1"]
+[WhiteElo "1885"]
+[BlackElo "2293"]
+[PlyCount "54"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A00"]
+[Opening "Hungarian Opening: Reversed Modern Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. g3 d5 2. Bg2 c5 { A00 Hungarian Opening: Reversed Modern Defense } 3. h3 Nc6 4. d3 e5 5. Nd2 Be6 6. e4 f5 7. Ne2 Nf6 8. O-O Qd7 9. exf5 Bxf5 10. g4 Be6 11. f4 exf4 12. Nxf4 O-O-O 13. Nf3 Bf7 14. Ng5 Bg8 15. Kh2 h6 16. Nf3 Bd6 17. Kh1 g5 18. Ne2 h5 19. Bxg5 hxg4 20. Bxf6 gxh3 21. Bxh8 hxg2+ 22. Kxg2 Qg4+ 23. Kf2 Rf8 24. Ng1 Bg3+ 25. Ke3 Re8+ 26. Kd2 Qf4+ 27. Kc3 Qb4# { White is checkmated } 0-1

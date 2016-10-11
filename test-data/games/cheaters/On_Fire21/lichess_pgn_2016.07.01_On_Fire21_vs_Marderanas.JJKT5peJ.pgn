@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/JJKT5peJ"]
+[Date "2016.07.01"]
+[White "On_Fire21"]
+[Black "Marderanas"]
+[Result "1-0"]
+[WhiteElo "2225"]
+[BlackElo "2162"]
+[PlyCount "61"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Marshall Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 d5 2. exd5 Nf6 3. d4 Nxd5 { B01 Scandinavian Defense: Marshall Variation } 4. c4 Nb6 5. Nc3 g6 6. Nf3 Bg7 7. Be2 O-O 8. O-O c6 9. Be3 Bg4 10. h3 Bxf3 11. Bxf3 Nxc4 12. Qb3 Nxe3 13. fxe3 Qc7 14. Rac1 Nd7 15. Nd5 Qd6 16. Nc3 Nb6 17. Ne4 Qd8 18. a4 a5 19. Nc5 Rb8 20. Rfd1 Nd5 21. Bxd5 Qxd5 22. Qxd5 cxd5 23. Nd7 e5 24. Nxf8 Rxf8 25. Rc5 exd4 26. exd4 Rd8 27. Rxa5 Bh6 28. Kf2 Re8 29. Rxd5 Be3+ 30. Kf3 Re7 31. Re1 { Black resigns } 1-0

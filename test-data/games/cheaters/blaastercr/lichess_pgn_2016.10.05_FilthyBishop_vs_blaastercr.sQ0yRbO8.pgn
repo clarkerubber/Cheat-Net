@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/sQ0yRbO8"]
+[Date "2016.10.05"]
+[White "FilthyBishop"]
+[Black "blaastercr"]
+[Result "0-1"]
+[WhiteElo "2082"]
+[BlackElo "2229"]
+[PlyCount "72"]
+[Variant "Standard"]
+[TimeControl "1800+10"]
+[ECO "D37"]
+[Opening "Queen's Gambit Declined: Harrwitz Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Be7 5. Bf4 { D37 Queen's Gambit Declined: Harrwitz Attack } O-O 6. e3 Nc6 7. Rc1 Nh5 8. Be5 f6 9. Bg3 a6 10. cxd5 exd5 11. Qb3 Bb4 12. a3 Ba5 13. Bd3 Ne7 14. O-O Kh8 15. Qc2 Bd7 16. Bxh7 Bxc3 17. bxc3 f5 18. Ng5 Nf6 19. Qe2 Qe8 20. Bxf5 Nxf5 21. Bxc7 Bb5 22. Qf3 Qg6 23. Ne6 Bxf1 24. Nxf8 Rxf8 25. Kxf1 Ne4 26. Qh3+ Nh6 27. Bf4 Qb6 28. Bxh6 Rxf2+ 29. Kg1 gxh6 30. Qc8+ Kg7 31. Qd7+ Rf7 32. Qxd5 Nxc3 33. Qe5+ Kh7 34. Qe8 Ne2+ 35. Kh1 Qg6 36. Re1 Rf1+ { White resigns } 0-1

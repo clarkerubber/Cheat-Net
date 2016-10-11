@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/2U496QEd"]
+[Date "2016.10.06"]
+[White "grefusa"]
+[Black "IMGnyce"]
+[Result "1-0"]
+[WhiteElo "2635"]
+[BlackElo "2409"]
+[PlyCount "57"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 { B30 Sicilian Defense: Nyezhmetdinov-Rossolimo Attack } e6 4. O-O Nge7 5. Re1 a6 6. Be2 Ng6 7. c3 Be7 8. d4 cxd4 9. cxd4 d5 10. exd5 exd5 11. Nc3 O-O 12. Bd3 Bf6 13. h3 b5 14. Be3 Be6 15. a4 b4 16. Ne2 Qb6 17. Ng3 Na5 18. Nh5 Be7 19. Rc1 Rfc8 20. Bxg6 hxg6 21. Nf4 Rxc1 22. Bxc1 Bf6 23. Nxe6 fxe6 24. Qd3 Kf7 25. g4 Nc6 26. Be3 Rh8 27. Kg2 Qc7 28. Qxa6 Na5 29. Bf4 { Black resigns } 1-0

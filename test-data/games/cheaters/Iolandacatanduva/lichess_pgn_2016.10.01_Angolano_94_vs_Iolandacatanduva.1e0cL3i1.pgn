@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/1e0cL3i1"]
+[Date "2016.10.01"]
+[White "Angolano_94"]
+[Black "Iolandacatanduva"]
+[Result "0-1"]
+[WhiteElo "2210"]
+[BlackElo "2305"]
+[PlyCount "44"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Nimzo-Larsen Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. Nf3 Nf6 2. b3 { A04 Zukertort Opening: Nimzo-Larsen Variation } e6 3. Bb2 d5 4. d4 c5 5. Nbd2 cxd4 6. Nxd4 e5 7. N4f3 e4 8. Nd4 e3 9. fxe3 Bc5 10. N2f3 O-O 11. h3 Ne4 12. Qd3 Bb4+ 13. c3 Bd6 14. O-O-O Nf2 15. Qb5 Nxh1 16. Qxd5 Qe7 17. Nb5 Bc5 18. g4 Nf2 19. Re1 Bxe3+ 20. Kb1 Rd8 21. Qe5 Qxe5 22. Nxe5 Bd2 { White resigns } 0-1

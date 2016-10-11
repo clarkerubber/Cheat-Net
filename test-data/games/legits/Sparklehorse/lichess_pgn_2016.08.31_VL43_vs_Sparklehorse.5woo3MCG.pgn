@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/5woo3MCG"]
+[Date "2016.08.31"]
+[White "VL43"]
+[Black "Sparklehorse"]
+[Result "0-1"]
+[WhiteElo "1939"]
+[BlackElo "2442"]
+[PlyCount "66"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[ECO "A02"]
+[Opening "Bird Opening"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. f4 { A02 Bird Opening } g6 2. Nf3 d5 3. e3 Bg7 4. d4 Nh6 5. Bd3 O-O 6. O-O c5 7. c3 Qc7 8. b3 Bf5 9. Bb2 Nd7 10. Nh4 Bxd3 11. Qxd3 e6 12. Nd2 Rfc8 13. Rac1 Qb6 14. c4 cxd4 15. Bxd4 Bxd4 16. exd4 dxc4 17. bxc4 Rd8 18. Rb1 Qc7 19. Qe3 Nf5 20. Nxf5 exf5 21. Qf3 b6 22. Rbc1 Nf6 23. Rfd1 Rac8 24. Nb3 Qd7 25. d5 Ne4 26. Nd4 Nc5 27. Qa3 Re8 28. Nc6 Rxc6 29. dxc6 Qxc6 30. Rd4 Kg7 31. Qxa7 Ra8 32. Rd6 Qe4 33. Qc7 Rxa2 { White forfeits on time } 0-1

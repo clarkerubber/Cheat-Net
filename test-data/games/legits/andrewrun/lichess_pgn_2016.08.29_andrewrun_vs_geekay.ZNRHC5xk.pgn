@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/ZNRHC5xk"]
+[Date "2016.08.29"]
+[White "andrewrun"]
+[Black "geekay"]
+[Result "1-0"]
+[WhiteElo "2200"]
+[BlackElo "2227"]
+[PlyCount "59"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "C03"]
+[Opening "French Defense: Tarrasch Variation, Guimard Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. d4 d5 3. Nd2 Nc6 { C03 French Defense: Tarrasch Variation, Guimard Defense } 4. exd5 exd5 5. Ngf3 Nf6 6. Bb5 Bg4 7. c3 Bd6 8. O-O O-O 9. h3 Bh5 10. Re1 Ne7 11. Nf1 c6 12. Ba4 Ne4 13. Be3 f5 14. Bc2 f4 15. Bd2 Nxd2 16. N1xd2 Nf5 17. Bxf5 Rxf5 18. Nf1 Qf6 19. N1h2 Rf8 20. Qd3 a6 21. Re2 Bg6 22. Qd2 h6 23. Rae1 Bh7 24. Ng4 Qf7 25. Nge5 Bxe5 26. Nxe5 Qc7 27. f3 g5 28. Ng4 Kg7 29. Re7+ R8f7 30. Rxc7 { Black resigns } 1-0

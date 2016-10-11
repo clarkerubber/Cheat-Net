@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/iZJZr5TH"]
+[Date "2014.05.22"]
+[White "DUNI"]
+[Black "andrewrun"]
+[Result "0-1"]
+[WhiteElo "1671"]
+[BlackElo "2096"]
+[PlyCount "92"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A80"]
+[Opening "Dutch Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 f5 { A80 Dutch Defense } 2. f4 Nf6 3. Nf3 g6 4. e3 Bg7 5. Bd3 d6 6. c4 O-O 7. Nc3 Rfe8 8. O-O Nbd7 9. d5 Nc5 10. Ng5 h6 11. b4 Nxd3 12. Ne6 Bxe6 13. dxe6 Nxc1 14. Raxc1 c6 15. Qf3 Qb6 16. a3 Rad8 17. Rfe1 d5 18. c5 Qc7 19. Qg3 Kh7 20. Ne2 Qc8 21. Nd4 Ne4 22. Qh4 Bxd4 23. exd4 Qxe6 24. g4 fxg4 25. Rc2 Qf5 26. Rg2 g5 27. fxg5 Qxg5 28. Qxg4 Qxg4 29. Rxg4 Reg8 30. h3 Rxg4+ 31. hxg4 Rg8 32. Kf1 Rxg4 33. Re3 Rf4+ 34. Ke1 Kg6 35. a4 h5 36. a5 h4 37. Rh3 a6 38. Ke2 Kg5 39. Ke3 Rg4 40. Rh1 Rg3+ 41. Ke2 Kg4 42. Ra1 h3 43. Rh1 Rb3 44. Rg1+ Ng3+ 45. Kf2 Rb2+ 46. Ke3 h2 { White resigns } 0-1

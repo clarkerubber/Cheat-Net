@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/4Cs5HDCY"]
+[Date "2016.10.05"]
+[White "hasan123"]
+[Black "blaastercr"]
+[Result "0-1"]
+[WhiteElo "1907"]
+[BlackElo "2245"]
+[PlyCount "57"]
+[Variant "Standard"]
+[TimeControl "540+0"]
+[ECO "B11"]
+[Opening "Caro-Kann Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c6 2. Nc3 d5 { B11 Caro-Kann Defense } 3. exd5 cxd5 4. d4 Nf6 5. Nf3 Nc6 6. Bg5 a6 7. Be2 e6 8. h3 Bd6 9. O-O h6 10. Bh4 g5 11. Bg3 Bxg3 12. fxg3 Ne4 13. Nxe4 dxe4 14. Ne5 O-O 15. Nxc6 bxc6 16. c3 Rb8 17. Qc2 f5 18. b3 Qd6 19. Rad1 Qxg3 20. c4 a5 21. Rc1 Qe3+ 22. Kh2 Qxd4 23. Rfd1 Qe5+ 24. Kh1 c5 25. Rd2 Bb7 26. Rcd1 e3 27. Rd6 Be4 28. Qc1 Qg3 29. Rg1 { White resigns } 0-1

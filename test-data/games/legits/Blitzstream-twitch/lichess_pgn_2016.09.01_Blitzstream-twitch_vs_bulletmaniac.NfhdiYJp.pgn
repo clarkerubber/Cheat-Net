@@ -1,0 +1,17 @@
+[Event "Daily HyperBullet Arena"]
+[Site "https://lichess.org/NfhdiYJp"]
+[Date "2016.09.01"]
+[White "Blitzstream-twitch"]
+[Black "bulletmaniac"]
+[Result "1-0"]
+[WhiteElo "2523"]
+[BlackElo "2432"]
+[PlyCount "61"]
+[Variant "Standard"]
+[TimeControl "30+0"]
+[ECO "C00"]
+[Opening "Rat Defense: Small Center Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. d4 d6 { C00 Rat Defense: Small Center Defense } 3. Nd2 e5 4. Ngf3 exd4 5. Nxd4 c6 6. N2f3 g6 7. Bd3 Bg7 8. Bg5 Nf6 9. Qd2 O-O 10. O-O-O c5 11. Ne2 c4 12. Bxc4 b5 13. Bb3 Be6 14. Ng3 Bxb3 15. axb3 Nc6 16. e5 Nxe5 17. Nxe5 dxe5 18. Qe2 Qa5 19. Kb1 e4 20. h4 Ne8 21. h5 gxh5 22. Nxh5 h6 23. Nxg7 hxg5 24. Nf5 Nf6 25. Nh6+ Kg7 26. Qe3 Nh7 27. Qxe4 f6 28. Nf5+ Kg6 29. Ne7+ Kf7 30. Rxh7+ Ke8 31. Nf5# { Black is checkmated } 1-0

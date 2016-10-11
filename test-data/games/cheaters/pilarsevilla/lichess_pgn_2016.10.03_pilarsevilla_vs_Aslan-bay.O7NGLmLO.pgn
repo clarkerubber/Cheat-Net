@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/O7NGLmLO"]
+[Date "2016.10.03"]
+[White "pilarsevilla"]
+[Black "Aslan-bay"]
+[Result "1-0"]
+[WhiteElo "2176"]
+[BlackElo "2058"]
+[PlyCount "57"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Mason Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 d5 2. Bf4 { D00 Queen's Pawn Game: Mason Attack } Nf6 3. e3 e6 4. Nf3 Bd6 5. Bd3 Bxf4 6. exf4 O-O 7. O-O g6 8. Nbd2 c5 9. dxc5 Na6 10. Bxa6 bxa6 11. b4 a5 12. b5 Qc7 13. c6 Qxf4 14. Re1 Qa4 15. c4 Qxd1 16. Raxd1 Rb8 17. a4 Ne8 18. Nd4 dxc4 19. Nxc4 Nc7 20. Nb3 e5 21. Rxe5 Be6 22. Nbxa5 Rfd8 23. Nd6 a6 24. Nab7 axb5 25. Nxd8 Rxd8 26. axb5 Ne8 27. b6 Rxd6 28. Rxd6 Nxd6 29. b7 { Black resigns } 1-0

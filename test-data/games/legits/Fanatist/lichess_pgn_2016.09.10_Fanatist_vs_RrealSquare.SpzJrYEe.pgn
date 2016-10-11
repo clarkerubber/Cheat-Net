@@ -1,0 +1,17 @@
+[Event "Hourly SuperBlitz Arena"]
+[Site "https://lichess.org/SpzJrYEe"]
+[Date "2016.09.10"]
+[White "Fanatist"]
+[Black "RrealSquare"]
+[Result "1-0"]
+[WhiteElo "2517"]
+[BlackElo "2138"]
+[PlyCount "45"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 c6 2. e4 d5 3. e5 { B12 Caro-Kann Defense: Advance Variation } g6 4. Nc3 Bg7 5. h4 f6 6. Nf3 c5 7. dxc5 fxe5 8. Qxd5 Qxd5 9. Nxd5 Kd8 10. Be3 Nf6 11. O-O-O Nxd5 12. Rxd5+ Ke8 13. Bb5+ Nc6 14. h5 Be6 15. Rd2 Kf7 16. Ng5+ Kf6 17. h6 Bf8 18. Nxe6 Kxe6 19. Rh3 Nb4 20. Bc4+ Kf5 21. Rf3+ Kg4 22. Be6+ Kh5 23. Rh3# { Black is checkmated } 1-0

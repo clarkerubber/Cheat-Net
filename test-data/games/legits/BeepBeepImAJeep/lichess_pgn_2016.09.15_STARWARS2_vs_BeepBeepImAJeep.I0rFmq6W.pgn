@@ -1,0 +1,17 @@
+[Event "Hourly Bullet Arena"]
+[Site "https://lichess.org/I0rFmq6W"]
+[Date "2016.09.15"]
+[White "STARWARS2"]
+[Black "BeepBeepImAJeep"]
+[Result "0-1"]
+[WhiteElo "2106"]
+[BlackElo "2625"]
+[PlyCount "38"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "C38"]
+[Opening "King's Gambit Accepted, Hanstein Gambit"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. f4 exf4 3. Nf3 g5 4. Bc4 Bg7 5. O-O { C38 King's Gambit Accepted, Hanstein Gambit } h6 6. d4 d6 7. c3 Nc6 8. g4 Bxg4 9. Qb3 Qd7 10. Qxb7 Rb8 11. Qa6 Nge7 12. e5 Bxf3 13. Rxf3 dxe5 14. Nd2 exd4 15. Ne4 O-O 16. Nc5 Qd6 17. cxd4 Qxd4+ 18. Kg2 Qxc5 19. b3 Bxa1 { White resigns } 0-1

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/FuaQxUV4"]
+[Date "2016.08.31"]
+[White "juanvm"]
+[Black "juanarmando"]
+[Result "0-1"]
+[WhiteElo "1992"]
+[BlackElo "2319"]
+[PlyCount "48"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A07"]
+[Opening "King's Indian Attack"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. Nf3 d5 2. g3 { A07 King's Indian Attack } c6 3. d3 Nf6 4. Nbd2 Bf5 5. Bg2 h6 6. O-O e6 7. Re1 Be7 8. Nh4 Bh7 9. h3 O-O 10. c4 Nbd7 11. a3 a5 12. Qb3 Qb6 13. cxd5 cxd5 14. Nhf3 a4 15. Qxb6 Nxb6 16. Nd4 Rfc8 17. N2f3 Nfd7 18. Nb5 Nc5 19. Be3 Nbd7 20. Rac1 Nb3 21. Rxc8+ Rxc8 22. Nfd4 Ndc5 23. Rd1 Bf6 24. Nxb3 Nxb3 { White forfeits on time } 0-1

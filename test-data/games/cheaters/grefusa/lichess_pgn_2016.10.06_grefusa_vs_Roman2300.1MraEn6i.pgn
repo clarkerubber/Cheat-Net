@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/1MraEn6i"]
+[Date "2016.10.06"]
+[White "grefusa"]
+[Black "Roman2300"]
+[Result "1-0"]
+[WhiteElo "2612"]
+[BlackElo "2211"]
+[PlyCount "53"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C10"]
+[Opening "French Defense: Rubinstein Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. Nc3 d5 3. d4 dxe4 { C10 French Defense: Rubinstein Variation } 4. Nxe4 Be7 5. Nf3 Nf6 6. Nxf6+ Bxf6 7. c3 O-O 8. Bd3 c5 9. dxc5 Nc6 10. O-O Qe7 11. Be3 Rd8 12. Qc2 h6 13. Rad1 Bd7 14. b4 Ne5 15. Nxe5 Bxe5 16. b5 a6 17. a4 axb5 18. axb5 Ra5 19. c6 bxc6 20. Bb6 Ra3 21. Bh7+ Kh8 22. Qe4 Bb8 23. bxc6 f5 24. Bxd8 fxe4 25. Bxe7 Bxc6 26. Bg6 Bc7 27. Bxa3 { Black resigns } 1-0

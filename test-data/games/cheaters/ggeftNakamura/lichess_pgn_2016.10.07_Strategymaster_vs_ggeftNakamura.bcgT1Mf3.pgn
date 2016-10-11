@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/bcgT1Mf3"]
+[Date "2016.10.07"]
+[White "Strategymaster"]
+[Black "ggeftNakamura"]
+[Result "0-1"]
+[WhiteElo "2307"]
+[BlackElo "2403"]
+[PlyCount "40"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A10"]
+[Opening "English Opening: Jaenisch Gambit"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. c4 b5 { A10 English Opening: Jaenisch Gambit } 2. g3 bxc4 3. Bg2 d5 4. Na3 c6 5. b3 cxb3 6. axb3 Nd7 7. Nf3 Ngf6 8. Bb2 e6 9. O-O Rb8 10. d3 Be7 11. Nc2 Rxb3 12. Bd4 a6 13. Ne5 Nxe5 14. Bxe5 O-O 15. Nd4 Rb6 16. Qc2 Ng4 17. f4 c5 18. Nf3 Ne3 19. Qc3 Nxf1 20. Rxf1 f6 { White resigns } 0-1

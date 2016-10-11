@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/1RCAoGRJ"]
+[Date "2016.09.22"]
+[White "IamyourFather"]
+[Black "Basstard"]
+[Result "1-0"]
+[WhiteElo "2296"]
+[BlackElo "2362"]
+[PlyCount "67"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B00"]
+[Opening "Owen Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 b6 { B00 Owen Defense } 2. d4 e6 3. Bd3 Bb7 4. c3 d5 5. e5 c5 6. f4 Nc6 7. Nf3 a6 8. Be3 Be7 9. Qe2 h5 10. Nbd2 Nh6 11. h3 Qc7 12. O-O g6 13. Ng5 Bxg5 14. fxg5 Nf5 15. Bxf5 gxf5 16. a3 Ne7 17. b4 h4 18. dxc5 bxc5 19. Bxc5 Rg8 20. Nf3 Rc8 21. Rac1 Ng6 22. Bd6 Qc6 23. Nd4 Qd7 24. c4 dxc4 25. Rxc4 f4 26. Rfc1 Rxc4 27. Rxc4 Bd5 28. Rc7 Qd8 29. Qxa6 f3 30. Rc8 Kd7 31. Rxd8+ Rxd8 32. Qa7+ Ke8 33. Nxf3 Nf4 34. Qe7# { Black is checkmated } 1-0

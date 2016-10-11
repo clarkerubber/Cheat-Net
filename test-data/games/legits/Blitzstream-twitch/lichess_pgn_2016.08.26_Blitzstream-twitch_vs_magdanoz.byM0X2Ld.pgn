@@ -1,0 +1,17 @@
+[Event "Daily Bullet Arena"]
+[Site "https://lichess.org/byM0X2Ld"]
+[Date "2016.08.26"]
+[White "Blitzstream-twitch"]
+[Black "magdanoz"]
+[Result "1-0"]
+[WhiteElo "2330"]
+[BlackElo "2359"]
+[PlyCount "39"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "C44"]
+[Opening "Scotch Game"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 { C44 Scotch Game } Nf6 4. dxe5 Nxe4 5. Bc4 Bc5 6. O-O d6 7. Qd5 O-O 8. Qxe4 dxe5 9. Nc3 Qe7 10. Bg5 Qd6 11. Rad1 Qg6 12. Qh4 h6 13. Bd3 Bf5 14. Bxf5 Qxf5 15. Be3 Bxe3 16. fxe3 Qg6 17. e4 Rad8 18. Qg3 Rxd1 19. Rxd1 f6 20. Qxg6 { Black resigns } 1-0

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/gxqZwYe7"]
+[Date "2016.03.27"]
+[White "deepbobby"]
+[Black "mangulica"]
+[Result "0-1"]
+[WhiteElo "1939"]
+[BlackElo "2112"]
+[PlyCount "50"]
+[Variant "Standard"]
+[TimeControl "1020+15"]
+[ECO "C70"]
+[Opening "Ruy Lopez: Morphy Defense, Caro Variation"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 b5 { C70 Ruy Lopez: Morphy Defense, Caro Variation } 5. Bb3 d6 6. a4 Be6 7. c3 Bxb3 8. Qxb3 Na5 9. Qc2 c5 10. d4 exd4 11. axb5 axb5 12. O-O Nf6 13. cxd4 Nc6 14. Rxa8 Qxa8 15. Nc3 b4 16. e5 bxc3 17. exf6 gxf6 18. bxc3 Be7 19. Bh6 Qc8 20. Bg7 Rg8 21. Qxh7 Kd7 22. dxc5 dxc5 23. Bh6 Qe8 24. Qf5+ Kc7 25. Bf4+ Ne5 { White leaves the game } 0-1

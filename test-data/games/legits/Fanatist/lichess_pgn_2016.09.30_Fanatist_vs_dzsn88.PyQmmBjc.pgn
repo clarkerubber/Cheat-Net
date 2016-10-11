@@ -1,0 +1,17 @@
+[Event "Daily Bullet Arena"]
+[Site "https://lichess.org/PyQmmBjc"]
+[Date "2016.09.30"]
+[White "Fanatist"]
+[Black "dzsn88"]
+[Result "1-0"]
+[WhiteElo "2422"]
+[BlackElo "2250"]
+[PlyCount "83"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "E69"]
+[Opening "King's Indian Defense: Fianchetto Variation, Classical Main Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 c6 2. c4 d6 3. Nf3 Nd7 4. Nc3 g6 5. g3 Bg7 6. Bg2 Ngf6 7. O-O O-O 8. e4 e5 9. h3 { E69 King's Indian Defense: Fianchetto Variation, Classical Main Line } Re8 10. Re1 h6 11. Be3 Kh7 12. b4 a6 13. Rb1 Nf8 14. Qb3 Qe7 15. a4 Bf5 16. exf5 gxf5 17. dxe5 dxe5 18. b5 e4 19. Nh4 Qe6 20. c5 axb5 21. Qxe6 Nxe6 22. axb5 cxb5 23. Nxf5 b4 24. Rxb4 Ra3 25. Nxg7 Kxg7 26. Nxe4 Nd5 27. Rxb7 Ra2 28. Nd6 Rf8 29. Bxd5 Nd8 30. Bxa2 Nxb7 31. Nxb7 Rb8 32. c6 Rc8 33. Rc1 Kf6 34. c7 Ke7 35. Bxh6 Kd7 36. Bf4 Rxc7 37. Rxc7+ Ke8 38. h4 Kf8 39. h5 Kg7 40. h6+ Kh7 41. Bb1+ Kh8 42. Rc8# { Black is checkmated } 1-0

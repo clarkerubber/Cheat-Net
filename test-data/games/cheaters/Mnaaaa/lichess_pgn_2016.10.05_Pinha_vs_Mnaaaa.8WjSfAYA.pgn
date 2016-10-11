@@ -1,0 +1,17 @@
+[Event "Lengyel Arena"]
+[Site "https://lichess.org/8WjSfAYA"]
+[Date "2016.10.05"]
+[White "Pinha"]
+[Black "Mnaaaa"]
+[Result "0-1"]
+[WhiteElo "1744"]
+[BlackElo "1657"]
+[PlyCount "62"]
+[Variant "Standard"]
+[TimeControl "420+0"]
+[ECO "C42"]
+[Opening "Russian Game: Nimzowitsch Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. Nc3 { C42 Russian Game: Nimzowitsch Attack } Nxc3 6. dxc3 Be7 7. Be3 O-O 8. Qd2 Be6 9. h4 Nc6 10. h5 Ne5 11. O-O-O h6 12. Kb1 Ng4 13. Nd4 Bd7 14. Bf4 Bg5 15. g3 Bxf4 16. gxf4 Nf6 17. f3 c5 18. Nb5 d5 19. Na3 Qc7 20. Rg1 Kh8 21. Bd3 c4 22. Be2 Rfe8 23. Rh1 Qc5 24. Rdg1 a5 25. Qd4 Qxd4 26. cxd4 Rxe2 27. c3 Rae8 28. Nc2 Bf5 29. Rc1 R8e3 30. Ka1 Bxc2 31. Rcg1 Nxh5 { White resigns } 0-1

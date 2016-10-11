@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/tW2M9XhX"]
+[Date "2016.09.25"]
+[White "Annibale93"]
+[Black "twitchtvMimii"]
+[Result "0-1"]
+[WhiteElo "2152"]
+[BlackElo "2453"]
+[PlyCount "45"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A35"]
+[Opening "English Opening: Symmetrical Variation, Four Knights Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. c4 c5 2. Nc3 Nc6 3. Nf3 Nf6 { A35 English Opening: Symmetrical Variation, Four Knights Variation } 4. g3 d5 5. cxd5 Nxd5 6. Bg2 Nxc3 7. bxc3 e6 8. O-O Bd6 9. d4 O-O 10. Rb1 Qa5 11. Qc2 f6 12. e4 cxd4 13. cxd4 Nb4 14. Qb3 Qxa2 15. Ba3 Qxb3 16. Rxb3 a5 17. e5 Be7 18. Nd2 Rd8 19. exf6 gxf6 20. d5 exd5 21. Re1 Bd6 22. Nf3 Nc2 23. Rd1 { White resigns } 0-1

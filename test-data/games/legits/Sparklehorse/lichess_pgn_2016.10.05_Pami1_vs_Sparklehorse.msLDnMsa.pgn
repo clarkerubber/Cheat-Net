@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/msLDnMsa"]
+[Date "2016.10.05"]
+[White "Pami1"]
+[Black "Sparklehorse"]
+[Result "0-1"]
+[WhiteElo "1712"]
+[BlackElo "2513"]
+[PlyCount "88"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[ECO "E61"]
+[Opening "King's Indian Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 { E61 King's Indian Defense } 4. Nf3 O-O 5. Bf4 d6 6. e3 c5 7. Be2 Nc6 8. O-O Bf5 9. dxc5 dxc5 10. Nd5 Nxd5 11. cxd5 Nb4 12. Qb3 Bc2 13. Qc4 Qxd5 14. Qxd5 Nxd5 15. Rac1 Nxf4 16. exf4 Be4 17. Rxc5 Bxb2 18. Rc7 Ba3 19. Bc4 Bd6 20. Rd7 Bc6 21. Rxd6 exd6 22. Ng5 h6 23. Nf3 Bxf3 24. gxf3 Kg7 25. Re1 Rae8 26. Rb1 b6 27. Bd5 Re7 28. Rc1 Rfe8 29. Rc6 Rd8 30. a4 Re1+ 31. Kg2 Rd1 32. Be4 d5 33. Bxg6 fxg6 34. Rc7+ Kf6 35. Rxa7 d4 36. Ra6 Rb1 37. Ra7 d3 38. Rc7 Rd6 39. f5 d2 40. fxg6 d1=Q 41. g7 Qh1+ 42. Kg3 Rg1+ 43. Kf4 Qxh2+ 44. Ke3 Re1# { White is checkmated } 0-1

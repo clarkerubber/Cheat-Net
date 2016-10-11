@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/OWkqOfZJ"]
+[Date "2016.06.15"]
+[White "omurtag13"]
+[Black "Paramos"]
+[Result "0-1"]
+[WhiteElo "2382"]
+[BlackElo "2543"]
+[PlyCount "56"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B53"]
+[Opening "Sicilian Defense: Chekhover Variation"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Qxd4 { B53 Sicilian Defense: Chekhover Variation } Nf6 5. Bg5 Bd7 6. Nc3 Nc6 7. Qd2 e6 8. O-O-O a6 9. Bc4 Rc8 10. Rhe1 Be7 11. Bb3 Qc7 12. Bxf6 gxf6 13. Qh6 Ne5 14. Qg7 Rf8 15. Qxh7 b5 16. Nd4 b4 17. Nd5 exd5 18. exd5 a5 19. f4 a4 20. fxe5 fxe5 21. Nc6 axb3 22. axb3 Bxc6 23. dxc6 Qxc6 24. h4 Bxh4 25. Rxd6 Bg5+ 26. Kb1 Qxd6 27. Qf5 Qd8 28. Rxe5+ Be7 { White forfeits on time } 0-1

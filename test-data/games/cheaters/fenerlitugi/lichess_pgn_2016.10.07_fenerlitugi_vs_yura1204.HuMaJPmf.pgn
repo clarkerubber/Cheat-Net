@@ -1,0 +1,17 @@
+[Event "Hourly Classical Arena"]
+[Site "https://lichess.org/HuMaJPmf"]
+[Date "2016.10.07"]
+[White "fenerlitugi"]
+[Black "yura1204"]
+[Result "1-0"]
+[WhiteElo "2107"]
+[BlackElo "1924"]
+[PlyCount "65"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Vitolins Variation"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Bd2 c5 { E11 Bogo-Indian Defense: Vitolins Variation } 5. Bxb4 cxb4 6. e3 O-O 7. Bd3 d5 8. Nbd2 dxc4 9. Nxc4 b5 10. Nce5 a6 11. O-O Bb7 12. Qc2 Nbd7 13. Nxd7 Qxd7 14. Ne5 Qd5 15. f3 Rac8 16. Qd2 Nd7 17. Be4 Qd6 18. Bxb7 Nxe5 19. Qf2 Nd3 20. Qe2 Rc7 21. Be4 Nf4 22. exf4 f5 23. Bc2 Qxd4+ 24. Kh1 Qxf4 25. Qxe6+ Kh8 26. Bd3 Rcf7 27. Rac1 Rf6 28. Rc8 Qd4 29. Bxf5 g6 30. Qe7 Rxc8 31. Bxc8 Rf4 32. Bf5 Rxf5 33. Rc1 { Black forfeits on time } 1-0

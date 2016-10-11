@@ -1,0 +1,17 @@
+[Event "Hourly Classical Arena"]
+[Site "https://lichess.org/mLPek7tm"]
+[Date "2016.10.06"]
+[White "fenerlitugi"]
+[Black "JRCLARO"]
+[Result "1-0"]
+[WhiteElo "2050"]
+[BlackElo "2060"]
+[PlyCount "43"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "B89"]
+[Opening "Sicilian Defense: Sozin Attack, Main Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 Nc6 3. Nc3 d6 4. d4 cxd4 5. Nxd4 Nf6 6. Bc4 e6 7. Be3 { B89 Sicilian Defense: Sozin Attack, Main Line } Be7 8. Bb3 O-O 9. O-O a6 10. f4 Nxd4 11. Bxd4 b5 12. e5 dxe5 13. fxe5 Nd7 14. Ne4 Qc7 15. Qh5 Bb7 16. Nf6+ Bxf6 17. exf6 Qc6 18. Qg5 g6 19. Rf2 Qe4 20. Qh6 Nxf6 21. Bxf6 Qe1+ 22. Rxe1 { Black resigns } 1-0

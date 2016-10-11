@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/PKNJujoG"]
+[Date "2016.10.06"]
+[White "eragon47"]
+[Black "niking"]
+[Result "0-1"]
+[WhiteElo "2142"]
+[BlackElo "2033"]
+[PlyCount "78"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B32"]
+[Opening "Sicilian Defense: Open #2"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 { B32 Sicilian Defense: Open #2 } 4. c3 Nf6 5. e5 Nd5 6. Bc4 e6 7. cxd4 d6 8. O-O Be7 9. exd6 Qxd6 10. Nc3 Nxc3 11. bxc3 b6 12. d5 exd5 13. Re1 O-O 14. Qxd5 Bb7 15. Bg5 Qxd5 16. Bxd5 Bc5 17. Nd4 Rac8 18. a3 h6 19. Nxc6 Bxc6 20. Bxc6 Rxc6 21. Bf4 Rfc8 22. Red1 a5 23. Rd7 g5 24. Be5 f6 25. Bg3 Bf8 26. Rb7 Rxc3 27. f3 Rc1+ 28. Rxc1 Rxc1+ 29. Kf2 Bc5+ 30. Ke2 Ra1 31. Rb8+ Kg7 32. Bc7 Rxa3 33. Bxb6 Rb3 34. Bc7 Rxb8 35. Bxb8 Kf7 36. Kd3 Ke6 37. Kc4 Bb4 38. Bc7 h5 39. Kb5 Kd5 { White forfeits on time } 0-1

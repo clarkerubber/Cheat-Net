@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/cpf3GNBY"]
+[Date "2016.09.27"]
+[White "BeepBeepImAJeep"]
+[Black "Elda64"]
+[Result "1-0"]
+[WhiteElo "2642"]
+[BlackElo "2518"]
+[PlyCount "59"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A00"]
+[Opening "Polish Opening: Outflank Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. b4 c6 { A00 Polish Opening: Outflank Variation } 2. Bb2 d6 3. c4 Nd7 4. a4 Ngf6 5. e3 e5 6. b5 Be7 7. Nf3 O-O 8. Be2 e4 9. Nd4 Nc5 10. O-O Re8 11. Nc3 Bf8 12. bxc6 bxc6 13. a5 Qc7 14. Ba3 Nd3 15. Nxe4 Nxe4 16. Bxd3 c5 17. Nb5 Qd8 18. Qc2 Bb7 19. Bb2 a6 20. Nc3 Nxc3 21. Bxh7+ Kh8 22. Bxc3 Qg5 23. f3 d5 24. cxd5 Bd6 25. Be4 Qh6 26. f4 Rxe4 27. Qxe4 Rd8 28. Rab1 Ba8 29. Rb6 c4 30. Be5 { Black resigns } 1-0

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/ASrUa9eo"]
+[Date "2016.06.30"]
+[White "twitchtvMimii"]
+[Black "gabi09"]
+[Result "1-0"]
+[WhiteElo "1786"]
+[BlackElo "1803"]
+[PlyCount "45"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C25"]
+[Opening "Vienna Game: Vienna Gambit, Steinitz Gambit, Knight Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 Nc6 2. Nc3 e5 3. f4 exf4 4. Nf3 { C25 Vienna Game: Vienna Gambit, Steinitz Gambit, Knight Variation } Bb4 5. a3 Bxc3 6. dxc3 Qe7 7. Bxf4 Qxe4+ 8. Qe2 Qxe2+ 9. Bxe2 d6 10. Nd4 Nce7 11. O-O Nf6 12. Bg5 Bd7 13. Bxf6 gxf6 14. Rxf6 O-O-O 15. Rxf7 Nc6 16. Nxc6 Bxc6 17. Bd3 Rhg8 18. g4 Rxg4+ 19. Kf1 Kb8 20. Re1 Bg2+ 21. Ke2 Re8+ 22. Kd2 Rxe1 23. Rf8+ { Black resigns } 1-0

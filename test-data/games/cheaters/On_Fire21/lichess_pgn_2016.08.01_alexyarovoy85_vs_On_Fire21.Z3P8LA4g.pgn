@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Z3P8LA4g"]
+[Date "2016.08.01"]
+[White "alexyarovoy85"]
+[Black "On_Fire21"]
+[Result "0-1"]
+[WhiteElo "2137"]
+[BlackElo "2227"]
+[PlyCount "84"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[ECO "C45"]
+[Opening "Scotch Game: Classical Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Bc5 { C45 Scotch Game: Classical Variation } 5. Be3 Qf6 6. c3 Nge7 7. Bc4 Ne5 8. Be2 Qg6 9. O-O d6 10. Kh1 O-O 11. f3 d5 12. f4 Ng4 13. Bg1 Bxd4 14. f5 Qg5 15. cxd4 Nf6 16. e5 Ne4 17. f6 Nf5 18. Rf3 gxf6 19. Nc3 Nh4 20. Qf1 Nxf3 21. Qxf3 Nxc3 22. bxc3 fxe5 23. Be3 e4 24. Qf2 Qg6 25. Rb1 f6 26. Qh4 b6 27. c4 Be6 28. cxd5 Bxd5 29. a3 Rfd8 30. Rf1 Rd6 31. Bh5 Qg7 32. Rf4 Kh8 33. Rg4 Qe7 34. Rf4 Rc6 35. h3 Rg8 36. Kh2 Rc3 37. Qf2 Rxa3 38. Rxf6 Rxe3 39. Rh6 Ra3 40. Bg6 Qd6+ 41. g3 Rxg6 42. Qf8+ Qxf8 { White resigns } 0-1

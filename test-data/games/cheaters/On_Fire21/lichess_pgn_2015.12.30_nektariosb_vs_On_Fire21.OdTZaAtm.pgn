@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/OdTZaAtm"]
+[Date "2015.12.30"]
+[White "nektariosb"]
+[Black "On_Fire21"]
+[Result "0-1"]
+[WhiteElo "2078"]
+[BlackElo "2183"]
+[PlyCount "104"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C55"]
+[Opening "Italian Game: Scotch Gambit Declined"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 d6 2. Nf3 Nc6 3. d4 e5 4. Bc4 Nf6 { C55 Italian Game: Scotch Gambit Declined } 5. Nc3 exd4 6. Nxd4 Nxd4 7. Qxd4 Be7 8. O-O O-O 9. Bg5 Be6 10. Rad1 h6 11. Bh4 Bxc4 12. Qxc4 Nd7 13. Bg3 Bf6 14. b3 Ne5 15. Bxe5 Bxe5 16. Nd5 Rc8 17. a4 c6 18. Ne3 Qf6 19. Ng4 Qe7 20. Nxe5 dxe5 21. Rd3 Rfd8 22. Rfd1 Kf8 23. f3 Rxd3 24. Qxd3 Ke8 25. Kf2 Rd8 26. Qxd8+ Qxd8 27. Rxd8+ Kxd8 28. Ke3 Kc7 29. g3 Kd6 30. b4 c5 31. c3 b6 32. Kd3 cxb4 33. cxb4 a5 34. Kc4 Kc6 35. bxa5 bxa5 36. f4 exf4 37. gxf4 g6 38. h4 f6 39. e5 fxe5 40. fxe5 g5 41. hxg5 hxg5 42. e6 Kd6 43. Kb5 g4 44. Kxa5 g3 45. e7 Kxe7 46. Kb6 g2 47. a5 g1=Q+ 48. Kb7 Qb1+ 49. Ka7 Qb5 50. a6 Kd7 51. Ka8 Kc7 52. Ka7 Qb8# { White is checkmated } 0-1

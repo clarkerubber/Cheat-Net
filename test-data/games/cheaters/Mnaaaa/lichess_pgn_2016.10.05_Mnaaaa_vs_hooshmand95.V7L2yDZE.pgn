@@ -1,0 +1,17 @@
+[Event "Hourly Classical Arena"]
+[Site "https://lichess.org/V7L2yDZE"]
+[Date "2016.10.05"]
+[White "Mnaaaa"]
+[Black "hooshmand95"]
+[Result "1-0"]
+[WhiteElo "2117"]
+[BlackElo "1516"]
+[PlyCount "41"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Mason Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 d5 2. Bf4 { D00 Queen's Pawn Game: Mason Attack } e6 3. e3 f5 4. Nf3 g6 5. c4 Bg7 6. Qa4+ c6 7. Qa3 Bf8 8. Qb3 Na6 9. cxd5 exd5 10. Bxa6 bxa6 11. Ne5 Be6 12. Nd2 Rb8 13. Nf7 Bxf7 14. Bxb8 a5 15. Qb7 Bb4 16. Bc7 Qf6 17. Qc8+ Ke7 18. Bd8+ Kd6 19. Qc7+ Ke6 20. Qxc6+ Bd6 21. Qc8# { Black is checkmated } 1-0

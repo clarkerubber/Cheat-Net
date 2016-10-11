@@ -1,0 +1,17 @@
+[Event "Eastern SuperBlitz Arena"]
+[Site "https://lichess.org/uF7wk3WY"]
+[Date "2016.08.20"]
+[White "self_service"]
+[Black "Sparklehorse"]
+[Result "1/2-1/2"]
+[WhiteElo "2295"]
+[BlackElo "2480"]
+[PlyCount "85"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A01"]
+[Opening "Nimzo-Larsen Attack: Classical Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. b3 d5 { A01 Nimzo-Larsen Attack: Classical Variation } 2. Bb2 Bg4 3. Nf3 Bxf3 4. exf3 Nd7 5. g3 Ngf6 6. Bg2 g6 7. O-O Bg7 8. f4 e6 9. Re1 O-O 10. d3 Ne8 11. Bxg7 Nxg7 12. Nd2 c6 13. Nf3 a5 14. a4 b5 15. Ne5 Nxe5 16. fxe5 Qb6 17. h4 h5 18. g4 Qd4 19. Bf3 hxg4 20. Bxg4 Kh7 21. Kg2 Rh8 22. Qf3 Kg8 23. Kg3 Nh5+ 24. Bxh5 Rxh5 25. Qg4 Qc3 26. Rac1 b4 27. Re2 c5 28. Rf1 Kg7 29. f4 Qd4 30. Qf3 Rah8 31. Rh1 g5 32. fxg5 Rxh4 33. Qf6+ Kg8 34. Qd8+ Kg7 35. Qf6+ Kg8 36. Qd8+ Kg7 37. Qf6+ Kg8 38. Qd8+ Kg7 39. Qf6+ Kg8 40. Qd8+ Kg7 41. Qf6+ Kg8 42. Qd8+ Kg7 43. Qf6+ { Draw } 1/2-1/2

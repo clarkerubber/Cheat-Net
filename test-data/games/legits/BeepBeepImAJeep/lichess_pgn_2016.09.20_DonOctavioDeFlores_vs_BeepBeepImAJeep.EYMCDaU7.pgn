@@ -1,0 +1,17 @@
+[Event "Hourly Bullet Arena"]
+[Site "https://lichess.org/EYMCDaU7"]
+[Date "2016.09.20"]
+[White "DonOctavioDeFlores"]
+[Black "BeepBeepImAJeep"]
+[Result "0-1"]
+[WhiteElo "1914"]
+[BlackElo "2596"]
+[PlyCount "40"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "E21"]
+[Opening "Nimzo-Indian Defense: Three Knights Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 { E21 Nimzo-Indian Defense: Three Knights Variation } Ne4 5. Qc2 f5 6. Bg5 Nxg5 7. h4 Ne4 8. O-O-O Bxc3 9. bxc3 Nxf2 10. g4 Nxh1 11. Bh3 Nf2 12. gxf5 Nxd1 13. fxe6 dxe6 14. Qxd1 Qf6 15. Qd3 Nc6 16. Ne5 Nxe5 17. dxe5 Qxe5 18. Bg2 Bd7 19. Be4 O-O-O 20. Kb2 Bc6 { White resigns } 0-1

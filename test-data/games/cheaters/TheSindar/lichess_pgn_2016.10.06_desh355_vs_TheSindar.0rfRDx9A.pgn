@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/0rfRDx9A"]
+[Date "2016.10.06"]
+[White "desh355"]
+[Black "TheSindar"]
+[Result "0-1"]
+[WhiteElo "1952"]
+[BlackElo "2039"]
+[PlyCount "48"]
+[Variant "Standard"]
+[TimeControl "1200+3"]
+[ECO "C24"]
+[Opening "Bishop's Opening: Berlin Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Bc4 Nf6 { C24 Bishop's Opening: Berlin Defense } 3. d3 Nc6 4. Bg5 h6 5. Bh4 Na5 6. Bb3 Nxb3 7. axb3 d5 8. Bxf6 Qxf6 9. exd5 Qg5 10. Qf3 Qc1+ 11. Qd1 Bb4+ 12. c3 Qxb2 13. Ra4 Bg4 14. Nf3 Bxf3 15. gxf3 Bxc3+ 16. Nxc3 Qxc3+ 17. Kf1 O-O 18. Rc4 Qa5 19. Rg1 Rfd8 20. Qc1 Qxd5 21. Qxh6 Qxd3+ 22. Kg2 gxh6 23. Rg4+ Kh7 24. Kh1 Qxf3+ { White resigns } 0-1

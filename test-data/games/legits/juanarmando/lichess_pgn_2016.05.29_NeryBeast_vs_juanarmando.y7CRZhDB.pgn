@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/y7CRZhDB"]
+[Date "2016.05.29"]
+[White "NeryBeast"]
+[Black "juanarmando"]
+[Result "0-1"]
+[WhiteElo "2056"]
+[BlackElo "2499"]
+[PlyCount "38"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "E20"]
+[Opening "Nimzo-Indian Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 { E20 Nimzo-Indian Defense } 4. Bf4 c5 5. Nf3 Qa5 6. Nd2 Bxc3 7. bxc3 Qxc3 8. dxc5 O-O 9. e3 Ne4 10. Rc1 Qa5 11. Bd3 Nxd2 12. Qxd2 Qxc5 13. O-O f5 14. Be2 Nc6 15. Bd6 Qa5 16. Bxf8 Qxd2 17. Rfd1 Qxe2 18. Bd6 b6 19. c5 bxc5 { White resigns } 0-1

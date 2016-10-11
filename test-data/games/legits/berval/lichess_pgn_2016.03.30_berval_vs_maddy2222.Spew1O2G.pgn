@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Spew1O2G"]
+[Date "2016.03.30"]
+[White "berval"]
+[Black "maddy2222"]
+[Result "1/2-1/2"]
+[WhiteElo "2531"]
+[BlackElo "2499"]
+[PlyCount "61"]
+[Variant "Standard"]
+[TimeControl "240+0"]
+[ECO "B76"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 Nc6 8. Qd2 O-O 9. O-O-O { B76 Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line } d5 10. exd5 Nxd5 11. Nxc6 bxc6 12. Bd4 Nxc3 13. Qxc3 Bh6+ 14. Be3 Bxe3+ 15. Qxe3 Qb6 16. Qxe7 Be6 17. Qf6 Rad8 18. Bd3 Bxa2 19. h4 Qe3+ 20. Rd2 Rd5 21. h5 Rxh5 22. Rxh5 Qe1+ 23. Rd1 Qe3+ 24. Rd2 Qe1+ 25. Rd1 Qe3+ 26. Rd2 Qe1+ 27. Rd1 Qe3+ 28. Rd2 Qe1+ 29. Rd1 Qe3+ 30. Rd2 Qe1+ 31. Rd1 { Draw } 1/2-1/2

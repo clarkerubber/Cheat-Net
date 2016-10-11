@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/K5UjErYv"]
+[Date "2015.12.22"]
+[White "MIGUELCAD"]
+[Black "AKramins"]
+[Result "0-1"]
+[WhiteElo "1339"]
+[BlackElo "1500"]
+[PlyCount "39"]
+[Variant "Standard"]
+[TimeControl "1020+12"]
+[ECO "B20"]
+[Opening "Sicilian Defense: Bowdler Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Bc4 { B20 Sicilian Defense: Bowdler Attack } Nc6 3. Qf3 Nf6 4. Ne2 Ne5 5. Qe3 Nxc4 6. Qc3 Nb6 7. Qxc5 Nxe4 8. Qe3 Nf6 9. d4 d6 10. c3 h5 11. f4 Bf5 12. Nd2 h4 13. Nf3 Nbd5 14. Qf2 Ng4 15. Qf1 Nge3 16. Bxe3 Nxe3 17. Qf2 Nc2+ 18. Kf1 Nxa1 19. Nxh4 Be4 20. g3 { White resigns } 0-1

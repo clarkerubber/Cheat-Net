@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/ETAfNgKH"]
+[Date "2016.10.05"]
+[White "IManiceguy"]
+[Black "deepbobby"]
+[Result "0-1"]
+[WhiteElo "2057"]
+[BlackElo "2013"]
+[PlyCount "52"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "B53"]
+[Opening "Sicilian Defense: Chekhover Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Qxd4 { B53 Sicilian Defense: Chekhover Variation } Nc6 5. Bb5 Bd7 6. Bxc6 Bxc6 7. Nc3 Nf6 8. Bg5 e6 9. O-O-O Be7 10. Rhe1 h6 11. Bxf6 Bxf6 12. Qxd6 Qxd6 13. Rxd6 O-O 14. Nd4 Be7 15. Rxc6 bxc6 16. Nxc6 Bc5 17. f4 Rfc8 18. Ne5 Bd4 19. Nb5 Bxe5 20. fxe5 Rc5 21. a4 Rxe5 22. Nc7 Rd8 23. Nb5 a6 24. Na7 Rc5 25. Rd1 Rxd1+ 26. Kxd1 Rc7 { White resigns } 0-1

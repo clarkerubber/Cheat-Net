@@ -1,0 +1,17 @@
+[Event "Hourly Bullet Arena"]
+[Site "https://lichess.org/gMFwxJWK"]
+[Date "2016.10.02"]
+[White "fenerlitugi"]
+[Black "elpiratongo"]
+[Result "1-0"]
+[WhiteElo "1141"]
+[BlackElo "1789"]
+[PlyCount "69"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "D02"]
+[Opening "Queen's Gambit Refused: Baltic Defense"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. d4 d5 2. c4 Bf5 { D02 Queen's Gambit Refused: Baltic Defense } 3. Nc3 e6 4. Bf4 Nf6 5. Nf3 c6 6. e3 Bd6 7. Bxd6 Qxd6 8. Qb3 Qe7 9. cxd5 exd5 10. Ne5 O-O 11. Be2 Ne4 12. Nxe4 Bxe4 13. Bf3 Bxf3 14. Nxf3 b6 15. O-O Nd7 16. Rfe1 Nf6 17. Qc2 Ne4 18. Qxc6 Rfd8 19. Qc2 Rac8 20. Qd3 f5 21. Rac1 h6 22. Rxc8 Rxc8 23. Ne5 Qc7 24. Qb3 Qd6 25. Rf1 Kh7 26. h3 Nd2 27. Qd3 Nxf1 28. Qxf5+ g6 29. Qf7+ Kh8 30. Nxg6+ Qxg6 31. Qxg6 Nd2 32. Qxh6+ Kg8 33. Qg5+ Kf8 34. Qf5+ Kg7 35. Qxc8 { Black forfeits on time } 1-0

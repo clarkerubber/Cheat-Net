@@ -1,0 +1,17 @@
+[Event "Hourly Bullet Arena"]
+[Site "https://lichess.org/npj9RQQw"]
+[Date "2016.09.25"]
+[White "BeepBeepImAJeep"]
+[Black "Arteandaluz_Nakamura"]
+[Result "1-0"]
+[WhiteElo "2614"]
+[BlackElo "1905"]
+[PlyCount "65"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A00"]
+[Opening "Polish Opening"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. b4 { A00 Polish Opening } d5 2. Bb2 c6 3. e3 Nf6 4. c4 Nbd7 5. a4 g6 6. b5 Bg7 7. Nf3 e6 8. Be2 O-O 9. O-O Re8 10. d4 e5 11. dxe5 Ng4 12. cxd5 Ngxe5 13. Nxe5 Nxe5 14. dxc6 Nf3+ 15. Bxf3 Qxd1 16. Rxd1 Bf5 17. Bxg7 Kxg7 18. cxb7 Rab8 19. Nc3 Re7 20. a5 h5 21. a6 Kh6 22. Nd5 Re6 23. b6 axb6 24. Nc7 Rf6 25. a7 Rxb7 26. Bxb7 Bg4 27. f3 Be6 28. a8=Q Bc4 29. Bd5 Be2 30. Qh8+ Kg5 31. h4+ Kf5 32. e4+ Ke5 33. Ne8 { Black resigns } 1-0

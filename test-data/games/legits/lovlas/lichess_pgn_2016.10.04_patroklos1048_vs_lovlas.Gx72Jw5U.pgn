@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Gx72Jw5U"]
+[Date "2016.10.04"]
+[White "patroklos1048"]
+[Black "lovlas"]
+[Result "0-1"]
+[WhiteElo "2036"]
+[BlackElo "2527"]
+[PlyCount "40"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "D94"]
+[Opening "Gruenfeld Defense: Three Knights Variation, Paris Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. c4 g6 3. Nf3 Bg7 4. Nc3 d5 5. e3 O-O 6. Bd3 { D94 Gruenfeld Defense: Three Knights Variation, Paris Variation } c5 7. O-O Nc6 8. cxd5 Nxd5 9. Nxd5 Qxd5 10. e4 Qd6 11. d5 Nd4 12. Nxd4 Bxd4 13. Qc2 e6 14. dxe6 Bxe6 15. Bd2 Rac8 16. Bc3 Rfe8 17. Rac1 a6 18. a4 Red8 19. Rfd1 Qf4 20. Qe2 Bg4 { White resigns } 0-1

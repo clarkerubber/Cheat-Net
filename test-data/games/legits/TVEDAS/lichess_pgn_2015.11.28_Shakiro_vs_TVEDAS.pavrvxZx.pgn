@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/pavrvxZx"]
+[Date "2015.11.28"]
+[White "Shakiro"]
+[Black "TVEDAS"]
+[Result "0-1"]
+[WhiteElo "2377"]
+[BlackElo "2327"]
+[PlyCount "74"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. d4 cxd4 3. Nf3 d6 4. Nxd4 Nf6 5. Nc3 a6 { B90 Sicilian Defense: Najdorf Variation } 6. f3 e5 7. Nb3 Be6 8. Bd3 Nbd7 9. Qe2 b5 10. Be3 Nb6 11. a3 Nfd7 12. O-O Be7 13. Rfd1 O-O 14. h3 Rc8 15. Na5 Qc7 16. Rac1 Nc4 17. Nb3 Nxb2 18. Nd5 Bxd5 19. exd5 Nxd3 20. cxd3 Qb7 21. Na5 Qxd5 22. Bd2 Bh4 23. Bb4 Rxc1 24. Rxc1 Qd4+ 25. Kh1 Nf6 26. Nc6 Qf4 27. Rd1 Nh5 28. Qe4 Ng3+ 29. Kg1 Nxe4 30. dxe4 Qe3+ 31. Kh1 Bg5 32. Bxd6 Qe2 33. Rg1 Bf4 34. Be7 Qf2 35. Bb4 Qg3 36. Ne7+ Kh8 37. Nf5 Qh2# { White is checkmated } 0-1

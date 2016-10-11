@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Flwslej7"]
+[Date "2016.10.07"]
+[White "vishal09"]
+[Black "grefusa"]
+[Result "0-1"]
+[WhiteElo "1993"]
+[BlackElo "2693"]
+[PlyCount "22"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C59"]
+[Opening "Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 bxc6 8. Be2 h6 { C59 Italian Game: Two Knights Defense, Polerio Defense, Suhle Defense } 9. Nf3 e4 10. Ng1 Bc5 11. f3 Qd4 { White resigns } 0-1

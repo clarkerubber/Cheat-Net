@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/mubZ4iVp"]
+[Date "2016.09.13"]
+[White "andrewrun"]
+[Black "ImTheKingOfTheHill"]
+[Result "1-0"]
+[WhiteElo "2263"]
+[BlackElo "2208"]
+[PlyCount "41"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Marshall Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 d5 2. exd5 Nf6 3. d4 Nxd5 { B01 Scandinavian Defense: Marshall Variation } 4. c4 Nb6 5. Nc3 g6 6. Be3 Bg7 7. Nf3 Nc6 8. d5 Ne5 9. Nxe5 Bxe5 10. Be2 Bf5 11. O-O O-O 12. Rc1 e6 13. dxe6 Bxe6 14. b3 Qxd1 15. Rfxd1 Rad8 16. Bf3 c6 17. Ne4 Rxd1+ 18. Rxd1 f5 19. Nc5 Bc8 20. a4 Rd8 21. Rxd8+ { Black resigns } 1-0

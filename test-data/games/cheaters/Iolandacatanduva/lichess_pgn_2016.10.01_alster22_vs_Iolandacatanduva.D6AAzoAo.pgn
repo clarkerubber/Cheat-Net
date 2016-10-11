@@ -1,0 +1,17 @@
+[Event "Hourly SuperBlitz Arena"]
+[Site "https://lichess.org/D6AAzoAo"]
+[Date "2016.10.01"]
+[White "alster22"]
+[Black "Iolandacatanduva"]
+[Result "0-1"]
+[WhiteElo "2117"]
+[BlackElo "2279"]
+[PlyCount "54"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A46"]
+[Opening "Torre Attack"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. Nf3 e6 3. Bg5 { A46 Torre Attack } Be7 4. Nbd2 d5 5. e3 O-O 6. Bd3 h6 7. Bh4 Nbd7 8. c3 b6 9. O-O c5 10. Ne5 Nxe5 11. dxe5 Nd7 12. Bxe7 Qxe7 13. f4 Bb7 14. Qg4 Bc6 15. Rad1 f5 16. exf6 Nxf6 17. Qg3 Ne4 18. Nxe4 dxe4 19. Bc2 b5 20. Qg6 Rf5 21. a4 bxa4 22. Ra1 Rb8 23. Bxa4 Rf6 24. Qg4 Bxa4 25. Rxa4 Rxb2 26. Rfa1 Qf7 27. h3 Rg6 { White forfeits on time } 0-1

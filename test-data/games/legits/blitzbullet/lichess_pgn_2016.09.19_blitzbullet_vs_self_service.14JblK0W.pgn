@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/14JblK0W"]
+[Date "2016.09.19"]
+[White "blitzbullet"]
+[Black "self_service"]
+[Result "1-0"]
+[WhiteElo "2585"]
+[BlackElo "2434"]
+[PlyCount "57"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "B80"]
+[Opening "Sicilian Defense: Scheveningen Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 d6 { B80 Sicilian Defense: Scheveningen Variation } 6. Be3 a6 7. f4 b5 8. Bd3 Bb7 9. Qf3 Nbd7 10. a3 Rc8 11. O-O Rxc3 12. bxc3 Nc5 13. Qe2 Nfxe4 14. c4 Nxd3 15. cxd3 Nc5 16. cxb5 axb5 17. Nxb5 Be7 18. f5 e5 19. d4 Nd7 20. dxe5 Nxe5 21. f6 Bxf6 22. Rad1 O-O 23. Nxd6 Qa8 24. Nxb7 Qxb7 25. Bd4 Re8 26. Rf5 Qd7 27. Bxe5 Qxf5 28. Bxf6 Qc5+ 29. Bd4 { Black resigns } 1-0

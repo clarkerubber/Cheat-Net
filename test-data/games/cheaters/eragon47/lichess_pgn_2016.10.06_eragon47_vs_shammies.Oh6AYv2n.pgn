@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Oh6AYv2n"]
+[Date "2016.10.06"]
+[White "eragon47"]
+[Black "shammies"]
+[Result "1-0"]
+[WhiteElo "2056"]
+[BlackElo "2079"]
+[PlyCount "69"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A13"]
+[Opening "English Opening: Agincourt Defense #3"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. Nf3 e6 2. c4 { A13 English Opening: Agincourt Defense #3 } f5 3. g3 Nf6 4. Bg2 Be7 5. O-O O-O 6. Nc3 d6 7. d3 Bd7 8. Qb3 Bc6 9. Bg5 Kh8 10. Nd4 Bxg2 11. Kxg2 Qc8 12. Qa4 e5 13. Bxf6 Bxf6 14. Nc2 Nc6 15. Nb4 Nd4 16. e3 Ne6 17. f4 g5 18. fxe5 dxe5 19. Nbd5 f4 20. Ne4 Bd8 21. b4 c6 22. Nd6 Qd7 23. c5 b5 24. Qb3 cxd5 25. exf4 gxf4 26. Qxd5 Bf6 27. c6 Qg7 28. Qxe6 Qg6 29. c7 Qxd3 30. c8=Q Raxc8 31. Nxc8 Qc2+ 32. Kh1 Qxc8 33. Qxc8 Rxc8 34. a4 e4 35. Rae1 { Black forfeits on time } 1-0

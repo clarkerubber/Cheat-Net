@@ -1,0 +1,17 @@
+[Event "Buckle Arena"]
+[Site "https://lichess.org/v2QHeALL"]
+[Date "2016.10.05"]
+[White "imorg1"]
+[Black "Mnaaaa"]
+[Result "0-1"]
+[WhiteElo "1709"]
+[BlackElo "1500"]
+[PlyCount "42"]
+[Variant "Standard"]
+[TimeControl "60+2"]
+[ECO "C42"]
+[Opening "Russian Game: Nimzowitsch Attack"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. Nc3 { C42 Russian Game: Nimzowitsch Attack } Nxc3 6. dxc3 Be7 7. Bf4 O-O 8. Qd2 Nd7 9. O-O-O Nc5 10. Kb1 Re8 11. h4 Ne4 12. Qd4 Bf6 13. Qe3 Nxc3+ 14. Qxc3 Bxc3 15. bxc3 Be6 16. Nd4 c6 17. Bd3 Qb6+ 18. Kc1 Bxa2 19. Kd2 c5 20. Nf5 c4 21. Nxd6 Qxf2+ { White leaves the game } 0-1

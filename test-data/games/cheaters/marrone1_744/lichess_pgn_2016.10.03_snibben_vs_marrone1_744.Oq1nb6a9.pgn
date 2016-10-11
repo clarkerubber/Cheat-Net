@@ -1,0 +1,17 @@
+[Event "Hourly SuperBlitz Arena"]
+[Site "https://lichess.org/Oq1nb6a9"]
+[Date "2016.10.03"]
+[White "snibben"]
+[Black "marrone1_744"]
+[Result "0-1"]
+[WhiteElo "1988"]
+[BlackElo "2024"]
+[PlyCount "66"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C09"]
+[Opening "French Defense: Tarrasch Variation, Open System, Main Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. d4 d5 3. Nd2 c5 4. exd5 exd5 5. Ngf3 Nc6 { C09 French Defense: Tarrasch Variation, Open System, Main Line } 6. Bb5 Qe7+ 7. Qe2 Qxe2+ 8. Bxe2 Bf5 9. c3 cxd4 10. Nxd4 Nxd4 11. cxd4 Nf6 12. O-O Bd6 13. Bb5+ Kf8 14. h3 a6 15. Ba4 g6 16. a3 Kg7 17. Nf3 Rhc8 18. Be3 Bc2 19. Bxc2 Rxc2 20. b4 Ne4 21. Rfc1 Rxc1+ 22. Rxc1 a5 23. Rb1 axb4 24. axb4 Ra3 25. Nd2 Rxe3 26. fxe3 Nxd2 27. Ra1 Bxb4 28. Ra7 Nc4 29. Rxb7 Bd2 30. Kf2 Bxe3+ 31. Kf3 Bxd4 32. Rd7 Ne5+ 33. Ke2 Nxd7 { White resigns } 0-1

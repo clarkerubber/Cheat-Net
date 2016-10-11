@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/o1XRJxS1"]
+[Date "2015.12.29"]
+[White "nuam"]
+[Black "On_Fire21"]
+[Result "0-1"]
+[WhiteElo "2053"]
+[BlackElo "2135"]
+[PlyCount "44"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A30"]
+[Opening "English Opening: Symmetrical Variation"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. c4 c5 { A30 English Opening: Symmetrical Variation } 2. g3 Nc6 3. Bg2 e6 4. Nf3 Nf6 5. O-O d5 6. cxd5 exd5 7. d4 cxd4 8. Nxd4 Bc5 9. Nb3 Be7 10. Nc3 Be6 11. Bg5 O-O 12. Nd4 h6 13. Nxe6 fxe6 14. Bf4 e5 15. Bc1 d4 16. Qb3+ Kh8 17. Ne4 Qc7 18. Bd2 Rab8 19. Rac1 Qd7 20. Nc5 Bxc5 21. Rxc5 Qd6 22. Rfc1 e4 { White forfeits on time } 0-1

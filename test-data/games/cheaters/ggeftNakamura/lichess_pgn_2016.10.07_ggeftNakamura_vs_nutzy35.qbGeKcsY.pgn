@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/qbGeKcsY"]
+[Date "2016.10.07"]
+[White "ggeftNakamura"]
+[Black "nutzy35"]
+[Result "1-0"]
+[WhiteElo "2374"]
+[BlackElo "2212"]
+[PlyCount "49"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A00"]
+[Opening "Grob Opening"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. g4 { A00 Grob Opening } c6 2. Nf3 d5 3. h3 h5 4. g5 g6 5. d4 Bg7 6. Nc3 Nd7 7. Bf4 Qb6 8. b3 Qb4 9. Qd2 e5 10. dxe5 Ne7 11. e4 dxe4 12. a3 Qb6 13. Nxe4 O-O 14. Bc4 Nd5 15. Nf6+ N7xf6 16. gxf6 Bh8 17. O-O-O Be6 18. Ng5 Nxf4 19. Qxf4 Bxc4 20. bxc4 Qc5 21. Rd3 Rad8 22. Ne6 fxe6 23. Qh6 Rxd3 24. Qxg6+ Bg7 25. Qxg7# { Black is checkmated } 1-0

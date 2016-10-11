@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/O4FtehBS"]
+[Date "2016.10.05"]
+[White "MF_marrone"]
+[Black "purzelbaumer"]
+[Result "1-0"]
+[WhiteElo "2360"]
+[BlackElo "2471"]
+[PlyCount "65"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nc3 { B23 Sicilian Defense: Closed Variation } g6 3. Nf3 Bg7 4. Bc4 d6 5. Ng5 Nh6 6. d3 Nc6 7. O-O O-O 8. h3 a6 9. Bf4 b5 10. Bd5 Bd7 11. a3 e6 12. Bxc6 Bxc6 13. Qc1 b4 14. axb4 cxb4 15. Na2 a5 16. Nf3 f5 17. Bxh6 fxe4 18. Bxg7 Kxg7 19. Ng5 Qe7 20. Nxe4 d5 21. Qg5 Qxg5 22. Nxg5 Rae8 23. Rfe1 Rf6 24. Nc1 a4 25. Na2 b3 26. cxb3 h6 27. Nf3 axb3 28. Nc1 Bb5 29. Ne5 Rc8 30. Ra7+ Kg8 31. Nxb3 Rc2 32. Ng4 Rf7 33. Nxh6+ { Black resigns } 1-0

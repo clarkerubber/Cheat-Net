@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/8J8YDA7h"]
+[Date "2016.06.30"]
+[White "twitchtvMimii"]
+[Black "cemsarta"]
+[Result "1-0"]
+[WhiteElo "1990"]
+[BlackElo "1814"]
+[PlyCount "15"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A00"]
+[Opening "Polish Opening: Symmetrical Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. b4 b5 { A00 Polish Opening: Symmetrical Variation } 2. Nc3 Nc6 3. e3 a6 4. a4 Bb7 5. axb5 axb5 6. Rxa8 Qxa8 7. Nxb5 Nxb4 8. Nxc7+ { Black resigns } 1-0

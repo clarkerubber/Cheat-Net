@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/g37uABY4"]
+[Date "2016.10.06"]
+[White "mosheianina"]
+[Black "MF_marrone"]
+[Result "0-1"]
+[WhiteElo "2422"]
+[BlackElo "2489"]
+[PlyCount "70"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Grand Prix Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nc3 Nc6 3. f4 { B23 Sicilian Defense: Grand Prix Attack } e6 4. Nf3 d5 5. Bb5 dxe4 6. Bxc6+ bxc6 7. Nxe4 Nf6 8. d3 Nxe4 9. dxe4 Qxd1+ 10. Kxd1 Be7 11. Ne5 f6 12. Nxc6 Bb7 13. Nxe7 Kxe7 14. Re1 Rhd8+ 15. Bd2 Rac8 16. c3 Kf7 17. Kc2 f5 18. exf5 exf5 19. Re5 Be4+ 20. Kc1 Rd3 21. Kc2 Rcd8 22. Be1 c4 23. Rxe4 fxe4 24. b3 Re3 25. bxc4 Re2+ 26. Kb3 Rb8+ 27. Ka3 Rxg2 28. Bg3 Rc2 29. f5 Rxc3+ 30. Ka4 Rxc4+ 31. Ka3 Rb7 32. Rd1 Rc6 33. Rd4 Ra6+ 34. Ra4 Rxa4+ 35. Kxa4 e3 { White resigns } 0-1

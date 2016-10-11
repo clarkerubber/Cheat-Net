@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/rTGdEwMm"]
+[Date "2016.10.05"]
+[White "blaastercr"]
+[Black "pepeline84"]
+[Result "1-0"]
+[WhiteElo "1500"]
+[BlackElo "1644"]
+[PlyCount "43"]
+[Variant "Standard"]
+[TimeControl "360+0"]
+[ECO "A21"]
+[Opening "English Opening: King's English Variation, Reversed Sicilian"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. c4 e5 2. Nc3 { A21 English Opening: King's English Variation, Reversed Sicilian } f5 3. e3 Nf6 4. d4 e4 5. Nh3 Be7 6. Be2 O-O 7. O-O b6 8. Bd2 Bb7 9. a3 c5 10. d5 Bd6 11. Qc2 a6 12. f4 exf3 13. Rxf3 Qc7 14. g3 Ng4 15. Rxf5 Nh6 16. Rxf8+ Kxf8 17. Qxh7 Be5 18. Rf1+ Ke7 19. Nf4 Qd6 20. Ne4 Qc7 21. Ng6+ Kd8 22. Rf8# { Black is checkmated } 1-0

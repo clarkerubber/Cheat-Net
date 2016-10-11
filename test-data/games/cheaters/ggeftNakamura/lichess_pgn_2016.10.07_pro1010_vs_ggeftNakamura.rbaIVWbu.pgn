@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/rbaIVWbu"]
+[Date "2016.10.07"]
+[White "pro1010"]
+[Black "ggeftNakamura"]
+[Result "0-1"]
+[WhiteElo "2251"]
+[BlackElo "2439"]
+[PlyCount "42"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Polish Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. Nf3 b5 { A04 Zukertort Opening: Polish Defense } 2. d4 a5 3. e4 Ba6 4. Bd3 e6 5. O-O Nf6 6. e5 Nd5 7. c3 c5 8. Nbd2 cxd4 9. cxd4 h6 10. Ne4 Nc6 11. Bb1 b4 12. Re1 Rc8 13. Bd2 Qb6 14. Be3 Be7 15. Qd2 Bb5 16. a4 Bc4 17. Bc2 b3 18. Bb1 Bb4 19. Nc3 Nce7 20. Qc1 Bxc3 21. bxc3 b2 { White resigns } 0-1

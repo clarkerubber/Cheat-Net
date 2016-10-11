@@ -1,0 +1,17 @@
+[Event "Lengyel Arena"]
+[Site "https://lichess.org/LgitCEsF"]
+[Date "2016.10.05"]
+[White "maloosak"]
+[Black "Mnaaaa"]
+[Result "0-1"]
+[WhiteElo "1905"]
+[BlackElo "1873"]
+[PlyCount "66"]
+[Variant "Standard"]
+[TimeControl "420+0"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Mason Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 d5 2. Bf4 { D00 Queen's Pawn Game: Mason Attack } Bf5 3. e3 e6 4. Bd3 Bxd3 5. cxd3 Nc6 6. h3 Bd6 7. Bxd6 cxd6 8. a3 Rc8 9. Nf3 Qb6 10. Qd2 Na5 11. Qd1 Nb3 12. Nbd2 Nxa1 13. Qxa1 Rc2 14. b4 Qc7 15. O-O Ne7 16. Nb3 Qc3 17. Qxc3 Rxc3 18. Nfd2 Kd7 19. Rb1 Rxd3 20. Kf1 Rc8 21. Ke2 Rdc3 22. b5 Rc2 23. a4 Ra2 24. a5 a6 25. bxa6 bxa6 26. e4 dxe4 27. Ke3 Nd5+ 28. Kxe4 Rc3 29. g4 g5 30. Nc5+ dxc5 31. Rb7+ Kc6 32. Rxf7 Rxd2 33. Rxh7 Re2# { White is checkmated } 0-1

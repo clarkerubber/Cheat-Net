@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/7s2gksdG"]
+[Date "2016.10.06"]
+[White "grefusa"]
+[Black "IMGnyce"]
+[Result "1-0"]
+[WhiteElo "2620"]
+[BlackElo "2419"]
+[PlyCount "43"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B34"]
+[Opening "Sicilian Defense: Accelerated Dragon, Exchange Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. d4 cxd4 3. Nf3 Nc6 4. Nxd4 g6 5. Nxc6 { B34 Sicilian Defense: Accelerated Dragon, Exchange Variation } bxc6 6. Bc4 Bg7 7. Nc3 Nf6 8. e5 Ng8 9. Bf4 Qa5 10. Qf3 Bxe5 11. Bxf7+ Kf8 12. Bxg6 Bxf4 13. Qxf4+ Nf6 14. Qh6+ Kg8 15. Bd3 Qb4 16. O-O Qxb2 17. Rae1 Kf7 18. Rxe7+ Kxe7 19. Qg7+ Ke6 20. Re1+ Kd6 21. Qg3+ Kc5 22. Na4+ { Black resigns } 1-0

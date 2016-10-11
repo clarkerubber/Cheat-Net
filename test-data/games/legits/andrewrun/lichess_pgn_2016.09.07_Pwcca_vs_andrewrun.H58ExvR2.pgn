@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/H58ExvR2"]
+[Date "2016.09.07"]
+[White "Pwcca"]
+[Black "andrewrun"]
+[Result "0-1"]
+[WhiteElo "2059"]
+[BlackElo "2254"]
+[PlyCount "44"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Two Knights Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c6 2. Nf3 d5 3. Nc3 { B10 Caro-Kann Defense: Two Knights Attack } dxe4 4. Nxe4 Nd7 5. Bc4 Ngf6 6. Ng3 e6 7. O-O Nb6 8. Bb3 Bd6 9. d4 a5 10. c4 a4 11. c5 axb3 12. cxd6 bxa2 13. Bf4 O-O 14. Be5 Nbd5 15. Re1 Nd7 16. Nd2 f6 17. Bf4 Nxf4 18. Qg4 Ng6 19. Qxe6+ Kh8 20. Nf5 Nb6 21. d7 Bxd7 22. Qd6 Bxf5 { White resigns } 0-1

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/del8UJFO"]
+[Date "2016.10.05"]
+[White "Gleidson-Literatura"]
+[Black "blaastercr"]
+[Result "0-1"]
+[WhiteElo "2015"]
+[BlackElo "2221"]
+[PlyCount "52"]
+[Variant "Standard"]
+[TimeControl "660+0"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c6 2. d4 d5 3. e5 c5 { B12 Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense } 4. c3 e6 5. Nf3 Nc6 6. Bb5 Bd7 7. O-O Nxe5 8. Bxd7+ Nxd7 9. Bf4 Ngf6 10. h3 Qb6 11. Qc2 Rc8 12. Rd1 cxd4 13. Nxd4 Bc5 14. Nf3 Ne4 15. Rf1 f6 16. Nbd2 Nxf2 17. Kh2 g5 18. Bg3 O-O 19. b4 Bd6 20. Bxd6 Qxd6+ 21. g3 g4 22. Rxf2 gxf3 23. Nxf3 f5 24. Nd4 Nf6 25. Qd2 Ne4 26. Qf4 e5 { White resigns } 0-1

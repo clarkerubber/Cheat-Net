@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/tVxINsZt"]
+[Date "2016.09.21"]
+[White "IamyourFather"]
+[Black "Auroral"]
+[Result "1/2-1/2"]
+[WhiteElo "2566"]
+[BlackElo "2832"]
+[PlyCount "61"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C07"]
+[Opening "French Defense: Tarrasch Variation, Open System, Euwe-Keres Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. d4 d5 3. Nd2 c5 4. Ngf3 { C07 French Defense: Tarrasch Variation, Open System, Euwe-Keres Line } Nf6 5. exd5 exd5 6. Bb5+ Bd7 7. Bxd7+ Nbxd7 8. O-O Be7 9. dxc5 Nxc5 10. Nb3 O-O 11. Nxc5 Bxc5 12. Bg5 Rc8 13. c3 Rc6 14. Qd3 Rb6 15. Bxf6 Qxf6 16. Qxd5 Be7 17. Qd2 Rd8 18. Qc2 Bc5 19. Rfe1 Re6 20. Rxe6 Qxe6 21. Re1 Qxa2 22. Ng5 g6 23. Qc1 Bf8 24. Ne4 Bg7 25. Qg5 Qd5 26. h4 Qxg5 27. hxg5 h6 28. gxh6 Bxh6 29. g4 Bf4 30. Kg2 Kg7 31. Kf3 { Draw } 1/2-1/2

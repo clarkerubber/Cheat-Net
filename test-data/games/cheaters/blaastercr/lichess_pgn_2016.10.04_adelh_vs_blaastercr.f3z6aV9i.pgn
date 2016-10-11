@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/f3z6aV9i"]
+[Date "2016.10.04"]
+[White "adelh"]
+[Black "blaastercr"]
+[Result "0-1"]
+[WhiteElo "2043"]
+[BlackElo "2201"]
+[PlyCount "50"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[ECO "B13"]
+[Opening "Caro-Kann Defense: Panov Attack, Modern Defense, Mieses Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Nf3 Bg4 { B13 Caro-Kann Defense: Panov Attack, Modern Defense, Mieses Line } 7. Be3 e6 8. cxd5 Nxd5 9. Nxd5 Qxd5 10. Be2 Bb4+ 11. Bd2 Bxf3 12. Bxf3 Qxd4 13. Bxc6+ bxc6 14. Bxb4 Qxb4+ 15. Qd2 Qe4+ 16. Kf1 O-O 17. Qc3 Rfd8 18. Kg1 Rd3 19. Qc2 Rad8 20. h3 R8d4 21. Qc5 Qf4 22. g3 Rxg3+ 23. Kf1 Rd2 24. Rh2 Qe4 25. Re1 Qd3+ { White resigns } 0-1

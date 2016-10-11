@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/FfWqGzAK"]
+[Date "2016.06.14"]
+[White "malavan"]
+[Black "On_Fire21"]
+[Result "0-1"]
+[WhiteElo "2438"]
+[BlackElo "2233"]
+[PlyCount "86"]
+[Variant "Standard"]
+[TimeControl "60+5"]
+[ECO "E06"]
+[Opening "Catalan Opening: Closed Variation"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. Nf3 d5 2. d4 Nf6 3. c4 e6 4. g3 Be7 5. Bg2 { E06 Catalan Opening: Closed Variation } O-O 6. O-O dxc4 7. Qc2 Nc6 8. Qxc4 Qd5 9. Qxd5 Nxd5 10. Nc3 Rd8 11. Nxd5 Rxd5 12. Bf4 Nxd4 13. Nxd4 Rxd4 14. Bxc7 Rd2 15. Be5 Rxe2 16. Bc3 Kf8 17. Bf3 Rc2 18. Be4 Rxc3 19. bxc3 f5 20. Bf3 Kf7 21. Rab1 Rb8 22. Rfd1 e5 23. Bd5+ Kf6 24. a4 b6 25. c4 a5 26. Bc6 Be6 27. Bb5 g5 28. Rd2 Bb4 29. Re2 Rd8 30. f3 Rd4 31. Rbe1 Bxe1 32. Rxe1 Bxc4 33. Bc6 g4 34. fxg4 fxg4 35. Rb1 e4 36. Kf2 Ke5 37. Rxb6 Rd2+ 38. Ke1 Rd6 39. Kf2 Rf6+ 40. Ke3 Rf3+ 41. Kd2 e3+ 42. Kc2 e2 43. Rb1 Rf1 { White forfeits on time } 0-1

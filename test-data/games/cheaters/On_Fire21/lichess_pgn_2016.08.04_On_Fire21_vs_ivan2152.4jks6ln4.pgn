@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/4jks6ln4"]
+[Date "2016.08.04"]
+[White "On_Fire21"]
+[Black "ivan2152"]
+[Result "1-0"]
+[WhiteElo "2245"]
+[BlackElo "2147"]
+[PlyCount "49"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C00"]
+[Opening "French Defense: Steinitz Attack"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. e5 { C00 French Defense: Steinitz Attack } d5 3. exd6 cxd6 4. d4 Nc6 5. Nf3 d5 6. Bd3 Nf6 7. O-O Be7 8. c3 b6 9. Nbd2 Bb7 10. Re1 O-O 11. Nf1 a5 12. Ng3 Ba6 13. Bf4 Bxd3 14. Qxd3 Bd6 15. Ne5 Rc8 16. Nxc6 Rxc6 17. Bxd6 Qxd6 18. Re2 Rcc8 19. Rae1 Rb8 20. Qd2 b5 21. f4 b4 22. f5 bxc3 23. bxc3 exf5 24. Nxf5 Qc6 25. Qg5 { Black resigns } 1-0

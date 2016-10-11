@@ -1,0 +1,17 @@
+[Event "Casual game"]
+[Site "https://lichess.org/q8XQGdrt"]
+[Date "2016.02.27"]
+[White "TS69"]
+[Black "Clarkey"]
+[Result "0-1"]
+[WhiteElo "1272"]
+[BlackElo "1660"]
+[PlyCount "70"]
+[Variant "Standard"]
+[TimeControl "300+2"]
+[ECO "B73"]
+[Opening "Sicilian Defense: Dragon Variation, Classical Variation #2"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 g6 6. Be2 Bg7 7. Be3 Nf6 { B73 Sicilian Defense: Dragon Variation, Classical Variation #2 } 8. f3 Bd7 9. Qd2 a6 10. a4 O-O 11. Bh6 Nxd4 12. Bxg7 Nxe2 13. Bxf8 Nxc3 14. bxc3 Qxf8 15. O-O Rc8 16. Rfb1 Bc6 17. Qd4 Qh6 18. e5 dxe5 19. Qxe5 Nd5 20. c4 Nf6 21. Qxe7 Kg7 22. Rd1 Re8 23. Qc5 Re2 24. Rd8 Rxg2+ 25. Kxg2 Bxf3+ 26. Kxf3 Qh3+ 27. Ke2 Qg4+ 28. Kd3 Qe4+ 29. Kc3 Qf3+ 30. Kb4 Ne4 31. Qf8+ Kf6 32. Qh8+ Kf5 33. Qd4 b6 34. Rd5+ Kf4 35. Qf6+ Nxf6 { White forfeits on time } 0-1

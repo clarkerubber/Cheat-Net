@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/rfCcoLAK"]
+[Date "2016.10.05"]
+[White "eragon47"]
+[Black "rubenpinus"]
+[Result "1-0"]
+[WhiteElo "2036"]
+[BlackElo "2155"]
+[PlyCount "83"]
+[Variant "Standard"]
+[TimeControl "240+2"]
+[ECO "E11"]
+[Opening "Bogo-Indian Defense: Exchange Variation"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. d4 Nf6 2. Nf3 e6 3. c4 Bb4+ 4. Bd2 Bxd2+ { E11 Bogo-Indian Defense: Exchange Variation } 5. Qxd2 O-O 6. Nc3 d5 7. e3 Qe7 8. Bd3 dxc4 9. Bxc4 c5 10. O-O Nc6 11. Rac1 Rd8 12. a3 cxd4 13. exd4 Bd7 14. Rfe1 Na5 15. Ba2 Be8 16. d5 Qf8 17. Qg5 Nxd5 18. Bxd5 exd5 19. Nxd5 Nc6 20. Nf6+ Kh8 21. Nxe8 Rxe8 22. Qb5 Re7 23. Rxe7 Qxe7 24. Qf5 Kg8 25. Re1 Qf6 26. Qxf6 gxf6 27. Rd1 Kf8 28. b4 Ke7 29. b5 Ne5 30. Nd4 Rc8 31. f4 Ng4 32. Re1+ Kf8 33. Nf5 Rc5 34. Nd6 f5 35. h3 Nf6 36. Re5 Rxe5 37. fxe5 Nd7 38. Nxb7 Nxe5 39. Nd6 f4 40. Nc8 Nc4 41. Nxa7 Nxa3 42. b6 { Black forfeits on time } 1-0

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Q3rADw84"]
+[Date "2016.09.11"]
+[White "Elda64"]
+[Black "xeroxx"]
+[Result "1-0"]
+[WhiteElo "2687"]
+[BlackElo "2302"]
+[PlyCount "45"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C10"]
+[Opening "French Defense: Rubinstein Variation, Fort Knox Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 e6 2. e4 d5 3. Nc3 dxe4 4. Nxe4 Bd7 5. Nf3 Bc6 { C10 French Defense: Rubinstein Variation, Fort Knox Variation } 6. Bd3 Nd7 7. Qe2 Ngf6 8. Nxf6+ Nxf6 9. O-O Bxf3 10. Qxf3 c6 11. c3 Be7 12. b3 Qd5 13. Qe2 h5 14. Bb2 Qd7 15. c4 Bd6 16. h3 O-O 17. d5 e5 18. dxc6 bxc6 19. Rad1 Qc7 20. c5 Bxc5 21. Bxe5 Qe7 22. Bxf6 Qxf6 23. Qxh5 { Black resigns } 1-0

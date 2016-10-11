@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/qhZh9GwD"]
+[Date "2016.08.27"]
+[White "CrazyGambit"]
+[Black "juanarmando"]
+[Result "0-1"]
+[WhiteElo "1942"]
+[BlackElo "2449"]
+[PlyCount "48"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Sicilian Invitation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. Nf3 c5 { A04 Zukertort Opening: Sicilian Invitation } 2. c4 g6 3. g3 Bg7 4. Bg2 Nf6 5. O-O O-O 6. d4 cxd4 7. Nxd4 Nc6 8. Nc3 d6 9. Nxc6 bxc6 10. Bxc6 Rb8 11. Bg2 Be6 12. b3 d5 13. cxd5 Nxd5 14. Nxd5 Bxa1 15. Ba3 Bxd5 16. Qxd5 Qxd5 17. Bxd5 Bf6 18. e4 Rfd8 19. Rc1 e6 20. Bc4 Rbc8 21. f4 Rd2 22. e5 Bd8 23. Bc5 Rxc5 24. Bxe6 Rxc1# { White is checkmated } 0-1

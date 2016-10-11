@@ -1,0 +1,17 @@
+[Event "Hourly Classical Arena"]
+[Site "https://lichess.org/UHmzAA1J"]
+[Date "2016.10.07"]
+[White "samrat_ashok"]
+[Black "fenerlitugi"]
+[Result "0-1"]
+[WhiteElo "1813"]
+[BlackElo "2079"]
+[PlyCount "44"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "B41"]
+[Opening "Sicilian Defense: Kan Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. Nf3 c5 3. d4 cxd4 4. Nxd4 a6 { B41 Sicilian Defense: Kan Variation } 5. e5 Qa5+ 6. Nc3 Qxe5+ 7. Be3 d5 8. Bd3 Qc7 9. O-O Nd7 10. f4 Ngf6 11. f5 e5 12. Ndb5 axb5 13. Nxb5 Qc6 14. Re1 Bc5 15. Qe2 O-O 16. c4 dxc4 17. Bxc4 Bxe3+ 18. Qxe3 Qxc4 19. Nd6 Qb4 20. Red1 Ng4 21. Qe2 Qc5+ 22. Kf1 Ne3+ { White resigns } 0-1

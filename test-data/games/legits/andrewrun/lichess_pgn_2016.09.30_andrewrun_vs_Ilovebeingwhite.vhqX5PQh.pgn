@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/vhqX5PQh"]
+[Date "2016.09.30"]
+[White "andrewrun"]
+[Black "Ilovebeingwhite"]
+[Result "1-0"]
+[WhiteElo "2269"]
+[BlackElo "2042"]
+[PlyCount "89"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "C66"]
+[Opening "Ruy Lopez: Berlin Defense, Hedgehog Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Be7 4. Bb5 d6 5. d4 Bd7 6. O-O Nf6 { C66 Ruy Lopez: Berlin Defense, Hedgehog Variation } 7. Re1 exd4 8. Nxd4 O-O 9. Bf1 Nxd4 10. Qxd4 c6 11. Be3 Qc7 12. Rad1 Be6 13. f4 Rfd8 14. h3 d5 15. e5 Nd7 16. a3 Bc5 17. Qd2 Bxe3+ 18. Qxe3 Qb6 19. Qxb6 axb6 20. g4 Nc5 21. f5 Bd7 22. Kf2 b5 23. Bg2 Na4 24. Nxa4 Rxa4 25. Re3 Rf4+ 26. Rf3 Rxf3+ 27. Kxf3 Kf8 28. Ke3 Bc8 29. Kd4 Ke7 30. Kc5 Kd7 31. Kb6 Re8 32. Re1 Ke7 33. Kc7 Rd8 34. c3 d4 35. cxd4 Rxd4 36. Kxc8 Rd2 37. Be4 Rxb2 38. Kxb7 c5 39. Kc6 b4 40. Kxc5 bxa3 41. Ra1 a2 42. Bd5 Rb1 43. Rxa2 Rc1+ 44. Kd4 Rc3 45. Kxc3 { Black resigns } 1-0

@@ -1,0 +1,17 @@
+[Event "Hourly Classical Arena"]
+[Site "https://lichess.org/Lac6JTlc"]
+[Date "2016.10.01"]
+[White "Iolandacatanduva"]
+[Black "Mbatha"]
+[Result "1-0"]
+[WhiteElo "1957"]
+[BlackElo "1759"]
+[PlyCount "69"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "C00"]
+[Opening "Rat Defense: Small Center Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. d4 d6 { C00 Rat Defense: Small Center Defense } 3. Nf3 Nd7 4. Bd3 b6 5. c4 Bb7 6. Nc3 Be7 7. Bf4 Ngf6 8. O-O O-O 9. Bc2 a5 10. h3 Rc8 11. Qe2 Re8 12. e5 Nh5 13. Bh2 g6 14. Rad1 Ng7 15. Be4 Ba6 16. Bc6 Rf8 17. d5 Nc5 18. a3 Bb7 19. b4 axb4 20. axb4 Na6 21. Bxb7 Nxb4 22. Bxc8 Qxc8 23. exd6 Bxd6 24. Bxd6 cxd6 25. Qb2 Qxc4 26. Rd4 Nd3 27. Qd2 Qxd4 28. Nxd4 Ne5 29. dxe6 fxe6 30. Nxe6 Nxe6 31. Qxd6 Nf4 32. Qxe5 Nxh3+ 33. gxh3 Rf3 34. Ra1 Rf8 35. Ra7 { Black resigns } 1-0

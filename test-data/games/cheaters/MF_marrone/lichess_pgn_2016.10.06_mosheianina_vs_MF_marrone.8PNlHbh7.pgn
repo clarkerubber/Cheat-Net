@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/8PNlHbh7"]
+[Date "2016.10.06"]
+[White "mosheianina"]
+[Black "MF_marrone"]
+[Result "0-1"]
+[WhiteElo "2428"]
+[BlackElo "2458"]
+[PlyCount "68"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense: Breyer Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c6 2. d3 { B10 Caro-Kann Defense: Breyer Variation } d5 3. Nd2 e5 4. Ngf3 Bd6 5. g3 Nf6 6. Bg2 Be6 7. O-O O-O 8. Re1 Nbd7 9. Ng5 Bg4 10. Bf3 Bxf3 11. Ngxf3 Qb6 12. Qe2 a5 13. Nh4 a4 14. Nf5 Bc7 15. Nf3 dxe4 16. dxe4 Nc5 17. Qc4 Qb5 18. Qxb5 cxb5 19. Ne7+ Kh8 20. Nd5 Ba5 21. Bd2 Bxd2 22. Nxd2 Rad8 23. Nf3 Nfxe4 24. Nc7 b4 25. Nxe5 Rd2 26. f3 Ng5 27. h4 Nh3+ 28. Kh1 Nf2+ 29. Kg1 g5 30. hxg5 Nh3+ 31. Kh1 Nxg5 32. Rac1 Rc8 33. Nb5 Nd7 34. Nxd7 Nxf3 { White resigns } 0-1

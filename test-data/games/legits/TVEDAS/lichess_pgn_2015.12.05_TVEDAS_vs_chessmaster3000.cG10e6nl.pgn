@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/cG10e6nl"]
+[Date "2015.12.05"]
+[White "TVEDAS"]
+[Black "chessmaster3000"]
+[Result "0-1"]
+[WhiteElo "2378"]
+[BlackElo "2220"]
+[PlyCount "88"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A42"]
+[Opening "Modern Defense: Averbakh Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 g6 2. c4 Bg7 3. Nc3 d6 4. e4 { A42 Modern Defense: Averbakh Variation } Nd7 5. f3 a6 6. Bg5 Rb8 7. Rb1 c6 8. Nge2 b5 9. cxb5 axb5 10. b4 Nb6 11. Ng3 h6 12. Be3 Nc4 13. Bxc4 bxc4 14. O-O Ba6 15. a4 Nf6 16. d5 Bb7 17. dxc6 Bxc6 18. b5 Bd7 19. Nce2 O-O 20. Bd4 Rc8 21. Qc2 Be6 22. Qc3 Ne8 23. Bxg7 Nxg7 24. a5 Qc7 25. b6 Qb7 26. Nd4 Bd7 27. Ra1 Ra8 28. Rfb1 Rfb8 29. Qxc4 Ne6 30. Nxe6 Bxe6 31. Qc3 Ra6 32. h4 Rba8 33. h5 g5 34. Nf5 Bxf5 35. exf5 Qd5 36. b7 Rb8 37. Qc8+ Kg7 38. Qxb8 Qd4+ 39. Kf1 Qd3+ 40. Kf2 Qd2+ 41. Kg1 Qd4+ 42. Kf1 Qd3+ 43. Kf2 Qd2+ 44. Kg3 Qf4+ { White resigns } 0-1

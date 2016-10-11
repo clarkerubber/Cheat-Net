@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/FkM9MeEA"]
+[Date "2016.08.15"]
+[White "Sparklehorse"]
+[Black "mna101"]
+[Result "1-0"]
+[WhiteElo "2448"]
+[BlackElo "1903"]
+[PlyCount "59"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[ECO "C60"]
+[Opening "Ruy Lopez: Cozio Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nge7 { C60 Ruy Lopez: Cozio Defense } 4. O-O d6 5. c3 a6 6. Ba4 Bg4 7. d3 b5 8. Bb3 Ng6 9. h3 Be6 10. Bxe6 fxe6 11. Ng5 Qf6 12. Qg4 Nd8 13. f4 h5 14. Qg3 Nf7 15. Nxf7 Qxf7 16. fxe5 Nxe5 17. Rxf7 Nxf7 18. Be3 O-O-O 19. Qg6 Ne5 20. Qxe6+ Kb7 21. a4 b4 22. cxb4 g6 23. b5 a5 24. Nc3 Bg7 25. d4 Rhe8 26. Qd5+ c6 27. bxc6+ Nxc6 28. Qb5+ Kc7 29. Nd5+ Kd7 30. Rc1 { Black resigns } 1-0

@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/KMMcK9lx"]
+[Date "2016.10.05"]
+[White "juanarmando"]
+[Black "ivanhoeg"]
+[Result "1-0"]
+[WhiteElo "2491"]
+[BlackElo "2133"]
+[PlyCount "45"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "B17"]
+[Opening "Caro-Kann Defense: Karpov Variation, Smyslov Variation, Main Line"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c6 2. Nc3 d5 3. d4 dxe4 4. Nxe4 Nd7 5. Ng5 Ngf6 6. Bc4 e6 7. Qe2 Nb6 8. Bb3 { B17 Caro-Kann Defense: Karpov Variation, Smyslov Variation, Main Line } a5 9. a4 h6 10. N5f3 Qc7 11. Ne5 Nbd5 12. Ngf3 b6 13. Bd2 Bd6 14. O-O Ba6 15. Bc4 O-O 16. Bxa6 b5 17. axb5 cxb5 18. Bxb5 Rfb8 19. c4 Nb4 20. Bxb4 Bxb4 21. Nc6 Rb6 22. Nxb4 axb4 23. Rxa8+ { Black resigns } 1-0

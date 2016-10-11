@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/EqltWdxV"]
+[Date "2016.10.05"]
+[White "nayann"]
+[Black "MF_marrone"]
+[Result "0-1"]
+[WhiteElo "2347"]
+[BlackElo "2234"]
+[PlyCount "58"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "C15"]
+[Opening "French Defense: Winawer Variation, Alekhine-Maroczy Gambit"]
+[Termination "Time forfeit"]
+[Annotator "lichess.org"]
+
+1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. Ne2 { C15 French Defense: Winawer Variation, Alekhine-Maroczy Gambit } dxe4 5. a3 Be7 6. Nxe4 Nf6 7. N2g3 Nxe4 8. Nxe4 O-O 9. Bd3 f5 10. Ng3 Qxd4 11. O-O Rd8 12. Qe2 Nc6 13. Rb1 b6 14. b4 Qf6 15. Bb2 Nd4 16. Bxd4 Rxd4 17. Rfe1 g6 18. Bc4 Rd6 19. Rbd1 Bd7 20. Rxd6 Bxd6 21. Bxe6+ Bxe6 22. Qxe6+ Qxe6 23. Rxe6 a5 24. h4 axb4 25. axb4 Ra1+ 26. Kh2 Kf7 27. Re2 Bxb4 28. h5 Kf6 29. hxg6 hxg6 { White leaves the game } 0-1

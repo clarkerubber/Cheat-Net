@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/Is57NI0d"]
+[Date "2016.09.16"]
+[White "Lemon_Squeezy"]
+[Black "Paramos"]
+[Result "0-1"]
+[WhiteElo "2384"]
+[BlackElo "2408"]
+[PlyCount "78"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B42"]
+[Opening "Sicilian Defense: Kan Variation, Modern Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Bd3 { B42 Sicilian Defense: Kan Variation, Modern Variation } Nf6 6. O-O d6 7. Nc3 Be7 8. f4 O-O 9. f5 Nc6 10. Be3 Ne5 11. h3 d5 12. Nf3 Nxd3 13. cxd3 exf5 14. e5 Ne8 15. Qb3 Nc7 16. Bb6 Be6 17. Rac1 Rc8 18. Nd4 Qd7 19. Nce2 Na8 20. Ba5 Rxc1 21. Rxc1 Rc8 22. Bc3 b5 23. a3 Nb6 24. Rf1 Na4 25. Nf4 Bc5 26. Kh2 g6 27. g4 fxg4 28. Ndxe6 fxe6 29. hxg4 Nxc3 30. bxc3 Be3 31. Ng2 Bd2 32. c4 dxc4 33. dxc4 bxc4 34. Qc2 c3 35. Nh4 Qb5 36. Nxg6 Qxf1 37. Ne7+ Kh8 38. Qe4 Bf4+ 39. Qxf4 Qxf4+ { White resigns } 0-1

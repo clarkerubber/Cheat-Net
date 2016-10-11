@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/vLLryoiz"]
+[Date "2016.10.04"]
+[White "pilarsevilla"]
+[Black "komis1987"]
+[Result "1-0"]
+[WhiteElo "2210"]
+[BlackElo "2241"]
+[PlyCount "43"]
+[Variant "Standard"]
+[TimeControl "600+8"]
+[ECO "B40"]
+[Opening "Sicilian Defense: French Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 c5 2. Nf3 e6 { B40 Sicilian Defense: French Variation } 3. Nc3 Nc6 4. Bb5 Nge7 5. d4 cxd4 6. Nxd4 g6 7. Nxc6 Nxc6 8. Bf4 Bg7 9. O-O O-O 10. Qd6 a6 11. Bxc6 dxc6 12. Rfd1 Qa5 13. e5 Re8 14. Ne4 Bf8 15. Nf6+ Kh8 16. Qd3 Re7 17. Qh3 h5 18. Nxh5 gxh5 19. Qxh5+ Kg8 20. Qg5+ Kh8 21. Qf6+ Kg8 22. Rd3 { Black resigns } 1-0

@@ -1,0 +1,17 @@
+[Event "Hourly Bullet Arena"]
+[Site "https://lichess.org/rC26Kuyz"]
+[Date "2016.10.02"]
+[White "erdek"]
+[Black "fenerlitugi"]
+[Result "0-1"]
+[WhiteElo "1335"]
+[BlackElo "1363"]
+[PlyCount "60"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A00"]
+[Opening "Van't Kruijs Opening"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e3 { A00 Van't Kruijs Opening } e5 2. Be2 d5 3. d3 Nf6 4. Nf3 Nc6 5. a3 Bd6 6. Nc3 Bg4 7. Bd2 O-O 8. O-O Qe7 9. e4 d4 10. Nb5 a6 11. Nxd6 cxd6 12. Bb4 Rad8 13. c3 a5 14. Bxd6 Qxd6 15. c4 b6 16. Ng5 Bxe2 17. Qxe2 h6 18. Nf3 Nh5 19. Nh4 Nf4 20. Nf5 Nxe2+ 21. Kh1 Qg6 22. Nd6 Qxd6 23. Rae1 Nf4 24. Re2 Nxe2 25. Re1 Nf4 26. Re2 Nxe2 27. f3 Nf4 28. Kg1 Qg6 29. Kf1 Qxg2+ 30. Ke1 Qe2# { White is checkmated } 0-1

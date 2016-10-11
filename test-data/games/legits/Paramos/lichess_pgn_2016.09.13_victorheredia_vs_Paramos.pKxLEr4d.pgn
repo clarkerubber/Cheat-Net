@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/pKxLEr4d"]
+[Date "2016.09.13"]
+[White "victorheredia"]
+[Black "Paramos"]
+[Result "0-1"]
+[WhiteElo "2253"]
+[BlackElo "2428"]
+[PlyCount "90"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A85"]
+[Opening "Dutch Defense: Queen's Knight Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 f5 2. c4 Nf6 3. Nc3 { A85 Dutch Defense: Queen's Knight Variation } e6 4. g3 Bb4 5. Qb3 a5 6. a3 Bxc3+ 7. Qxc3 Qe7 8. Bg2 O-O 9. Nf3 a4 10. O-O d6 11. Bg5 Nbd7 12. Rad1 h6 13. Bc1 Ne4 14. Qc2 e5 15. dxe5 dxe5 16. Nh4 Ndc5 17. Ng6 Qe8 18. Nxf8 Qxf8 19. f3 Nd6 20. Be3 Nb3 21. c5 Ne8 22. c6 b6 23. Rd8 Qe7 24. Rfd1 Nd4 25. Bxd4 Qxd8 26. Bxe5 Qe7 27. f4 Nf6 28. Bd5+ Nxd5 29. Rxd5 Be6 30. Rd4 Kh7 31. Rxa4 Rxa4 32. Qxa4 Qc5+ 33. Bd4 Qc1+ 34. Kf2 Bd5 35. Bc3 Qh1 36. Qd4 Qxh2+ 37. Ke1 Qxg3+ 38. Kd2 Bxc6 39. Qe5 Be4 40. Qxc7 h5 41. Be5 h4 42. Qxb6 h3 43. Qd8 h2 44. a4 h1=Q 45. Qg5 Qhe1# { White is checkmated } 0-1

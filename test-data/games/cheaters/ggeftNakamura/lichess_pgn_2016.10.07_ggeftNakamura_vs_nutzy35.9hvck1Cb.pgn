@@ -1,0 +1,17 @@
+[Event "Rated game"]
+[Site "https://lichess.org/9hvck1Cb"]
+[Date "2016.10.07"]
+[White "ggeftNakamura"]
+[Black "nutzy35"]
+[Result "1-0"]
+[WhiteElo "2343"]
+[BlackElo "2241"]
+[PlyCount "41"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A00"]
+[Opening "Polish Opening: Birmingham Gambit"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. b4 c5 { A00 Polish Opening: Birmingham Gambit } 2. bxc5 e5 3. Bb2 f6 4. e3 Bxc5 5. d4 Bb4+ 6. c3 Ba5 7. Ba3 Nc6 8. d5 Nce7 9. d6 Nc6 10. Bc4 Nh6 11. Qh5+ Kf8 12. Ne2 Qe8 13. Qh3 a6 14. Bd5 b5 15. Bxc6 dxc6 16. d7+ Kf7 17. Qh5+ Ke6 18. dxe8=Q+ Rxe8 19. Qxe8+ Kf5 20. Ng3+ Kg5 21. Qh5# { Black is checkmated } 1-0
