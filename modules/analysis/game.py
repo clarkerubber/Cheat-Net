@@ -12,9 +12,13 @@ class analysed_game: # subjective to the player being analysed
         self.gameid = gameid
         self.positions = positions  # list(analysed_position)
 
+    def move_numbers(self):
+        return list(range(len(self.positions)))
+
     def graph_all(self):
         self.graph_rank_v_sd()
         self.graph_error_v_sd()
+        self.graph_rank_v_percent()
 
     def graph_rank_v_sd(self):
         x = self.top_five_sds()
@@ -25,7 +29,8 @@ class analysed_game: # subjective to the player being analysed
         ax.scatter(x, y)
         ax.set_xlabel('top 5 std')
         ax.set_ylabel('move rank')
-        plot_url = py.plot_mpl(fig, filename=self.playerid+'\\'+self.gameid+': Rank V SD')
+        fig.show()
+        #plot_url = py.plot_mpl(fig, filename=self.playerid+'\\'+self.gameid+': Rank V SD')
 
     def graph_error_v_sd(self):
         x = self.top_five_sds()
@@ -36,7 +41,19 @@ class analysed_game: # subjective to the player being analysed
         ax.scatter(x, y)
         ax.set_xlabel('top 5 std')
         ax.set_ylabel('move error')
-        plot_url = py.plot_mpl(fig, filename=self.playerid+'\\'+self.gameid+': Error V SD')
+        fig.show()
+        #plot_url = py.plot_mpl(fig, filename=self.playerid+'\\'+self.gameid+': Error V SD')
+
+    def graph_rank_v_percent(self):
+        x = self.percent_errors()
+        y = self.ranks()
+
+        fig, ax = plt.subplots()
+
+        ax.scatter(x, y)
+        ax.set_xlabel('percent error')
+        ax.set_ylabel('move rank')
+        fig.show()
 
     def error_difs(self):
         return list(i.error_dif() for i in self.positions)
@@ -62,6 +79,9 @@ class analysed_game: # subjective to the player being analysed
     def avg_error(self):
         return avg(self.errors())
 
+    def percent_errors(self):
+        return list(i.percent_error() for i in self.positions)
+
 class analysed_position:
     def __init__(self, played, legals):
         self.played = played # analysed_move
@@ -82,6 +102,12 @@ class analysed_position:
 
     def rank(self):
         return self.legals.index(self.played)
+
+    def percent_error(self):
+        try:
+            return 100*(self.actual_error()/float(self.best_eval))
+        except ZeroDivisionError:
+            return 0
 
 class analysed_move:
     def __init__(self, move, evaluation):

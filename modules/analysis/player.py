@@ -7,6 +7,11 @@ from modules.analysis.tools import avg
 from modules.bcolors.bcolors import bcolors
 from operator import methodcaller
 
+import matplotlib.pyplot as plt
+import plotly.plotly as py
+import plotly.tools as tls
+import numpy as np
+
 class analysed_player:
     def __init__(self, name, games):
         self.name = name    # str
@@ -18,6 +23,78 @@ class analysed_player:
     def graph_games_all(self):
         [i.graph_all() for i in self.games]
 
+    def graph_error_v_move_no(self):
+        x = sum(list(i.move_numbers() for i in self.games), [])
+        y = sum(list(i.actual_errors() for i in self.games), [])
+
+        avgs = []
+        for t in range(max(*x)):
+            l = []
+            for xt, yt in zip(x, y):
+                if xt == t:
+                    l.append(yt)
+            avgs.append(avg(l))
+
+        fig, ax = plt.subplots()
+        ax.plot(list(range(max(*x))), avgs, 'r-')
+        ax.set_xlabel('move number')
+        ax.set_ylabel('avg error')
+        return fig
+
+    def error_v_move_no(self):
+        x = sum(list(i.move_numbers() for i in self.games), [])
+        y = sum(list(i.actual_errors() for i in self.games), [])
+
+        avgs = []
+        for t in range(max(*x)):
+            l = []
+            for xt, yt in zip(x, y):
+                if xt == t:
+                    l.append(yt)
+            avgs.append(avg(l))
+
+        return (x, y)
+
+    def ranks(self):
+        return sum(list(i.ranks() for i in self.games), [])
+
+    def graph_merged(self):
+        x = sum(list(i.top_five_sds() for i in self.games),[])
+        x2 = sum(list(i.move_numbers() for i in self.games),[])
+        y1 = sum(list(i.ranks() for i in self.games), [])
+        y2 = sum(list(i.actual_errors() for i in self.games), [])
+        y3 = sum(list(i.percent_errors() for i in self.games), [])
+
+        fig, ax = plt.subplots()
+        avgs = []
+        for t in range(max(*x2)):
+            l = []
+            for x, y in zip(x2, y2):
+                if x == t:
+                    l.append(y)
+            avgs.append(avg(l))
+
+        ax.scatter(x2, y2)
+        ax.plot(list(range(max(*x2))), avgs, 'r--')
+        ax.set_xlabel('move number')
+        ax.set_ylabel('move error')
+        fig.savefig('figures/'+self.name+'_MoveNoVError.svg')
+        fig.show()
+"""
+        fig, ax = plt.subplots()
+        ax.scatter(x, y1)
+        ax.set_xlabel('top 5 std')
+        ax.set_ylabel('move rank')
+        fig.savefig('figures/'+self.name+'_Top5VRank.svg')
+        fig.show()
+
+        fig, ax = plt.subplots()
+        ax.scatter(y3, y1)
+        ax.set_xlabel('percent error')
+        ax.set_ylabel('move rank')
+        fig.savefig('figures/'+self.name+'_PercentVRank.svg')
+        fig.show()
+"""
 def analyse_player(player, games, engine, info_handler):
     # player: str, games: list(game)
     logging.debug(bcolors.UNDERLINE + bcolors.BOLD + bcolors.WARNING + 'INVESTIGATING: ' + player + bcolors.ENDC)
@@ -54,7 +131,7 @@ def analyse_player(player, games, engine, info_handler):
                     position_copy = node.board().copy()
                     position_copy.push(p)
                     engine.position(position_copy)
-                    engine.go(nodes=1000000)
+                    engine.go(nodes=3500000)
                     analysed_legals.append(analysed_move(p, info_handler.info["score"][1]))
 
                 logging.debug(bcolors.WARNING + bcolors.UNDERLINE + node.board().san(next_node.move) + bcolors.ENDC)
@@ -73,8 +150,6 @@ def analyse_player(player, games, engine, info_handler):
             node = next_node
 
         ag = analysed_game(player, game_id, analysed_positions)
-        #ag.graph_rank_v_sd()
-        #ag.graph_error_v_sd()
         analysed_games.append(ag)
 
     return analysed_player(player, analysed_games)

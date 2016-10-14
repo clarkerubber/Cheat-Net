@@ -9,6 +9,7 @@ import chess.pgn
 import logging
 import os
 import sys
+import pickle
 from modules.fishnet.fishnet import stockfish_command
 from modules.bcolors.bcolors import bcolors
 from modules.analysis.player import analyse_player
@@ -60,6 +61,7 @@ legits = get_folders('test-data/games/legits')
 for i, p in enumerate(legits):
     print str(i) + ': ' + str(p)
 
-for player in (cheaters):
-    analyse_player(player[0], get_player_games(player[1]), engine, info_handler)
-    ap.graph_games_all()
+for player in (cheaters + legits)[34:]:
+    ap = analyse_player(player[0], get_player_games(player[1]), engine, info_handler)
+    with open('test-data/saved/'+player[0]+'.pkl', 'w+') as output:
+        pickle.dump(ap, output, pickle.HIGHEST_PROTOCOL)
