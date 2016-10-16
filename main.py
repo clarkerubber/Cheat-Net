@@ -61,7 +61,8 @@ legits = get_folders('test-data/games/legits')
 for i, p in enumerate(legits):
     print str(i) + ': ' + str(p)
 
-for player in (cheaters + legits)[34:]:
-    ap = analyse_player(player[0], get_player_games(player[1]), engine, info_handler)
-    with open('test-data/saved/'+player[0]+'.pkl', 'w+') as output:
-        pickle.dump(ap, output, pickle.HIGHEST_PROTOCOL)
+player = legits[8]
+#for player in (legits + cheaters):
+ap = analyse_player(player[0], get_player_games(player[1]), engine, info_handler)
+with open('test-data/saved/'+player[0]+'.pkl', 'w+') as output:
+    pickle.dump(ap, output, pickle.HIGHEST_PROTOCOL)

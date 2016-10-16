@@ -1,0 +1,2 @@
+Notes:
+50% chance of cheat if top pv is selected more than 50% of the time. 0% chance of legit

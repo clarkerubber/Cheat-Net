@@ -58,6 +58,18 @@ class analysed_player:
     def ranks(self):
         return sum(list(i.ranks() for i in self.games), [])
 
+    def rank_0_percents(self):
+        return list(i.rank_0_percent() for i in self.games)
+
+    def rank_0_1030_percents(self):
+        return list(i.rank_0_1030_percent() for i in self.games)
+
+    def rank_5more_percents(self):
+        return list(i.rank_5more_percent() for i in self.games)
+
+    def accuracy_percentages(self, cp):
+        return list(i.accuracy_percentage(cp) for i in self.games)
+
     def graph_merged(self):
         x = sum(list(i.top_five_sds() for i in self.games),[])
         x2 = sum(list(i.move_numbers() for i in self.games),[])
@@ -131,7 +143,7 @@ def analyse_player(player, games, engine, info_handler):
                     position_copy = node.board().copy()
                     position_copy.push(p)
                     engine.position(position_copy)
-                    engine.go(nodes=3500000)
+                    engine.go(nodes=35000000)
                     analysed_legals.append(analysed_move(p, info_handler.info["score"][1]))
 
                 logging.debug(bcolors.WARNING + bcolors.UNDERLINE + node.board().san(next_node.move) + bcolors.ENDC)
