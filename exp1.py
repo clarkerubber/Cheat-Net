@@ -54,50 +54,71 @@ for i in legits_pkl:
 #print 'cheateravg: '+str(cheateravg)
 
 print 'legits'
-cp = 10
+cp = 20
 avgs = []
 maxs = []
 mins = []
 for x, y in legits.items():
 	#fig, ax = plt.subplots()
 	#data = Counter(y.ranks())
-	maxim = max(y.accuracy_percentages(cp))
-	minim = min(y.accuracy_percentages(cp))
-	averg = avg(y.accuracy_percentages(cp))
+	a = y.tactics_seized()
+	"""
+	maxim = max(a)
+	minim = min(a)
+	averg = avg(a)
+	"""
 	print '   '+y.name+':'
+	print 'avg: '+str(a)
+	"""
 	print 'max: '+str(maxim)
 	print 'min: '+str(minim)
 	print 'avg: '+str(averg)
-	avgs.append(averg)
-	maxs.append(maxim)
-	mins.append(minim)
+	"""
+	avgs.append(a)
+	#maxs.append(maxim)
+	#mins.append(minim)
 	#freqs = list(100*(sum(i == t for i in y.ranks())/float(len(y.ranks()))) for t in range(4)) + [100*sum(i > 3 for i in y.ranks())/len(y.ranks())]
 	#ax.pie(freqs, labels=list(range(4))+['greater than 4'])
 	#fig.show()
 print 'max avg: '+str(max(avgs))
-print 'min avg: '+str(min(avgs))
-print 'max max: '+str(max(maxs))
-print 'min min: '+str(min(mins))
+#print 'min avg: '+str(min(avgs))
+#print 'max max: '+str(max(maxs))
+#print 'min min: '+str(min(mins))
 
 print 'CHEATERS'
 cheatscaught = 0
+caught = []
+notcaught = []
 for x, y in cheaters.items():
 	#fig, ax = plt.subplots()
 	#data = Counter(y.ranks())
-	maxim = max(y.accuracy_percentages(cp))
-	averg = avg(y.accuracy_percentages(cp))
-	minim = min(y.accuracy_percentages(cp))
+	a = y.tactics_seized()
+	"""
+	maxim = max(a)
+	averg = avg(a)
+	minim = min(a)
+	"""
 	print '   '+y.name+':'
+	print 'avg: '+str(a)
+	"""
 	print 'max: '+str(maxim)
 	print 'min: '+str(minim)
 	print 'avg: '+str(averg)
-	if averg > max(avgs) or maxim < max(maxs):
+	"""
+	if a > max(avgs):
 		print 'CAUGHT'
 		cheatscaught += 1
+		caught.append(y.name)
+	else:
+		notcaught.append(y.name)
 	#freqs = list(100*(sum(i == t for i in y.ranks())/float(len(y.ranks()))) for t in range(4)) + [100*sum(i > 3 for i in y.ranks())/len(y.ranks())]
 	#ax.pie(freqs, labels=list(range(4))+['greater than 4'])
 	#fig.show()
 print cheatscaught
+print 'CAUGHT'
+print caught
+print 'NOT CAUGHT'
+print notcaught
 """
 fig, ax = plt.subplots()
 
