@@ -12,15 +12,13 @@ import sys
 import pickle
 from modules.fishnet.fishnet import stockfish_command
 from modules.bcolors.bcolors import bcolors
-from modules.analysis.player import analyse_player
-from modules.api.tools import get_folders, get_player_games
+from modules.analysis.AnalysableGame import recent_games
+from modules.analysis.AnalysedPlayer import AnalysedPlayer
+from modules.analysis.PlayerAssessment import PlayerAssessment
+from modules.api.tools import get_player_games
+from modules.api.api import get_player_data, get_new_user_id, post_report
 
-import matplotlib.pyplot as plt
-import plotly.plotly as py
-import plotly.tools as tls
-import numpy as np
-
-tls.set_credentials_file(username='Clarkey', api_key='jjln8tgi44')
+sys.setrecursionlimit(2000)
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("token", metavar="TOKEN",
@@ -54,15 +52,34 @@ engine.uci()
 info_handler = chess.uci.InfoHandler()
 engine.info_handlers.append(info_handler)
 
-cheaters = get_folders('test-data/games/cheaters')
-legits = get_folders('test-data/games/legits')
 
-#for player in cheaters:
-for i, p in enumerate(legits):
-    print str(i) + ': ' + str(p)
+"""Start importing players"""
 
-player = legits[8]
-#for player in (legits + cheaters):
-ap = analyse_player(player[0], get_player_games(player[1]), engine, info_handler)
-with open('test-data/saved/'+player[0]+'.pkl', 'w+') as output:
-    pickle.dump(ap, output, pickle.HIGHEST_PROTOCOL)
+def collect_analyse_save(userId):
+    try:
+        player_data = get_player_data(userId, settings.token)
+        playerAssessments = [PlayerAssessment(i) for i in player_data['assessment']['playerAssessments']]
+        recents = recent_games(playerAssessments, player_data['games'])
+
+        ap = AnalysedPlayer(
+            userId, 
+            recents, 
+            player_data['assessment']['user']['games'], 
+            player_data['assessment']['user']['engine'], 
+            player_data['assessment']['relatedUsers'])
+
+        [i.analyse(engine, info_handler) for i in ap.games]
+        if ap.assess():
+            logging.debug(bcolors.WARNING + userId + ' is likely cheating' + bcolors.ENDC)
+            post_report(userId, ap.assess(), settings.token)
+        else:
+            logging.debug(bcolors.WARNING + userId + ' is unlikely cheating' + bcolors.ENDC)
+            post_report(userId, ap.assess(), settings.token)
+
+        with open('test-data/saved/'+userId+'.pkl', 'w+') as output:
+            pickle.dump(ap, output, pickle.HIGHEST_PROTOCOL)
+    except KeyError:
+        pass
+
+while True:
+    collect_analyse_save(get_new_user_id(settings.token))

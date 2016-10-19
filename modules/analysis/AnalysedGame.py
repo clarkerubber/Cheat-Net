@@ -1,7 +1,5 @@
 import logging
 import chess.pgn
-import matplotlib.pyplot as plt
-import numpy as np
 from modules.analysis.tools import avg, bounded_eval
 from modules.bcolors.bcolors import bcolors
 
@@ -12,44 +10,6 @@ class AnalysedGame: # subjective to the player being analysed
 
     def move_numbers(self):
         return list(range(len(self.positions)))
-
-    def graph_all(self):
-        self.graph_rank_v_sd()
-        self.graph_error_v_sd()
-        self.graph_rank_v_percent()
-
-    def graph_rank_v_sd(self):
-        x = self.top_five_sds()
-        y = self.ranks()
-
-        fig, ax = plt.subplots()
-
-        ax.scatter(x, y)
-        ax.set_xlabel('top 5 std')
-        ax.set_ylabel('move rank')
-        fig.show()
-
-    def graph_error_v_sd(self):
-        x = self.top_five_sds()
-        y = self.actual_errors()
-
-        fig, ax = plt.subplots()
-
-        ax.scatter(x, y)
-        ax.set_xlabel('top 5 std')
-        ax.set_ylabel('move error')
-        fig.show()
-
-    def graph_rank_v_percent(self):
-        x = self.percent_errors()
-        y = self.ranks()
-
-        fig, ax = plt.subplots()
-
-        ax.scatter(x, y)
-        ax.set_xlabel('percent error')
-        ax.set_ylabel('move rank')
-        fig.show()
 
     def rank_0_percent(self):
         if len(self.positions) > 10:

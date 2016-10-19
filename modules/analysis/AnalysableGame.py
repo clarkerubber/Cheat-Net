@@ -68,7 +68,7 @@ def recent_games(assessments, pgns):
                 key=attrgetter('date'),
                 reverse=True)[:100]),
         key=attrgetter('assessment'),
-        reverse=True)[:6]
+        reverse=True)[:5]
     try:
         return [AnalysableGame(a, pgns[a.gameId]) for a in assessments]
     except ValueError:

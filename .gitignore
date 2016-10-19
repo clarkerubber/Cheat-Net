@@ -1,0 +1,5 @@
+*.py[cd]
+*/*.py[cd]
+stockfish-*
+Stockfish
+venv

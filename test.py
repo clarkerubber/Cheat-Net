@@ -36,6 +36,8 @@ for i in legits_pkl:
 print 'LEGITS'
 print 'Incorrectly Marked'
 print [y.name for x, y in legits.items() if y.assess()]
+print 'Correctly Ignored'
+print [y.name for x, y in legits.items() if not y.assess()]
 
 
 print 'CHEATERS'
