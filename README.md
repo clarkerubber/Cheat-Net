@@ -1,8 +1,8 @@
-# Python-Puzzle-Creator
+# Internet-Chess-Killer-Killer
 
 ## About
 
-This is a python application dedicated to creating chess puzzles for lichess.org. However it can easily be adapted to create puzzles from personal games.
+This is a python application dedicated to analysing reported cheaters on lichess.
 
 ## Installation
 
@@ -22,7 +22,7 @@ MacOS / Linux : `sh build-stockfish.sh` to obtain the current lichess Stockfish 
 
 ## Launching Application
 
-`python main.py <Secret API Token> <Instance Name> <#Threads = 4> <Hash (Bytes) = 2048>`
+`python main.py <Secret API Token> <#Threads = 4> <Hash (Bytes) = 2048>`
 
 If your system has systemd, you can use the service file provided, it is tuned for a local virtualenv in a dedicated user account. If you run it as root with system-wide pip packages, use `ExecStart=/usr/bin/python main.py --quiet $key $instance $threads`
 
