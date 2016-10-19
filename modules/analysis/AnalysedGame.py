@@ -2,8 +2,7 @@ import logging
 import chess.pgn
 import matplotlib.pyplot as plt
 import numpy as np
-
-from modules.analysis.tools import avg
+from modules.analysis.tools import avg, bounded_eval
 from modules.bcolors.bcolors import bcolors
 
 class AnalysedGame: # subjective to the player being analysed
@@ -65,18 +64,14 @@ class AnalysedGame: # subjective to the player being analysed
         else:
             return 0
 
-    def rank_0_1030_percent(self):
-        try:
-            if len(self.positions[0:50]) > 10:
-                return 100*sum((i.rank() == 0 or i.rank() == 1) for i in self.positions[0:50])/float(len(self.positions[0:50]))
-            else:
-                return 0
-        except ValueError:
+    def rank_0_move20plus_percent(self):
+        if len(self.positions[20:]) > 20:
+            return 100*sum(i.rank() == 0 for i in self.positions[20:])/float(len(self.positions[20:]))
+        else:
             return 0
 
     def rank_5more_percent(self):
         start = 20
-        stop = 50
         try:
             if len(self.positions[start:]) > 10:
                 return 100*sum((i.rank() > 5) for i in self.positions[start:])/float(len(self.positions[start:]))
@@ -118,14 +113,14 @@ class AnalysedGame: # subjective to the player being analysed
         else:
             return 0
 
-    def tactics_seized(self):
+    def tactics_seized(self, loss, gain):
         last_best = 0
         total_tactics = 0
         seized_tactics = 0
         for best, played, position in zip(list(i.best_eval for i in self.positions), list(bounded_eval(i.played.sort_val) for i in self.positions), self.positions):
-            if last_best - best > 150:
+            if last_best - best > loss:
                 total_tactics += 1
-                if position.actual_error() < 10:
+                if position.actual_error() < gain:
                     seized_tactics += 1
         return (seized_tactics, total_tactics)
 

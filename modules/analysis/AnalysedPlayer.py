@@ -14,98 +14,117 @@ import numpy as np
 class AnalysedPlayer:
     def __init__(self, name, games, gamesPlayed, cheater, related):
         self.name = name    # str
-        self.games = games  # list(AnalysedGame)
+        self.games = games  # list(AnalysableGame)
         self.gamesPlayed = gamesPlayed # # of games played
         self.cheater = cheater # True, False, None
         self.related = related # list(userId)
 
-    def move_errors_by_game(self):
-        return sum([map(list, enumerate(i.error_difs())) for i in self.games], []) # list([move_number, error])
+    def assess(self):
+        flags = []
+        flags.append(self.tactics_seized(150, 10)    >= 91.0)
+        flags.append(self.tactics_seized(200, 30)    >= 93.5)
+        flags.append(avg(self.rank_5more_percents(), default = 100) <= 19.5)
+        flags.append(self.assess_rank_0_percents())
+        flags.append(self.assess_rank_01_percents())
+        flags.append(self.assess_rank_0_move20plus_percents())
+        return (sum(flags) > 0)
 
-    def graph_games_all(self):
-        [i.graph_all() for i in self.games]
+    # Assessment Tools
 
-    def graph_error_v_move_no(self):
-        x = sum(list(i.move_numbers() for i in self.games), [])
-        y = sum(list(i.actual_errors() for i in self.games), [])
+    def assess_rank_0_percents(self):
+        flags = []
+        flags.append(avg(self.rank_0_percents()) >= 61.0)
+        for r, mb, hb, ho, mt in zip(self.rank_0_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
+            if hb or ho:
+                mod = 7
+            elif mt:
+                mod = 6
+            elif mb:
+                mod = 4
+            else:
+                mod = 0
+            try:
+                flags.append(r >= (73.0 - mod))
+            except ValueError:
+                pass
 
-        avgs = []
-        for t in range(max(*x)):
-            l = []
-            for xt, yt in zip(x, y):
-                if xt == t:
-                    l.append(yt)
-            avgs.append(avg(l))
+        return (sum(flags) > 0)
 
-        fig, ax = plt.subplots()
-        ax.plot(list(range(max(*x))), avgs, 'r-')
-        ax.set_xlabel('move number')
-        ax.set_ylabel('avg error')
-        return fig
+    def assess_rank_01_percents(self):
+        flags = []
+        flags.append(avg(self.rank_01_percents()) >= 69.0)
+        for r, mb, hb, ho, mt in zip(self.rank_01_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
+            if ho or mt:
+                mod = 11
+            elif mb or hb:
+                mod = 0
+            else:
+                mod = 0
+            try:
+                flags.append(r >= (95.0 - mod))
+            except ValueError:
+                pass
 
-    def error_v_move_no(self):
-        x = sum(list(i.move_numbers() for i in self.games), [])
-        y = sum(list(i.actual_errors() for i in self.games), [])
+        return (sum(flags) > 0)
 
-        avgs = []
-        for t in range(max(*x)):
-            l = []
-            for xt, yt in zip(x, y):
-                if xt == t:
-                    l.append(yt)
-            avgs.append(avg(l))
+    def assess_rank_0_move20plus_percents(self):
+        flags = []
+        flags.append(avg(self.rank_0_move20plus_percents()) >= 27.0)
+        for r, mb, hb, ho, mt in zip(self.rank_0_move20plus_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
+            if ho or mt:
+                mod = 30
+            elif mb or hb:
+                mod = 0
+            else:
+                mod = 0
+            try:
+                flags.append(r >= (77.0 - mod))
+            except ValueError:
+                pass
 
-        return (x, y)
+        return (sum(flags) > 0)
 
+    # Data Collectors
+        # Assessment
+    def mblurs(self):
+        return list(i.analysed.assessment.flags.mbr for i in self.games)
+
+    def hblurs(self):
+        return list(i.analysed.assessment.flags.hbr for i in self.games)
+
+    def holds(self):
+        return list(i.analysed.assessment.hold for i in self.games)
+
+    def move_times(self):
+        return list(i.analysed.assessment.flags.cmt for i in self.games)
+
+        # Game
     def ranks(self):
-        return sum(list(i.ranks() for i in self.games), [])
+        return sum(list(i.analysed.ranks() for i in self.games), [])
 
     def rank_0_percents(self):
-        return list(i.rank_0_percent() for i in self.games)
+        return list(i.analysed.rank_0_percent() for i in self.games)
 
     def rank_01_percents(self):
-        return list(i.rank_01_percent() for i in self.games)
+        return list(i.analysed.rank_01_percent() for i in self.games)
 
-    def rank_0_1030_percents(self):
-        return list(i.rank_0_1030_percent() for i in self.games)
+    def rank_0_move20plus_percents(self):
+        return list(i.analysed.rank_0_move20plus_percent() for i in self.games)
 
     def rank_5more_percents(self):
-        return list(i.rank_5more_percent() for i in self.games)
+        return list(i.analysed.rank_5more_percent() for i in self.games)
 
     def accuracy_percentages(self, cp):
-        return list(i.accuracy_percentage(cp) for i in self.games)
+        return list(i.analysed.accuracy_percentage(cp) for i in self.games)
 
     def accuracy_percentages_20(self, cp):
-        return list(i.accuracy_percentage_20(cp) for i in self.games)
+        return list(i.analysed.accuracy_percentage_20(cp) for i in self.games)
 
-    def tactics_seized(self):
-        a = list(i.tactics_seized() for i in self.games)
+    def tactics_seized(self, loss, gain):
+        a = list(i.analysed.tactics_seized(loss, gain) for i in self.games)
         tactics_seized = sum(list(i[0] for i in a))
         total_tactics = sum(list(i[1] for i in a))
         if total_tactics > 10:
             return 100*tactics_seized/float(total_tactics)
         else:
             return 0
-
-    def graph_merged(self):
-        x = sum(list(i.top_five_sds() for i in self.games),[])
-        x2 = sum(list(i.move_numbers() for i in self.games),[])
-        y1 = sum(list(i.ranks() for i in self.games), [])
-        y2 = sum(list(i.actual_errors() for i in self.games), [])
-        y3 = sum(list(i.percent_errors() for i in self.games), [])
-
-        fig, ax = plt.subplots()
-        avgs = []
-        for t in range(max(*x2)):
-            l = []
-            for x, y in zip(x2, y2):
-                if x == t:
-                    l.append(y)
-            avgs.append(avg(l))
-
-        ax.scatter(x2, y2)
-        ax.plot(list(range(max(*x2))), avgs, 'r--')
-        ax.set_xlabel('move number')
-        ax.set_ylabel('move error')
-        fig.savefig('figures/'+self.name+'_MoveNoVError.svg')
-        fig.show()

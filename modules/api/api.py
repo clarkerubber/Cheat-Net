@@ -22,7 +22,6 @@ def get_pgn(token):
             logging.debug("Trying again in 30 sec" + bcolors.ENDC)
             time.sleep(30)
 
-
     try:
         from StringIO import StringIO
     except ImportError:
@@ -59,7 +58,7 @@ def get_player_data(user_id, token):
     success = False
     while not success:
         try:
-            response = requests.get('https://en.stage.lichess.org/mod/'+user_id+'/assessment?api_key='+token)
+            response = requests.get('https://en.lichess.org/mod/'+user_id+'/assessment?api_key='+token)
             success = True
         except requests.ConnectionError:
             logging.warning(bcolors.WARNING + 'CONNECTION ERROR: Failed to pull assessment data' + bcolors.ENDC)
@@ -69,5 +68,7 @@ def get_player_data(user_id, token):
             logging.warning(bcolors.WARNING + 'SSL ERROR: Failed to pull assessment data' + bcolors.ENDC)
             logging.debug(bcolors.WARNING + 'Trying again in 30 sec' + bcolors.ENDC)
             time.sleep(30)
-
-    return json.loads(response.text)
+    try:
+        return json.loads(response.text)
+    except ValueError:
+        return {}
