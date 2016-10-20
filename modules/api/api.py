@@ -11,7 +11,7 @@ def post_report(userId, report, token):
     success = False
     while not success:
         try:
-            r = requests.post('https://en.stage.lichess.org/@/' + userId + '/clarkey-bot-note?api_key=' + token + '&v=' + str(int(report)))
+            r = requests.post('https://en.lichess.org/@/' + userId + '/clarkey-bot-note?api_key=' + token + '&v=' + str(int(report)))
             success = True
         except requests.ConnectionError:
             logging.warning(bcolors.WARNING + "CONNECTION ERROR: Failed to post puzzle.")
@@ -27,7 +27,7 @@ def get_player_data(user_id, token):
     success = False
     while not success:
         try:
-            response = requests.get('https://en.stage.lichess.org/mod/'+user_id+'/assessment?api_key='+token)
+            response = requests.get('https://en.lichess.org/mod/'+user_id+'/assessment?api_key='+token)
             success = True
         except requests.ConnectionError:
             logging.warning(bcolors.WARNING + 'CONNECTION ERROR: Failed to pull assessment data' + bcolors.ENDC)
@@ -47,7 +47,7 @@ def get_new_user_id(token):
     success = False
     while not success:
         try:
-            response = requests.get('https://en.stage.lichess.org/report/clarkey-bot-next?api_key='+token)
+            response = requests.get('https://en.lichess.org/report/clarkey-bot-next?api_key='+token)
             if response.status_code == 200:
                 success = True
             else:

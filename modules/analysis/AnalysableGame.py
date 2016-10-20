@@ -44,18 +44,18 @@ class AnalysableGame:
                     engine.go(nodes=1000000)
                     analysed_legals.append(AnalysedMove(p, info_handler.info["score"][1]))
 
-                logging.debug(bcolors.WARNING + bcolors.UNDERLINE + node.board().san(next_node.move) + bcolors.ENDC)
+                #logging.debug(bcolors.WARNING + bcolors.UNDERLINE + node.board().san(next_node.move) + bcolors.ENDC)
 
                 analysed_legals = sorted(analysed_legals, key=methodcaller('sort_val'))
                 played_move = next((x for x in analysed_legals if x.move == next_node.move), None)
                 analysed_positions.append(AnalysedPosition(played_move, analysed_legals))
 
-                logging.debug(bcolors.OKGREEN + bcolors.UNDERLINE + 'Legal Moves' + bcolors.ENDC)
-                for l in analysed_legals[:3]:
-                    logging.debug(bcolors.OKGREEN + "Move: " + str(node.board().san(l.move)) + bcolors.ENDC)
-                    logging.debug(bcolors.OKBLUE + "   CP: " + str(l.evaluation.cp))
-                    logging.debug("   Mate: " + str(l.evaluation.mate))
-                logging.debug("... and " + str(max(0, len(analysed_legals) - 3)) + " more moves" + bcolors.ENDC)
+                #logging.debug(bcolors.OKGREEN + bcolors.UNDERLINE + 'Legal Moves' + bcolors.ENDC)
+                #for l in analysed_legals[:3]:
+                    #logging.debug(bcolors.OKGREEN + "Move: " + str(node.board().san(l.move)) + bcolors.ENDC)
+                    #logging.debug(bcolors.OKBLUE + "   CP: " + str(l.evaluation.cp))
+                    #logging.debug("   Mate: " + str(l.evaluation.mate))
+                #logging.debug("... and " + str(max(0, len(analysed_legals) - 3)) + " more moves" + bcolors.ENDC)
 
             node = next_node
 
@@ -70,6 +70,6 @@ def recent_games(assessments, pgns):
         key=attrgetter('assessment'),
         reverse=True)[:5]
     try:
-        return [AnalysableGame(a, pgns[a.gameId]) for a in assessments]
+        return [AnalysableGame(a, pgns[a.gameId]) for a in assessments if pgns[a.gameId].get('variant', False) == False]
     except ValueError:
         return []

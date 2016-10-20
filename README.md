@@ -1,4 +1,4 @@
-# Internet-Chess-Killer-Killer
+# Cheat-Net
 
 ## About
 
