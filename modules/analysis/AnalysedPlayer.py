@@ -45,7 +45,7 @@ class AnalysedPlayer:
             mod.append(weights.get('homt', 0))
         return max(mod)
 
-    def assess_rank_0_percents(self, averg = 61.0, maxim = 77.0, weights = {'mb': 8, 'homt': 99, 'mt': 10, 'ho': 29, 'mbmt': 99, 'hb': 12, 'hbmt': 99}):
+    def assess_rank_0_percents(self, averg = 61.0, maxim = 77.0, weights = {'mb': 8, 'homt': 99, 'mt': 10, 'ho': 24, 'mbmt': 99, 'hb': 12, 'hbmt': 99}):
         flags = []
         flags.append(avg(self.rank_0_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.rank_0_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
