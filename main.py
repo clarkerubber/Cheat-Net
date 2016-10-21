@@ -79,7 +79,8 @@ def collect_analyse_save(userId):
         with open('test-data/saved/'+userId+'.pkl', 'w+') as output:
             pickle.dump(ap, output, pickle.HIGHEST_PROTOCOL)
     except KeyError:
-        pass
+        logging.debug(bcolors.WARNING + userId + ' has no report information available' + bcolors.ENDC)
+        post_report(userId, False, settings.token)
 
 while True:
     collect_analyse_save(get_new_user_id(settings.token))
