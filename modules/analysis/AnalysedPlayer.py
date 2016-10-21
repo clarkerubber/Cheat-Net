@@ -19,7 +19,9 @@ class AnalysedPlayer:
     def assess(self):
         flags = []
         flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) >= 91.0)
+        flags.append(self.accuracy_given_scaled_advantage(advantage = 150, threshold = 10) >= 91.0)
         flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 30) >= 93.5)
+        flags.append(self.accuracy_given_scaled_advantage(advantage = 200, threshold = 30) >= 93.5)
         flags.append(self.assess_rank_0_percents())
         flags.append(self.assess_rank_01_percents())
         flags.append(self.assess_rank_5less_percents())
@@ -116,11 +118,23 @@ class AnalysedPlayer:
     def accuracy_percentages(self, cp):
         return list(i.analysed.accuracy_percentage(cp) for i in self.games)
 
+    def scaled_accuracy_percentages(self, bound):
+        return list(i.analysed.scaled_accuracy_percentage(bound) for i in self.games)
+
     def accuracy_percentages_20(self, cp):
         return list(i.analysed.accuracy_percentage_20(cp) for i in self.games)
 
     def accuracy_given_advantage(self, advantage, threshold):
         a = list(i.analysed.accuracy_given_advantage(advantage, threshold) for i in self.games)
+        accurate_moves = sum(list(i[0] for i in a))
+        disadvantaged_positions = sum(list(i[1] for i in a))
+        if disadvantaged_positions > 10:
+            return 100*accurate_moves/float(disadvantaged_positions)
+        else:
+            return 0
+
+    def accuracy_given_scaled_advantage(self, scaled_advantage, scaled_threshold):
+        a = list(i.analysed.accuracy_given_scaled_advantage(scaled_advantage, scaled_threshold) for i in self.games)
         accurate_moves = sum(list(i[0] for i in a))
         disadvantaged_positions = sum(list(i[1] for i in a))
         if disadvantaged_positions > 10:
