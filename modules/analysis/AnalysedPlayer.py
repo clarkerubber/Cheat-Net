@@ -18,8 +18,8 @@ class AnalysedPlayer:
 
     def assess(self):
         flags = []
-        flags.append(self.tactics_seized(150, 10)    >= 91.0)
-        flags.append(self.tactics_seized(200, 30)    >= 93.5)
+        flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) >= 91.0)
+        flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 30) >= 93.5)
         flags.append(self.assess_rank_0_percents())
         flags.append(self.assess_rank_01_percents())
         flags.append(self.assess_rank_5less_percents())
@@ -73,6 +73,13 @@ class AnalysedPlayer:
             flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
+    def assess_cpl20_percents(self, averg = 85.0, maxim = 97.0, weights = {'mb': 14, 'homt': 99, 'mt': 4, 'ho': 24, 'mbmt': 99, 'hb': 14, 'hbmt': 99}):
+        flags = []
+        flags.append(avg(self.cpl20_percents()) >= averg)
+        for r, mb, hb, ho, mt in zip(self.cpl20_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
+            flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
+        return (sum(flags) > 0)
+
     # Data Collectors
         # Assessment
     def mblurs(self):
@@ -103,17 +110,20 @@ class AnalysedPlayer:
     def rank_5less_percents(self):
         return list(i.analysed.rank_5less_percent() for i in self.games)
 
+    def cpl20_percents(self):
+        return list(i.analysed.cpl20_percent() for i in self.games)
+
     def accuracy_percentages(self, cp):
         return list(i.analysed.accuracy_percentage(cp) for i in self.games)
 
     def accuracy_percentages_20(self, cp):
         return list(i.analysed.accuracy_percentage_20(cp) for i in self.games)
 
-    def tactics_seized(self, loss, gain):
-        a = list(i.analysed.tactics_seized(loss, gain) for i in self.games)
-        tactics_seized = sum(list(i[0] for i in a))
-        total_tactics = sum(list(i[1] for i in a))
-        if total_tactics > 10:
-            return 100*tactics_seized/float(total_tactics)
+    def accuracy_given_advantage(self, advantage, threshold):
+        a = list(i.analysed.accuracy_given_advantage(advantage, threshold) for i in self.games)
+        accurate_moves = sum(list(i[0] for i in a))
+        disadvantaged_positions = sum(list(i[1] for i in a))
+        if disadvantaged_positions > 10:
+            return 100*accurate_moves/float(disadvantaged_positions)
         else:
             return 0

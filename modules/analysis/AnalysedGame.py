@@ -37,6 +37,13 @@ class AnalysedGame: # subjective to the player being analysed
         else:
             return 0
 
+    def cpl20_percent(self):
+        start = 0
+        if len(self.positions[start:]) > 10:
+            return 100*sum(i.actual_error() < 20 for i in self.positions[start:])/float(len(self.positions[start:]))
+        else:
+            return 0
+
     def error_difs(self):
         return list(i.error_dif() for i in self.positions)
 
@@ -70,24 +77,12 @@ class AnalysedGame: # subjective to the player being analysed
         else:
             return 0
 
-    def tactics_seized(self, loss, gain):
-        last_best = 0
+    def accuracy_given_advantage(self, advantage, threshold):
         total_tactics = 0
         seized_tactics = 0
         for best, played, position in zip(list(i.best_eval for i in self.positions), list(bounded_eval(i.played.sort_val) for i in self.positions), self.positions):
-            if last_best - best > loss:
+            if (-best) > advantage:
                 total_tactics += 1
-                if position.actual_error() < gain:
+                if position.actual_error() < threshold:
                     seized_tactics += 1
         return (seized_tactics, total_tactics)
-
-    def accuracy_percentage_20(self, cp):
-        start = 15
-        end = 30
-        try:
-            if len(self.positions[start:]) > 10:
-                return 100*sum(i.accuracy_less_than(cp) for i in self.positions[start:])/float(len(self.positions[start:]))
-            else:
-                return 0
-        except ValueError:
-            return 0
