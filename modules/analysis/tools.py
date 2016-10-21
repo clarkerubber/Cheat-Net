@@ -1,6 +1,6 @@
 from operator import attrgetter
 
-import numpy as np
+import math
 
 def avg(l, default = 0):
     if len(l) > 0:
@@ -12,4 +12,7 @@ def bounded_eval(e):
     return min(1000, max(-1000, e))
 
 def scaled_eval(e):
-    return 2 / (1 + np.exp(-0.005 * e)) - 1
+    try:
+        return 2 / (1 + math.exp(-0.005 * e)) - 1
+    except OverflowError:
+        return e
