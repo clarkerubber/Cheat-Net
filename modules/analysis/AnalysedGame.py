@@ -30,15 +30,12 @@ class AnalysedGame: # subjective to the player being analysed
         else:
             return 0
 
-    def rank_5more_percent(self):
-        start = 20
-        try:
-            if len(self.positions[start:]) > 10:
-                return 100*sum((i.rank() > 5) for i in self.positions[start:])/float(len(self.positions[start:]))
-            else:
-                return 100
-        except ValueError:
-            return 100
+    def rank_5less_percent(self):
+        start = 0
+        if len(self.positions[start:]) > 10:
+            return 100*sum(i.rank() < 4 for i in self.positions[start:])/float(len(self.positions[start:]))
+        else:
+            return 0
 
     def error_difs(self):
         return list(i.error_dif() for i in self.positions)

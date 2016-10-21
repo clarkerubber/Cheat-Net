@@ -20,9 +20,9 @@ class AnalysedPlayer:
         flags = []
         flags.append(self.tactics_seized(150, 10)    >= 91.0)
         flags.append(self.tactics_seized(200, 30)    >= 93.5)
-        flags.append(avg(self.rank_5more_percents(), default = 100) <= 19.5)
         flags.append(self.assess_rank_0_percents())
         flags.append(self.assess_rank_01_percents())
+        flags.append(self.assess_rank_5less_percents())
         flags.append(self.assess_rank_0_move20plus_percents())
         return (sum(flags) > 0)
 
@@ -56,6 +56,13 @@ class AnalysedPlayer:
         flags = []
         flags.append(avg(self.rank_01_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.rank_01_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
+            flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
+        return (sum(flags) > 0)
+
+    def assess_rank_5less_percents(self, averg = 101.0, maxim = 101.0, weights = {'mb': 8, 'homt': 99, 'mt': 4, 'ho': 22, 'mbmt': 99, 'hb': 8, 'hbmt': 99}):
+        flags = []
+        flags.append(avg(self.rank_5less_percents()) >= averg)
+        for r, mb, hb, ho, mt in zip(self.rank_5less_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
             flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
@@ -93,8 +100,8 @@ class AnalysedPlayer:
     def rank_0_move20plus_percents(self):
         return list(i.analysed.rank_0_move20plus_percent() for i in self.games)
 
-    def rank_5more_percents(self):
-        return list(i.analysed.rank_5more_percent() for i in self.games)
+    def rank_5less_percents(self):
+        return list(i.analysed.rank_5less_percent() for i in self.games)
 
     def accuracy_percentages(self, cp):
         return list(i.analysed.accuracy_percentage(cp) for i in self.games)
