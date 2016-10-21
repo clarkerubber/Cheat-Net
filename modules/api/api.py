@@ -52,8 +52,8 @@ def get_new_user_id(token):
                 success = True
             else:
                 logging.warning(bcolors.WARNING + '404: Failed get to new player name' + bcolors.ENDC)
-                logging.debug(bcolors.WARNING + 'Trying again in 30 sec' + bcolors.ENDC)
-                time.sleep(30)
+                logging.debug(bcolors.WARNING + 'Trying again in 60 sec' + bcolors.ENDC)
+                time.sleep(60)
         except requests.ConnectionError:
             logging.warning(bcolors.WARNING + 'CONNECTION ERROR: Failed to get new player name' + bcolors.ENDC)
             logging.debug(bcolors.WARNING + 'Trying again in 30 sec' + bcolors.ENDC)

@@ -8,9 +8,6 @@ from modules.analysis.tools import avg
 from modules.bcolors.bcolors import bcolors
 from operator import methodcaller
 
-import matplotlib.pyplot as plt
-import numpy as np
-
 class AnalysedPlayer:
     def __init__(self, name, games, gamesPlayed, cheater, related):
         self.name = name    # str
@@ -30,58 +27,43 @@ class AnalysedPlayer:
         return (sum(flags) > 0)
 
     # Assessment Tools
+    def weights_mask(self, weights, mb, hb, ho, mt):
+        mod = [0]
+        if mb:
+            mod.append(weights.get('mb', 0))
+        if hb:
+            mod.append(weights.get('hb', 0))
+        if ho:
+            mod.append(weights.get('ho', 0))
+        if mt:
+            mod.append(weights.get('mt', 0))
+        if mb and mt:
+            mod.append(weights.get('mbmt', 0))
+        if hb and mt:
+            mod.append(weights.get('hbmt', 0))
+        if ho and mt:
+            mod.append(weights.get('homt', 0))
+        return max(mod)
 
-    def assess_rank_0_percents(self):
+    def assess_rank_0_percents(self, averg = 61.0, maxim = 77.0, weights = {'mb': 8, 'homt': 99, 'mt': 10, 'ho': 29, 'mbmt': 99, 'hb': 12, 'hbmt': 99}):
         flags = []
-        flags.append(avg(self.rank_0_percents()) >= 61.0)
+        flags.append(avg(self.rank_0_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.rank_0_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
-            if hb or ho:
-                mod = 7
-            elif mt:
-                mod = 6
-            elif mb:
-                mod = 4
-            else:
-                mod = 0
-            try:
-                flags.append(r >= (73.0 - mod))
-            except ValueError:
-                pass
-
+            flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
-    def assess_rank_01_percents(self):
+    def assess_rank_01_percents(self, averg = 69.0, maxim = 95.0, weights = {'mb': 0, 'homt': 99, 'mt': 11, 'ho': 33, 'mbmt': 99, 'hb': 0, 'hbmt': 99}):
         flags = []
-        flags.append(avg(self.rank_01_percents()) >= 69.0)
+        flags.append(avg(self.rank_01_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.rank_01_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
-            if ho or mt:
-                mod = 11
-            elif mb or hb:
-                mod = 0
-            else:
-                mod = 0
-            try:
-                flags.append(r >= (95.0 - mod))
-            except ValueError:
-                pass
-
+            flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
-    def assess_rank_0_move20plus_percents(self):
+    def assess_rank_0_move20plus_percents(self, averg = 27.0, maxim = 77.0, weights = {'mb': 0, 'homt': 99, 'mt': 32, 'ho': 76, 'mbmt': 99, 'hb': 0, 'hbmt': 99}):
         flags = []
-        flags.append(avg(self.rank_0_move20plus_percents()) >= 27.0)
+        flags.append(avg(self.rank_0_move20plus_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.rank_0_move20plus_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
-            if ho or mt:
-                mod = 30
-            elif mb or hb:
-                mod = 0
-            else:
-                mod = 0
-            try:
-                flags.append(r >= (77.0 - mod))
-            except ValueError:
-                pass
-
+            flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
     # Data Collectors
