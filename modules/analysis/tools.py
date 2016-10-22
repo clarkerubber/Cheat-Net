@@ -3,6 +3,7 @@ from operator import attrgetter
 import math
 
 def avg(l, default = 0):
+    l = [i for i in l if i is not None]
     if len(l) > 0:
         return sum(l) / float(len(l))
     else:

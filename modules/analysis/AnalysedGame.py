@@ -15,34 +15,34 @@ class AnalysedGame: # subjective to the player being analysed
         if len(self.positions) > 10:
             return 100*sum(i.rank() == 0 for i in self.positions)/float(len(self.positions))
         else:
-            return 0
+            return None
 
     def rank_01_percent(self):
         start = 20
         if len(self.positions[start:]) > 10:
             return 100*sum(i.rank() < 2 for i in self.positions[start:])/float(len(self.positions[start:]))
         else:
-            return 0
+            return None
 
     def rank_0_move20plus_percent(self):
         if len(self.positions[20:]) > 20:
             return 100*sum(i.rank() == 0 for i in self.positions[20:])/float(len(self.positions[20:]))
         else:
-            return 0
+            return None
 
     def rank_5less_percent(self):
         start = 0
         if len(self.positions[start:]) > 10:
             return 100*sum(i.rank() < 4 for i in self.positions[start:])/float(len(self.positions[start:]))
         else:
-            return 0
+            return None
 
     def cpl20_percent(self):
         start = 0
         if len(self.positions[start:]) > 10:
             return 100*sum(i.actual_error() < 20 for i in self.positions[start:])/float(len(self.positions[start:]))
         else:
-            return 0
+            return None
 
     def error_difs(self):
         return list(i.error_dif() for i in self.positions)
@@ -93,7 +93,7 @@ class AnalysedGame: # subjective to the player being analysed
         if len(self.positions) > 0:
             return 100*sum(i.accuracy_less_than(cp) for i in self.positions)/float(len(self.positions))
         else:
-            return 0
+            return None
 
     def accuracy_given_advantage(self, advantage, threshold):
         total_tactics = 0
