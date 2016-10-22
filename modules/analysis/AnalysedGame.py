@@ -1,6 +1,6 @@
 import logging
 import chess.pgn
-from modules.analysis.tools import avg, bounded_eval
+from modules.analysis.tools import avg, bounded_eval, scaled_eval
 from modules.bcolors.bcolors import bcolors
 
 class AnalysedGame: # subjective to the player being analysed
@@ -15,34 +15,34 @@ class AnalysedGame: # subjective to the player being analysed
         if len(self.positions) > 10:
             return 100*sum(i.rank() == 0 for i in self.positions)/float(len(self.positions))
         else:
-            return None
+            return 0
 
     def rank_01_percent(self):
         start = 20
         if len(self.positions[start:]) > 10:
             return 100*sum(i.rank() < 2 for i in self.positions[start:])/float(len(self.positions[start:]))
         else:
-            return None
+            return 0
 
     def rank_0_move20plus_percent(self):
         if len(self.positions[20:]) > 20:
             return 100*sum(i.rank() == 0 for i in self.positions[20:])/float(len(self.positions[20:]))
         else:
-            return None
+            return 0
 
     def rank_5less_percent(self):
         start = 0
         if len(self.positions[start:]) > 10:
             return 100*sum(i.rank() < 4 for i in self.positions[start:])/float(len(self.positions[start:]))
         else:
-            return None
+            return 0
 
     def cpl20_percent(self):
         start = 0
         if len(self.positions[start:]) > 10:
             return 100*sum(i.actual_error() < 20 for i in self.positions[start:])/float(len(self.positions[start:]))
         else:
-            return None
+            return 0
 
     def error_difs(self):
         return list(i.error_dif() for i in self.positions)
@@ -62,15 +62,6 @@ class AnalysedGame: # subjective to the player being analysed
     def top_five_scaled_sds(self):
         return list(i.top_five_scaled_sd() for i in self.positions)
 
-    def expected_errors(self):
-        return list(i.expected_error() for i in self.positions)
-
-    def expected_scaled_errors(self):
-        return list(i.expected_scaled_error() for i in self.positions)
-
-    def ranks(self):
-        return list(i.rank() for i in self.positions)
-
     def avg_rank(self):
         return avg(self.ranks())
 
@@ -83,22 +74,16 @@ class AnalysedGame: # subjective to the player being analysed
     def avg_error(self):
         return avg(self.errors())
 
-    def percent_errors(self):
-        return list(i.percent_error() for i in self.positions)
-
-    def percent_scaled_errors(self):
-        return list(i.percent_scaled_error() for i in self.positions)
-
     def accuracy_percentage(self, cp):
         if len(self.positions) > 0:
             return 100*sum(i.accuracy_less_than(cp) for i in self.positions)/float(len(self.positions))
         else:
-            return None
+            return 0
 
     def accuracy_given_advantage(self, advantage, threshold):
         total_tactics = 0
         seized_tactics = 0
-        for best, played, position in zip(list(i.best_eval for i in self.positions), list(bounded_eval(i.played.sort_val) for i in self.positions), self.positions):
+        for best, played, position in zip(list(i.best_eval for i in self.positions), list(bounded_eval(i.played.sort_val()) for i in self.positions), self.positions):
             if (-best) > advantage:
                 total_tactics += 1
                 if position.actual_error() < threshold:
@@ -108,7 +93,7 @@ class AnalysedGame: # subjective to the player being analysed
     def accuracy_given_scaled_advantage(self, scaled_advantage, scaled_threshold):
         total_tactics = 0
         seized_tactics = 0
-        for best, played, position in zip(list(i.best_scaled_eval for i in self.positions), list(bounded_eval(scaled_eval(i.played.sort_val)) for i in self.positions), self.positions):
+        for best, played, position in zip(list(i.best_scaled_eval for i in self.positions), list(bounded_eval(scaled_eval(i.played.sort_val())) for i in self.positions), self.positions):
             if (-best) > scaled_advantage:
                 total_tactics += 1
                 if position.actual_scaled_error() < scaled_threshold:

@@ -8,12 +8,6 @@ class AnalysedPosition:
         self.best_eval = bounded_eval(self.legals[0].sort_val())
         self.best_scaled_eval = bounded_eval(scaled_eval(self.legals[0].sort_val()))
 
-    def expected_error(self):
-        return avg(list(abs(self.best_eval - bounded_eval(i.sort_val())) for i in self.legals))
-
-    def expected_scaled_error(self):
-        return avg(list(abs(self.best_scaled_eval - bounded_eval(scaled_eval(i.sort_val()))) for i in self.legals))
-
     def top_five_sd(self):
         return np.std(list(bounded_eval(i.sort_val()) for i in self.legals[:5])).item()
 

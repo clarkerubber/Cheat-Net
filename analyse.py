@@ -19,9 +19,6 @@ from modules.analysis.PlayerAssessment import PlayerAssessment
 from modules.api.tools import get_folders, get_player_games
 from modules.api.api import get_player_data
 
-import matplotlib.pyplot as plt
-import numpy as np
-
 sys.setrecursionlimit(2000)
 
 parser = argparse.ArgumentParser(description=__doc__)
@@ -174,4 +171,4 @@ def collect_analyse_save(userId, cheater):
         pass
 
 #[collect_analyse_save(userId, True) for userId in cheaters]
-[collect_analyse_save(userId, False) for userId in legits[13:]]
+[collect_analyse_save(userId, False) for userId in legits[20:]]
