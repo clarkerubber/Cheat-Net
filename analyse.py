@@ -117,6 +117,7 @@ legits = [
     'Elda64',
     'Fanatist',
     'GnarlyGoat',
+    'chesskm8',
     'Iamyourfather',
     'Kingscrusher-YouTube',
     'Lance5500',
@@ -172,5 +173,5 @@ def collect_analyse_save(userId, cheater):
     except KeyError:
         pass
 
-[collect_analyse_save(userId, True) for userId in cheaters[4:]]
+[collect_analyse_save(userId, True) for userId in cheaters]
 [collect_analyse_save(userId, False) for userId in legits]

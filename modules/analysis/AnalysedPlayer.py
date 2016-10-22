@@ -19,7 +19,7 @@ class AnalysedPlayer:
     def assess(self):
         flags = []
         flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) >= 91.0)
-        flags.append(self.accuracy_given_scaled_advantage(advantage = 150, threshold = 10) >= 91.0)
+        flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10) >= 91.0)
         flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 30) >= 93.5)
         flags.append(self.accuracy_given_scaled_advantage(advantage = 200, threshold = 30) >= 93.5)
         flags.append(self.assess_rank_0_percents())
