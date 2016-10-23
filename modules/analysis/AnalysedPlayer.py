@@ -47,37 +47,42 @@ class AnalysedPlayer:
             mod.append(weights.get('homt', 0))
         return max(mod)
 
-    def assess_rank_0_percents(self, averg = 61.0, maxim = 77.0, weights = {'mb': 8, 'homt': 99, 'mt': 10, 'ho': 24, 'mbmt': 99, 'hb': 12, 'hbmt': 99}):
+    def assess_rank_0_percents(self, averg = 58.0, maxim = 73.0, weights = {'mb': 0, 'homt': 99, 'mt': 9, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99}):
         flags = []
-        flags.append(avg(self.rank_0_percents()) >= averg)
+        if len(self.games) > 2:
+            flags.append(avg(self.rank_0_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.rank_0_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
             flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
-    def assess_rank_01_percents(self, averg = 69.0, maxim = 95.0, weights = {'mb': 0, 'homt': 99, 'mt': 11, 'ho': 33, 'mbmt': 99, 'hb': 0, 'hbmt': 99}):
+    def assess_rank_01_percents(self, averg = 62.0, maxim = 93.0, weights = {'mb': 14, 'homt': 99, 'mt': 9, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99}):
         flags = []
-        flags.append(avg(self.rank_01_percents()) >= averg)
+        if len(self.games) > 2:
+            flags.append(avg(self.rank_01_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.rank_01_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
             flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
-    def assess_rank_5less_percents(self, averg = 101.0, maxim = 101.0, weights = {'mb': 8, 'homt': 99, 'mt': 4, 'ho': 22, 'mbmt': 99, 'hb': 8, 'hbmt': 99}):
+    def assess_rank_5less_percents(self, averg = 101.0, maxim = 101.0, weights = {'mb': 8, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 8, 'hbmt': 99}):
         flags = []
-        flags.append(avg(self.rank_5less_percents()) >= averg)
+        if len(self.games) > 2:
+            flags.append(avg(self.rank_5less_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.rank_5less_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
             flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
-    def assess_rank_0_move20plus_percents(self, averg = 27.0, maxim = 77.0, weights = {'mb': 0, 'homt': 99, 'mt': 32, 'ho': 76, 'mbmt': 99, 'hb': 0, 'hbmt': 99}):
+    def assess_rank_0_move20plus_percents(self, averg = 29.0, maxim = 77.0, weights = {'mb': 35, 'homt': 99, 'mt': 76, 'ho': 99, 'mbmt': 99, 'hb': 35, 'hbmt': 99}):
         flags = []
-        flags.append(avg(self.rank_0_move20plus_percents()) >= averg)
+        if len(self.games) > 2:
+            flags.append(avg(self.rank_0_move20plus_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.rank_0_move20plus_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
             flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
-    def assess_cpl20_percents(self, averg = 85.0, maxim = 97.0, weights = {'mb': 14, 'homt': 99, 'mt': 4, 'ho': 24, 'mbmt': 99, 'hb': 14, 'hbmt': 99}):
+    def assess_cpl20_percents(self, averg = 101.0, maxim = 101.0, weights = {'mb': 20, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99}):
         flags = []
-        flags.append(avg(self.cpl20_percents()) >= averg)
+        if len(self.games) > 2:
+            flags.append(avg(self.cpl20_percents()) >= averg)
         for r, mb, hb, ho, mt in zip(self.cpl20_percents(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
             flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
