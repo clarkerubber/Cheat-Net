@@ -17,6 +17,8 @@ class AnalysedPlayer:
         self.related = related # list(userId)
 
     def assess(self):
+        if len(games) < 3:
+            return False
         flags = []
         flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) >= 92.0)
         flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10) >= 94.0)
