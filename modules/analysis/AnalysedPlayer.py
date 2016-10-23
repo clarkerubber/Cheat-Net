@@ -4,7 +4,7 @@ import chess.pgn
 import logging
 import modules.analysis
 
-from modules.analysis.tools import avg
+from modules.analysis.tools import avg, weights_mask, weighted_avg
 from modules.bcolors.bcolors import bcolors
 from operator import methodcaller
 
@@ -17,7 +17,7 @@ class AnalysedPlayer:
         self.related = related # list(userId)
 
     def assess(self):
-        if len(games) < 3:
+        if len(self.games) < 3:
             return False
         flags = []
         flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) >= 92.0)
@@ -28,93 +28,83 @@ class AnalysedPlayer:
         flags.append(self.assess_rank_0_percents(
             averg = 58,
             maxim = 73,
-            weights = {'mb': 0, 'homt': 99, 'mt': 1, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99}
+            weights = {'mb': 0, 'homt': 99, 'mt': 1, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99},
+            avgweights = {'mb': 11, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 11, 'hbmt': 99}
         ))
 
         flags.append(self.assess_rank_1_percents(
             averg = 25,
             maxim = 39,
-            weights = {'mb': 15, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 15, 'hbmt': 99}
+            weights = {'mb': 15, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 15, 'hbmt': 99},
+            avgweights = {'mb': 4, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 4, 'hbmt': 99}
         ))
 
         flags.append(self.assess_rank_01_percents(
             averg = 62,
             maxim = 93,
-            weights = {'mb': 14, 'homt': 99, 'mt': 9, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99}
+            weights = {'mb': 14, 'homt': 99, 'mt': 9, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99},
+            avgweights = {'mb': 5, 'homt': 99, 'mt': 10, 'ho': 99, 'mbmt': 99, 'hb': 5, 'hbmt': 99}
         ))
 
         flags.append(self.assess_rank_5less_percents(
             averg = 101,
             maxim = 101,
-            weights = {'mb': 8, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 8, 'hbmt': 99}
+            weights = {'mb': 8, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 8, 'hbmt': 99},
+            avgweights = {'mb': 13, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 13, 'hbmt': 99}
         ))
 
         flags.append(self.assess_rank_0_move20plus_percents(
             averg = 27,
             maxim = 77,
-            weights = {'mb': 35, 'homt': 99, 'mt': 76, 'ho': 99, 'mbmt': 99, 'hb': 35, 'hbmt': 99}
+            weights = {'mb': 35, 'homt': 99, 'mt': 76, 'ho': 99, 'mbmt': 99, 'hb': 35, 'hbmt': 99},
+            avgweights = {'mb': 18, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 18, 'hbmt': 99}
         ))
 
         flags.append(self.assess_cpl20_percents(
             averg = 101,
             maxim = 101,
-            weights = {'mb': 20, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99}
+            weights = {'mb': 20, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99},
+            avgweights = {'mb': 26, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 26, 'hbmt': 99}
         ))
 
         flags.append(self.assess_cpl10_percents(
             averg = 79,
             maxim = 91,
-            weights = {'mb': 14, 'homt': 99, 'mt': 5, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99}
+            weights = {'mb': 14, 'homt': 99, 'mt': 5, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99},
+            avgweights = {'mb': 10, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 10, 'hbmt': 99}
         ))
         return (sum(flags) > 0)
 
     # Assessors
-    def assess_rank_0_percents(self, averg, maxim, weights):
-        return self.assess_func(self.rank_0_percents, averg, maxim, weights)
+    def assess_rank_0_percents(self, averg, maxim, weights, avgweights):
+        return self.assess_func(self.rank_0_percents, averg, maxim, weights, avgweights)
 
-    def assess_rank_1_percents(self, averg, maxim, weights):
-        return self.assess_func(self.rank_1_percents, averg, maxim, weights)
+    def assess_rank_1_percents(self, averg, maxim, weights, avgweights):
+        return self.assess_func(self.rank_1_percents, averg, maxim, weights, avgweights)
 
-    def assess_rank_01_percents(self, averg, maxim, weights):
-        return self.assess_func(self.rank_01_percents, averg, maxim, weights)
+    def assess_rank_01_percents(self, averg, maxim, weights, avgweights):
+        return self.assess_func(self.rank_01_percents, averg, maxim, weights, avgweights)
 
-    def assess_rank_5less_percents(self, averg, maxim, weights):
-        return self.assess_func(self.rank_5less_percents, averg, maxim, weights)
+    def assess_rank_5less_percents(self, averg, maxim, weights, avgweights):
+        return self.assess_func(self.rank_5less_percents, averg, maxim, weights, avgweights)
 
-    def assess_rank_0_move20plus_percents(self, averg, maxim, weights):
-        return self.assess_func(self.rank_0_move20plus_percents, averg, maxim, weights)
+    def assess_rank_0_move20plus_percents(self, averg, maxim, weights, avgweights):
+        return self.assess_func(self.rank_0_move20plus_percents, averg, maxim, weights, avgweights)
 
-    def assess_cpl20_percents(self, averg, maxim, weights):
-        return self.assess_func(self.cpl20_percents, averg, maxim, weights)
+    def assess_cpl20_percents(self, averg, maxim, weights, avgweights):
+        return self.assess_func(self.cpl20_percents, averg, maxim, weights, avgweights)
 
-    def assess_cpl10_percents(self, averg, maxim, weights):
-        return self.assess_func(self.cpl10_percents, averg, maxim, weights)
+    def assess_cpl10_percents(self, averg, maxim, weights, avgweights):
+        return self.assess_func(self.cpl10_percents, averg, maxim, weights, avgweights)
 
     # Assessment Tools
-    def weights_mask(self, weights, mb, hb, ho, mt):
-        mod = [0]
-        if mb:
-            mod.append(weights.get('mb', 0))
-        if hb:
-            mod.append(weights.get('hb', 0))
-        if ho:
-            mod.append(weights.get('ho', 0))
-        if mt:
-            mod.append(weights.get('mt', 0))
-        if mb and mt:
-            mod.append(weights.get('mbmt', 0))
-        if hb and mt:
-            mod.append(weights.get('hbmt', 0))
-        if ho and mt:
-            mod.append(weights.get('homt', 0))
-        return max(mod)
-
-    def assess_func(self, func, averg, maxim, weights):
+    def assess_func(self, func, averg, maxim, weights, avgweights):
         flags = []
+        itergames = zip(func(), self.mblurs(), self.hblurs(), self.holds(), self.move_times())
         if len(self.games) > 2:
-            flags.append(avg(func()) >= averg)
-        for r, mb, hb, ho, mt in zip(func(), self.mblurs(), self.hblurs(), self.holds(), self.move_times()):
-            flags.append(r >= (maxim - self.weights_mask(weights, mb, hb, ho, mt)))
+            flags.append(weighted_avg(itergames, avgweights) >= averg)
+        for r, mb, hb, ho, mt in itergames:
+            flags.append(r >= (maxim - weights_mask(weights, mb, hb, ho, mt)))
         return (sum(flags) > 0)
 
     # Data Collectors

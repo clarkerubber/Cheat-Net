@@ -37,11 +37,16 @@ for i in legits_pkl:
 
 def maximise_weights(func, averg, maxim): # used to find the maximum weight value while not marking a legit player
     weights = {'mb': 0, 'hb': 0, 'ho': 0, 'mt': 0, 'mbmt': 0, 'hbmt': 0, 'homt': 0}
+    avgweights = {'mb': 0, 'hb': 0, 'ho': 0, 'mt': 0, 'mbmt': 0, 'hbmt': 0, 'homt': 0}
     for flag, val in weights.items():
-        while not func(averg = averg, maxim = maxim, weights = weights) and weights[flag] < 100:
+        while not func(averg = averg, maxim = maxim, weights = weights, avgweights = {}) and weights[flag] < 100:
             weights[flag] += 1
         weights[flag] -= 1
-    return weights
+    for flag, val in avgweights.items():
+        while not func(averg = averg, maxim = maxim, weights = {}, avgweights = avgweights) and avgweights[flag] < 100:
+            avgweights[flag] += 1
+        avgweights[flag] -= 2
+    return (weights, avgweights)
 
 def minimise_weights(weights): # Find the maximum weight allowed to not mark any legit players
     weights_output = {'mb': 100, 'hb': 100, 'ho': 100, 'mt': 100, 'mbmt': 100, 'hbmt': 100, 'homt': 100}
@@ -53,11 +58,11 @@ def minimise_weights(weights): # Find the maximum weight allowed to not mark any
 
 def max_and_avg(func): # used to find the maximum averg and max values while not marking a legit player
     averg = 100
-    while not func(averg = averg, maxim = 100, weights = {}) and averg > 0:
+    while not func(averg = averg, maxim = 100, weights = {}, avgweights = {}) and averg > 0:
         averg -= 1
     averg += 1
     maxim = 100
-    while not func(averg = 100, maxim = maxim, weights = {}) and maxim > 0:
+    while not func(averg = 100, maxim = maxim, weights = {}, avgweights = {}) and maxim > 0:
         maxim -= 1
     maxim += 1
     return (maxim, averg)
@@ -119,34 +124,41 @@ for x, y in legits.items():
 print 'RANK 0 PERCENTS'
 print '            averg = '+str(r0p_avg)+','
 print '            maxim = '+str(r0p_max)+','
-print '            weights = '+str(minimise_weights(r0p_weights))+"\n"
+print '            weights = '+str(minimise_weights(list(i[0] for i in r0p_weights)))+','
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r0p_weights)))+"\n"
 
 print 'RANK 1 PERCENTS'
 print '            averg = '+str(r1p_avg)+','
 print '            maxim = '+str(r1p_max)+','
-print '            weights = '+str(minimise_weights(r1p_weights))+"\n"
+print '            weights = '+str(minimise_weights(list(i[0] for i in r1p_weights)))+','
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r1p_weights)))+"\n"
 
 print 'RANK 01 PERCENTS'
 print '            averg = '+str(r01p_avg)+','
 print '            maxim = '+str(r01p_max)+','
-print '            weights = '+str(minimise_weights(r01p_weights))+"\n"
+print '            weights = '+str(minimise_weights(list(i[0] for i in r01p_weights)))+','
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r01p_weights)))+"\n"
 
 print 'RANK 5 LESS PERCENTS'
 print '            averg = '+str(r5lp_avg)+','
 print '            maxim = '+str(r5lp_max)+','
-print '            weights = '+str(minimise_weights(r5lp_weights))+"\n"
+print '            weights = '+str(minimise_weights(list(i[0] for i in r5lp_weights)))+','
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r5lp_weights)))+"\n"
 
 print 'RANK 0 MOVE 20+ PERCENTS'
 print '            averg = '+str(r0m20p_avg)+','
 print '            maxim = '+str(r0m20p_max)+','
-print '            weights = '+str(minimise_weights(r0m20p_weights))+"\n"
+print '            weights = '+str(minimise_weights(list(i[0] for i in r0m20p_weights)))+','
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r0m20p_weights)))+"\n"
 
 print 'CPL <20 PERCENTS'
 print '            averg = '+str(c20_avg)+','
 print '            maxim = '+str(c20_max)+','
-print '            weights = '+str(minimise_weights(c20_weights))+"\n"
+print '            weights = '+str(minimise_weights(list(i[0] for i in c20_weights)))+','
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in c20_weights)))+"\n"
 
 print 'CPL <10 PERCENTS'
 print '            averg = '+str(c10_avg)+','
 print '            maxim = '+str(c10_max)+','
-print '            weights = '+str(minimise_weights(c10_weights))+"\n"
+print '            weights = '+str(minimise_weights(list(i[0] for i in c10_weights)))+','
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in c10_weights)))+"\n"
