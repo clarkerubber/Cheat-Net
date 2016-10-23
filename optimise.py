@@ -39,13 +39,13 @@ def maximise_weights(func, averg, maxim): # used to find the maximum weight valu
     weights = {'mb': 0, 'hb': 0, 'ho': 0, 'mt': 0, 'mbmt': 0, 'hbmt': 0, 'homt': 0}
     avgweights = {'mb': 0, 'hb': 0, 'ho': 0, 'mt': 0, 'mbmt': 0, 'hbmt': 0, 'homt': 0}
     for flag, val in weights.items():
-        while not func(averg = averg, maxim = maxim, weights = weights, avgweights = {}) and weights[flag] < 100:
+        while not max(func(averg = averg, maxim = maxim, weights = weights, avgweights = {}) or [0]) > 0 and weights[flag] < 100:
             weights[flag] += 1
         weights[flag] -= 1
     for flag, val in avgweights.items():
-        while not func(averg = averg, maxim = maxim, weights = {}, avgweights = avgweights) and avgweights[flag] < 100:
+        while not max(func(averg = averg, maxim = maxim, weights = {}, avgweights = avgweights) or [0]) > 0 and avgweights[flag] < 100:
             avgweights[flag] += 1
-        avgweights[flag] -= 2
+        avgweights[flag] -= 1
     return (weights, avgweights)
 
 def minimise_weights(weights): # Find the maximum weight allowed to not mark any legit players
@@ -58,11 +58,11 @@ def minimise_weights(weights): # Find the maximum weight allowed to not mark any
 
 def max_and_avg(func): # used to find the maximum averg and max values while not marking a legit player
     averg = 100
-    while not func(averg = averg, maxim = 100, weights = {}, avgweights = {}) and averg > 0:
+    while not max(func(averg = averg, maxim = 100, weights = {}, avgweights = {}) or [0]) > 0 and averg > 0:
         averg -= 1
     averg += 1
     maxim = 100
-    while not func(averg = 100, maxim = maxim, weights = {}, avgweights = {}) and maxim > 0:
+    while not max(func(averg = 100, maxim = maxim, weights = {}, avgweights = {}) or [0]) > 0 and maxim > 0:
         maxim -= 1
     maxim += 1
     return (maxim, averg)

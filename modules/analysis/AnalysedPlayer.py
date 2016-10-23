@@ -17,63 +17,62 @@ class AnalysedPlayer:
         self.related = related # list(userId)
 
     def assess(self):
-        if len(self.games) < 3:
-            return False
         flags = []
-        flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) >= 92.0)
-        flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10) >= 94.0)
-        flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 30) >= 94.5)
-        flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 30) >= 94.0)
+        if len(self.games) > 2:
+            flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) - 92.0)
+            flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10) - 94.0)
+            flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 30) - 94.5)
+            flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 30) - 94.0)
 
-        flags.append(self.assess_rank_0_percents(
+        flags.extend(self.assess_rank_0_percents(
             averg = 58,
             maxim = 73,
             weights = {'mb': 0, 'homt': 99, 'mt': 1, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99},
             avgweights = {'mb': 11, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 11, 'hbmt': 99}
         ))
 
-        flags.append(self.assess_rank_1_percents(
+        flags.extend(self.assess_rank_1_percents(
             averg = 25,
             maxim = 39,
             weights = {'mb': 15, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 15, 'hbmt': 99},
             avgweights = {'mb': 4, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 4, 'hbmt': 99}
         ))
 
-        flags.append(self.assess_rank_01_percents(
+        flags.extend(self.assess_rank_01_percents(
             averg = 62,
             maxim = 93,
             weights = {'mb': 14, 'homt': 99, 'mt': 9, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99},
             avgweights = {'mb': 5, 'homt': 99, 'mt': 10, 'ho': 99, 'mbmt': 99, 'hb': 5, 'hbmt': 99}
         ))
 
-        flags.append(self.assess_rank_5less_percents(
+        flags.extend(self.assess_rank_5less_percents(
             averg = 101,
             maxim = 101,
             weights = {'mb': 8, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 8, 'hbmt': 99},
             avgweights = {'mb': 13, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 13, 'hbmt': 99}
         ))
 
-        flags.append(self.assess_rank_0_move20plus_percents(
+        flags.extend(self.assess_rank_0_move20plus_percents(
             averg = 27,
             maxim = 77,
             weights = {'mb': 35, 'homt': 99, 'mt': 76, 'ho': 99, 'mbmt': 99, 'hb': 35, 'hbmt': 99},
             avgweights = {'mb': 18, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 18, 'hbmt': 99}
         ))
 
-        flags.append(self.assess_cpl20_percents(
+        flags.extend(self.assess_cpl20_percents(
             averg = 101,
             maxim = 101,
             weights = {'mb': 20, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99},
             avgweights = {'mb': 26, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 26, 'hbmt': 99}
         ))
 
-        flags.append(self.assess_cpl10_percents(
+        flags.extend(self.assess_cpl10_percents(
             averg = 79,
             maxim = 91,
             weights = {'mb': 14, 'homt': 99, 'mt': 5, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99},
             avgweights = {'mb': 10, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 10, 'hbmt': 99}
         ))
-        return (sum(flags) > 0)
+        return max(flags or [0]) > 0
 
     # Assessors
     def assess_rank_0_percents(self, averg, maxim, weights, avgweights):
@@ -102,10 +101,10 @@ class AnalysedPlayer:
         flags = []
         itergames = zip(func(), self.mblurs(), self.hblurs(), self.holds(), self.move_times())
         if len(self.games) > 2:
-            flags.append(weighted_avg(itergames, avgweights) >= averg)
+            flags.append(weighted_avg(itergames, avgweights) - averg)
         for r, mb, hb, ho, mt in itergames:
-            flags.append(r >= (maxim - weights_mask(weights, mb, hb, ho, mt)))
-        return (sum(flags) > 0)
+            flags.append(r - (maxim - weights_mask(weights, mb, hb, ho, mt)))
+        return flags
 
     # Data Collectors
         # Assessment

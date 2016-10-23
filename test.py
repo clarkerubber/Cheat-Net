@@ -43,7 +43,6 @@ print 'Correctly Ignored'
 print len(correct)
 print [y.name for x, y in legits.items() if not y.assess()]
 
-
 print ''
 print 'CHEATERS'
 print 'Correctly Marked'
