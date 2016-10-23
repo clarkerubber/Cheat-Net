@@ -63,19 +63,26 @@ def max_and_avg(func): # used to find the maximum averg and max values while not
     return (maxim, averg)
 
 r0p_mxavgs = []
+r1p_mxavgs = []
 r01p_mxavgs = []
 r5lp_mxavgs = []
 r0m20p_mxavgs = []
 c20_mxavgs = []
+c10_mxavgs = []
 for x, y in legits.items():
     r0p_mxavgs.append(max_and_avg(y.assess_rank_0_percents))
+    r1p_mxavgs.append(max_and_avg(y.assess_rank_1_percents))
     r01p_mxavgs.append(max_and_avg(y.assess_rank_01_percents))
     r5lp_mxavgs.append(max_and_avg(y.assess_rank_5less_percents))
     r0m20p_mxavgs.append(max_and_avg(y.assess_rank_0_move20plus_percents))
     c20_mxavgs.append(max_and_avg(y.assess_cpl20_percents))
+    c10_mxavgs.append(max_and_avg(y.assess_cpl10_percents))
 
 r0p_max = max(r0p_mxavgs, key=itemgetter(0))[0]
 r0p_avg = max(r0p_mxavgs, key=itemgetter(1))[1]
+
+r1p_max = max(r1p_mxavgs, key=itemgetter(0))[0]
+r1p_avg = max(r1p_mxavgs, key=itemgetter(1))[1]
 
 r01p_max = max(r01p_mxavgs, key=itemgetter(0))[0]
 r01p_avg = max(r01p_mxavgs, key=itemgetter(1))[1]
@@ -89,40 +96,57 @@ r0m20p_avg = max(r0m20p_mxavgs, key=itemgetter(1))[1]
 c20_max = max(c20_mxavgs, key=itemgetter(0))[0]
 c20_avg = max(c20_mxavgs, key=itemgetter(1))[1]
 
+c10_max = max(c10_mxavgs, key=itemgetter(0))[0]
+c10_avg = max(c10_mxavgs, key=itemgetter(1))[1]
+
 
 r0p_weights = []
+r1p_weights = []
 r01p_weights = []
 r5lp_weights = []
 r0m20p_weights = []
 c20_weights = []
+c10_weights = []
 for x, y in legits.items():
     r0p_weights.append(maximise_weights(y.assess_rank_0_percents, r0p_avg, r0p_max))
+    r1p_weights.append(maximise_weights(y.assess_rank_1_percents, r1p_avg, r1p_max))
     r01p_weights.append(maximise_weights(y.assess_rank_01_percents, r01p_avg, r01p_max))
     r5lp_weights.append(maximise_weights(y.assess_rank_5less_percents, r5lp_avg, r5lp_max))
     r0m20p_weights.append(maximise_weights(y.assess_rank_0_move20plus_percents, r0m20p_avg, r0m20p_max))
     c20_weights.append(maximise_weights(y.assess_cpl20_percents, c20_avg, c20_max))
+    c10_weights.append(maximise_weights(y.assess_cpl10_percents, c20_avg, c10_max))
 
 print 'RANK 0 PERCENTS'
-print '  AVG: '+str(r0p_avg)
-print '  MAX: '+str(r0p_max)
-print '  WEIGHTS: '+str(minimise_weights(r0p_weights))
+print '            averg = '+str(r0p_avg)+','
+print '            maxim = '+str(r0p_max)+','
+print '            weights = '+str(minimise_weights(r0p_weights))+"\n"
+
+print 'RANK 1 PERCENTS'
+print '            averg = '+str(r1p_avg)+','
+print '            maxim = '+str(r1p_max)+','
+print '            weights = '+str(minimise_weights(r1p_weights))+"\n"
 
 print 'RANK 01 PERCENTS'
-print '  AVG: '+str(r01p_avg)
-print '  MAX: '+str(r01p_max)
-print '  WEIGHTS: '+str(minimise_weights(r01p_weights))
+print '            averg = '+str(r01p_avg)+','
+print '            maxim = '+str(r01p_max)+','
+print '            weights = '+str(minimise_weights(r01p_weights))+"\n"
 
 print 'RANK 5 LESS PERCENTS'
-print '  AVG: '+str(r5lp_avg)
-print '  MAX: '+str(r5lp_max)
-print '  WEIGHTS: '+str(minimise_weights(r5lp_weights))
+print '            averg = '+str(r5lp_avg)+','
+print '            maxim = '+str(r5lp_max)+','
+print '            weights = '+str(minimise_weights(r5lp_weights))+"\n"
 
 print 'RANK 0 MOVE 20+ PERCENTS'
-print '  AVG: '+str(r0m20p_avg)
-print '  MAX: '+str(r0m20p_max)
-print '  WEIGHTS: '+str(minimise_weights(r0m20p_weights))
+print '            averg = '+str(r0m20p_avg)+','
+print '            maxim = '+str(r0m20p_max)+','
+print '            weights = '+str(minimise_weights(r0m20p_weights))+"\n"
 
 print 'CPL <20 PERCENTS'
-print '  AVG: '+str(c20_avg)
-print '  MAX: '+str(c20_max)
-print '  WEIGHTS: '+str(minimise_weights(c20_weights))
+print '            averg = '+str(c20_avg)+','
+print '            maxim = '+str(c20_max)+','
+print '            weights = '+str(minimise_weights(c20_weights))+"\n"
+
+print 'CPL <10 PERCENTS'
+print '            averg = '+str(c10_avg)+','
+print '            maxim = '+str(c10_max)+','
+print '            weights = '+str(minimise_weights(c10_weights))+"\n"

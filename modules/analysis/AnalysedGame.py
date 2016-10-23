@@ -17,6 +17,12 @@ class AnalysedGame: # subjective to the player being analysed
         else:
             return 0
 
+    def rank_1_percent(self):
+        if len(self.positions) > 10:
+            return 100*sum(i.rank() == 1 for i in self.positions)/float(len(self.positions))
+        else:
+            return 0
+
     def rank_01_percent(self):
         start = 20
         if len(self.positions[start:]) > 10:
@@ -41,6 +47,13 @@ class AnalysedGame: # subjective to the player being analysed
         start = 0
         if len(self.positions[start:]) > 10:
             return 100*sum(i.actual_error() < 20 for i in self.positions[start:])/float(len(self.positions[start:]))
+        else:
+            return 0
+
+    def cpl10_percent(self):
+        start = 0
+        if len(self.positions[start:]) > 10:
+            return 100*sum(i.actual_error() < 10 for i in self.positions[start:])/float(len(self.positions[start:]))
         else:
             return 0
 
