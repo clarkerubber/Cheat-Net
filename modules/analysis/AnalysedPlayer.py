@@ -26,9 +26,9 @@ class AnalysedPlayer:
 
         flags.extend(self.assess_rank_0_percents(
             averg = 58,
-            maxim = 73,
-            weights = {'mb': 0, 'homt': 99, 'mt': 1, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99},
-            avgweights = {'mb': 11, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 11, 'hbmt': 99}
+            maxim = 72,
+            weights = {'mb': 0, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 20, 'hbmt': 99},
+            avgweights = {'mb': 6, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 8, 'hbmt': 99}
         ))
 
         flags.extend(self.assess_rank_1_percents(
@@ -46,31 +46,31 @@ class AnalysedPlayer:
         ))
 
         flags.extend(self.assess_rank_5less_percents(
-            averg = 101,
-            maxim = 101,
-            weights = {'mb': 8, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 8, 'hbmt': 99},
-            avgweights = {'mb': 13, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 13, 'hbmt': 99}
+            averg = 92,
+            maxim = 100,
+            weights = {'mb': 7, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 7, 'hbmt': 99},
+            avgweights = {'mb': 4, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 4, 'hbmt': 99}
         ))
 
         flags.extend(self.assess_rank_0_move20plus_percents(
             averg = 27,
             maxim = 77,
-            weights = {'mb': 35, 'homt': 99, 'mt': 76, 'ho': 99, 'mbmt': 99, 'hb': 35, 'hbmt': 99},
-            avgweights = {'mb': 18, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 18, 'hbmt': 99}
+            weights = {'mb': 11, 'homt': 99, 'mt': 77, 'ho': 99, 'mbmt': 99, 'hb': 35, 'hbmt': 99},
+            avgweights = {'mb': 13, 'homt': 99, 'mt': 12, 'ho': 99, 'mbmt': 99, 'hb': 17, 'hbmt': 99}
         ))
 
         flags.extend(self.assess_cpl20_percents(
-            averg = 101,
-            maxim = 101,
-            weights = {'mb': 20, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 21, 'hbmt': 99},
-            avgweights = {'mb': 26, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 26, 'hbmt': 99}
+            averg = 86,
+            maxim = 100,
+            weights = {'mb': 19, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 20, 'hbmt': 99},
+            avgweights = {'mb': 11, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 11, 'hbmt': 99}
         ))
 
         flags.extend(self.assess_cpl10_percents(
             averg = 79,
             maxim = 91,
             weights = {'mb': 14, 'homt': 99, 'mt': 5, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99},
-            avgweights = {'mb': 10, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 10, 'hbmt': 99}
+            avgweights = {'mb': 10, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 10, 'hbmt': 99}
         ))
         return max(flags or [0]) > 0
 
