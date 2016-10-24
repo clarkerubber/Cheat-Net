@@ -90,10 +90,11 @@ for x, y in legits.items():
     c20_mxavgs.append(max_and_avg(y.assess_cpl20_percents))
     c10_mxavgs.append(max_and_avg(y.assess_cpl10_percents))
 
-    ag150_10.append(y.accuracy_given_advantage(advantage = 150, threshold = 10))
-    sag150_10.append(y.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10))
-    ag200_30.append(y.accuracy_given_advantage(advantage = 200, threshold = 30))
-    sag200_30.append(y.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 30))
+    if len(y.games) > 2:
+        ag150_10.append(y.accuracy_given_advantage(advantage = 150, threshold = 10))
+        sag150_10.append(y.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10))
+        ag200_30.append(y.accuracy_given_advantage(advantage = 200, threshold = 30))
+        sag200_30.append(y.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 30))
 
 r0p_max = max(r0p_mxavgs, key=itemgetter(0))[0]
 r0p_avg = max(r0p_mxavgs, key=itemgetter(1))[1]

@@ -21,7 +21,7 @@ class AnalysedPlayer:
         if len(self.games) > 2:
             flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) - 91.0)
             #flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10) - 100.0)
-            flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 30) - 95.0)
+            flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 30) - 98.5)
             #flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 30) - 100.0)
 
         flags.extend(self.assess_rank_0_percents(
@@ -32,10 +32,10 @@ class AnalysedPlayer:
         ))
 
         flags.extend(self.assess_rank_1_percents(
-            averg = 25,
-            maxim = 39,
-            weights = {'mb': 15, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 15, 'hbmt': 99},
-            avgweights = {'mb': 4, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 4, 'hbmt': 99}
+            averg = 29,
+            maxim = 42,
+            weights = {'mb': 18, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 18, 'hbmt': 99},
+            avgweights = {'mb': 8, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 8, 'hbmt': 99}
         ))
 
         flags.extend(self.assess_rank_01_percents(
@@ -55,7 +55,7 @@ class AnalysedPlayer:
         flags.extend(self.assess_rank_0_move20plus_percents(
             averg = 27,
             maxim = 77,
-            weights = {'mb': 11, 'homt': 99, 'mt': 59, 'ho': 99, 'mbmt': 99, 'hb': 35, 'hbmt': 99},
+            weights = {'mb': 11, 'homt': 99, 'mt': 40, 'ho': 99, 'mbmt': 99, 'hb': 35, 'hbmt': 99},
             avgweights = {'mb': 13, 'homt': 99, 'mt': 12, 'ho': 99, 'mbmt': 99, 'hb': 17, 'hbmt': 99}
         ))
 
@@ -165,6 +165,16 @@ class AnalysedPlayer:
 
     def accuracy_given_scaled_advantage(self, scaled_advantage, scaled_threshold):
         a = list(i.analysed.accuracy_given_scaled_advantage(scaled_advantage, scaled_threshold) for i in self.games)
+        accurate_moves = sum(list(i[0] for i in a))
+        disadvantaged_positions = sum(list(i[1] for i in a))
+        if disadvantaged_positions > 10:
+            return 100*accurate_moves/float(disadvantaged_positions)
+        else:
+            return 0
+
+    def tactics_seized(self, advantage, threshold):
+        last_best = 0
+        a = list(i.analysed.accuracy_given_advantage(advantage, threshold) for i in self.games)
         accurate_moves = sum(list(i[0] for i in a))
         disadvantaged_positions = sum(list(i[1] for i in a))
         if disadvantaged_positions > 10:
