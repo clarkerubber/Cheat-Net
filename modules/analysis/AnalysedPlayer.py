@@ -20,9 +20,9 @@ class AnalysedPlayer:
         flags = []
         if len(self.games) > 2:
             flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) - 91.0)
-            flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10) - 93.5)
+            #flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10) - 100.0)
             flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 30) - 95.0)
-            flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 30) - 93.5)
+            #flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 30) - 100.0)
 
         flags.extend(self.assess_rank_0_percents(
             averg = 58,
