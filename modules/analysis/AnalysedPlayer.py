@@ -20,9 +20,7 @@ class AnalysedPlayer:
         flags = []
         if len(self.games) > 2:
             flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) - 91.0)
-            #flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10) - 100.0)
-            flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 30) - 98.5)
-            #flags.append(self.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 30) - 100.0)
+            flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 20) - 96.5)
 
         flags.extend(self.assess_rank_0_percents(
             averg = 58,
@@ -172,12 +170,11 @@ class AnalysedPlayer:
         else:
             return 0
 
-    def tactics_seized(self, advantage, threshold):
-        last_best = 0
-        a = list(i.analysed.accuracy_given_advantage(advantage, threshold) for i in self.games)
-        accurate_moves = sum(list(i[0] for i in a))
-        disadvantaged_positions = sum(list(i[1] for i in a))
-        if disadvantaged_positions > 10:
-            return 100*accurate_moves/float(disadvantaged_positions)
+    def tactics_seized(self, minadv, maxadv, threshold):
+        a = list(i.analysed.tactics_seized(minadv, maxadv, threshold) for i in self.games)
+        seized_tactics = sum(list(i[0] for i in a))
+        total_tactics = sum(list(i[1] for i in a))
+        if total_tactics > 10:
+            return 100*seized_tactics/float(total_tactics)
         else:
             return 0

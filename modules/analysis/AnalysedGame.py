@@ -112,3 +112,15 @@ class AnalysedGame: # subjective to the player being analysed
                 if position.actual_scaled_error() < scaled_threshold:
                     seized_tactics += 1
         return (seized_tactics, total_tactics)
+
+    def tactics_seized(self, minadv, maxadv, threshold):
+        last_best = 0
+        total_tactics = 0
+        seized_tactics = 0
+        for best, played, position in zip(list(i.best_eval for i in self.positions), list(bounded_eval(i.played.sort_val()) for i in self.positions), self.positions):
+            if (last_best + best) > minadv and (last_best + best) < maxadv:
+                total_tactics += 1
+                if position.actual_error() < threshold:
+                    seized_tactics += 1
+            last_best = best
+        return (seized_tactics, total_tactics)

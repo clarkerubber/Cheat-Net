@@ -78,9 +78,12 @@ c20_mxavgs = []
 c10_mxavgs = []
 
 ag150_10 = []
-ag200_30 = []
+ag200_20 = []
+ts150_10 = []
+ts50_5 = []
+ts200_10 = []
 sag150_10 = []
-sag200_30 = []
+sag200_20 = []
 for x, y in legits.items():
     r0p_mxavgs.append(max_and_avg(y.assess_rank_0_percents))
     r1p_mxavgs.append(max_and_avg(y.assess_rank_1_percents))
@@ -92,9 +95,11 @@ for x, y in legits.items():
 
     if len(y.games) > 2:
         ag150_10.append(y.accuracy_given_advantage(advantage = 150, threshold = 10))
+        ag200_20.append(y.accuracy_given_advantage(advantage = 200, threshold = 20))
+        ts150_10.append(y.tactics_seized(minadv = 150, maxadv = 200, threshold = 10))
+        ts50_5.append(y.tactics_seized(minadv = 50, maxadv = 120, threshold = 5))
         sag150_10.append(y.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10))
-        ag200_30.append(y.accuracy_given_advantage(advantage = 200, threshold = 30))
-        sag200_30.append(y.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 30))
+        sag200_20.append(y.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 20))
 
 r0p_max = max(r0p_mxavgs, key=itemgetter(0))[0]
 r0p_avg = max(r0p_mxavgs, key=itemgetter(1))[1]
@@ -137,14 +142,20 @@ for x, y in legits.items():
 print 'ACCURACY GIVEN ADV 150 10'
 print str(max(ag150_10))+"\n"
 
+print 'ACCURACY GIVEN ADV 200 20'
+print str(max(ag200_20))+"\n"
+
+print 'TACTICS SEIZED 50 5'
+print str(max(ts50_5))+"\n"
+
+print 'TACTICS SEIZED 150 10'
+print str(max(ts150_10))+"\n"
+
 print 'SCALED ACCURACY GIVEN ADV 150 10'
 print str(max(sag150_10))+"\n"
 
-print 'ACCURACY GIVEN ADV 200 30'
-print str(max(ag200_30))+"\n"
-
-print 'SCALED ACCURACY GIVEN ADV 200 30'
-print str(max(sag200_30))+"\n"
+print 'SCALED ACCURACY GIVEN ADV 200 20'
+print str(max(sag200_20))+"\n"
 
 print 'RANK 0 PERCENTS'
 print '            averg = '+str(r0p_avg)+','
