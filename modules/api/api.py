@@ -11,7 +11,7 @@ def post_report(userId, report, token):
     success = False
     while not success:
         try:
-            r = requests.post('https://en.lichess.org/@/' + userId + '/clarkey-bot-note?api_key=' + token + '&v=' + str(int(report)))
+            r = requests.post('https://en.lichess.org/@/' + userId + '/clarkey-bot-note?api_key=' + token, json={'result': report, 'reason': 'because reasons'})
             success = True
         except requests.ConnectionError:
             logging.warning(bcolors.WARNING + "CONNECTION ERROR: Failed to post puzzle.")
