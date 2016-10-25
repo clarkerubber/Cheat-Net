@@ -43,17 +43,10 @@ class AnalysedGame: # subjective to the player being analysed
         else:
             return 0
 
-    def cpl20_percent(self):
+    def cpl_percent(self, cp):
         start = 0
         if len(self.positions[start:]) > 10:
-            return 100*sum(i.actual_error() < 20 for i in self.positions[start:])/float(len(self.positions[start:]))
-        else:
-            return 0
-
-    def cpl10_percent(self):
-        start = 0
-        if len(self.positions[start:]) > 10:
-            return 100*sum(i.actual_error() < 10 for i in self.positions[start:])/float(len(self.positions[start:]))
+            return 100*sum(i.actual_error() < cp for i in self.positions[start:])/float(len(self.positions[start:]))
         else:
             return 0
 
@@ -92,35 +85,3 @@ class AnalysedGame: # subjective to the player being analysed
             return 100*sum(i.accuracy_less_than(cp) for i in self.positions)/float(len(self.positions))
         else:
             return 0
-
-    def accuracy_given_advantage(self, advantage, threshold):
-        total_tactics = 0
-        seized_tactics = 0
-        for best, played, position in zip(list(i.best_eval for i in self.positions), list(bounded_eval(i.played.sort_val()) for i in self.positions), self.positions):
-            if (-best) > advantage:
-                total_tactics += 1
-                if position.actual_error() < threshold:
-                    seized_tactics += 1
-        return (seized_tactics, total_tactics)
-
-    def accuracy_given_scaled_advantage(self, scaled_advantage, scaled_threshold):
-        total_tactics = 0
-        seized_tactics = 0
-        for best, played, position in zip(list(i.best_scaled_eval for i in self.positions), list(bounded_eval(scaled_eval(i.played.sort_val())) for i in self.positions), self.positions):
-            if (-best) > scaled_advantage:
-                total_tactics += 1
-                if position.actual_scaled_error() < scaled_threshold:
-                    seized_tactics += 1
-        return (seized_tactics, total_tactics)
-
-    def tactics_seized(self, minadv, maxadv, threshold):
-        last_best = 0
-        total_tactics = 0
-        seized_tactics = 0
-        for best, played, position in zip(list(i.best_eval for i in self.positions), list(bounded_eval(i.played.sort_val()) for i in self.positions), self.positions):
-            if (last_best + best) > minadv and (last_best + best) < maxadv:
-                total_tactics += 1
-                if position.actual_error() < threshold:
-                    seized_tactics += 1
-            last_best = best
-        return (seized_tactics, total_tactics)

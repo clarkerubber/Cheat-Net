@@ -76,14 +76,8 @@ r5lp_mxavgs = []
 r0m20p_mxavgs = []
 c20_mxavgs = []
 c10_mxavgs = []
+c5_mxavgs = []
 
-ag150_10 = []
-ag200_20 = []
-ts150_10 = []
-ts50_5 = []
-ts200_10 = []
-sag150_10 = []
-sag200_20 = []
 for x, y in legits.items():
     r0p_mxavgs.append(max_and_avg(y.assess_rank_0_percents))
     r1p_mxavgs.append(max_and_avg(y.assess_rank_1_percents))
@@ -92,14 +86,7 @@ for x, y in legits.items():
     r0m20p_mxavgs.append(max_and_avg(y.assess_rank_0_move20plus_percents))
     c20_mxavgs.append(max_and_avg(y.assess_cpl20_percents))
     c10_mxavgs.append(max_and_avg(y.assess_cpl10_percents))
-
-    if len(y.games) > 2:
-        ag150_10.append(y.accuracy_given_advantage(advantage = 150, threshold = 10))
-        ag200_20.append(y.accuracy_given_advantage(advantage = 200, threshold = 20))
-        ts150_10.append(y.tactics_seized(minadv = 150, maxadv = 200, threshold = 10))
-        ts50_5.append(y.tactics_seized(minadv = 50, maxadv = 120, threshold = 5))
-        sag150_10.append(y.accuracy_given_scaled_advantage(scaled_advantage = 150, scaled_threshold = 10))
-        sag200_20.append(y.accuracy_given_scaled_advantage(scaled_advantage = 200, scaled_threshold = 20))
+    c5_mxavgs.append(max_and_avg(y.assess_cpl5_percents))
 
 r0p_max = max(r0p_mxavgs, key=itemgetter(0))[0]
 r0p_avg = max(r0p_mxavgs, key=itemgetter(1))[1]
@@ -122,6 +109,9 @@ c20_avg = max(c20_mxavgs, key=itemgetter(1))[1]
 c10_max = max(c10_mxavgs, key=itemgetter(0))[0]
 c10_avg = max(c10_mxavgs, key=itemgetter(1))[1]
 
+c5_max = max(c5_mxavgs, key=itemgetter(0))[0]
+c5_avg = max(c5_mxavgs, key=itemgetter(1))[1]
+
 
 r0p_weights = []
 r1p_weights = []
@@ -130,6 +120,8 @@ r5lp_weights = []
 r0m20p_weights = []
 c20_weights = []
 c10_weights = []
+c5_weights = []
+
 for x, y in legits.items():
     r0p_weights.append(maximise_weights(y.assess_rank_0_percents, r0p_avg, r0p_max))
     r1p_weights.append(maximise_weights(y.assess_rank_1_percents, r1p_avg, r1p_max))
@@ -137,64 +129,62 @@ for x, y in legits.items():
     r5lp_weights.append(maximise_weights(y.assess_rank_5less_percents, r5lp_avg, r5lp_max))
     r0m20p_weights.append(maximise_weights(y.assess_rank_0_move20plus_percents, r0m20p_avg, r0m20p_max))
     c20_weights.append(maximise_weights(y.assess_cpl20_percents, c20_avg, c20_max))
-    c10_weights.append(maximise_weights(y.assess_cpl10_percents, c20_avg, c10_max))
+    c10_weights.append(maximise_weights(y.assess_cpl10_percents, c10_avg, c10_max))
+    c5_weights.append(maximise_weights(y.assess_cpl5_percents, c5_avg, c5_max))
 
-print 'ACCURACY GIVEN ADV 150 10'
-print str(max(ag150_10))+"\n"
 
-print 'ACCURACY GIVEN ADV 200 20'
-print str(max(ag200_20))+"\n"
-
-print 'TACTICS SEIZED 50 5'
-print str(max(ts50_5))+"\n"
-
-print 'TACTICS SEIZED 150 10'
-print str(max(ts150_10))+"\n"
-
-print 'SCALED ACCURACY GIVEN ADV 150 10'
-print str(max(sag150_10))+"\n"
-
-print 'SCALED ACCURACY GIVEN ADV 200 20'
-print str(max(sag200_20))+"\n"
-
-print 'RANK 0 PERCENTS'
+print '        flags.extend(self.assess_rank_0_percents('
 print '            averg = '+str(r0p_avg)+','
 print '            maxim = '+str(r0p_max)+','
 print '            weights = '+str(minimise_weights(list(i[0] for i in r0p_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r0p_weights)))+"\n"
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r0p_weights)))
+print '        ))'
 
-print 'RANK 1 PERCENTS'
+print '        flags.extend(self.assess_rank_1_percents('
 print '            averg = '+str(r1p_avg)+','
 print '            maxim = '+str(r1p_max)+','
 print '            weights = '+str(minimise_weights(list(i[0] for i in r1p_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r1p_weights)))+"\n"
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r1p_weights)))
+print '        ))'
 
-print 'RANK 01 PERCENTS'
+print '        flags.extend(self.assess_rank_01_percents('
 print '            averg = '+str(r01p_avg)+','
 print '            maxim = '+str(r01p_max)+','
 print '            weights = '+str(minimise_weights(list(i[0] for i in r01p_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r01p_weights)))+"\n"
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r01p_weights)))
+print '        ))'
 
-print 'RANK 5 LESS PERCENTS'
+print '        flags.extend(self.assess_rank_5less_percents('
 print '            averg = '+str(r5lp_avg)+','
 print '            maxim = '+str(r5lp_max)+','
 print '            weights = '+str(minimise_weights(list(i[0] for i in r5lp_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r5lp_weights)))+"\n"
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r5lp_weights)))
+print '        ))'
 
-print 'RANK 0 MOVE 20+ PERCENTS'
+print '        flags.extend(self.assess_rank_0_move20plus_percents('
 print '            averg = '+str(r0m20p_avg)+','
 print '            maxim = '+str(r0m20p_max)+','
 print '            weights = '+str(minimise_weights(list(i[0] for i in r0m20p_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r0m20p_weights)))+"\n"
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in r0m20p_weights)))
+print '        ))'
 
-print 'CPL <20 PERCENTS'
+print '        flags.extend(self.assess_cpl20_percents('
 print '            averg = '+str(c20_avg)+','
 print '            maxim = '+str(c20_max)+','
 print '            weights = '+str(minimise_weights(list(i[0] for i in c20_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in c20_weights)))+"\n"
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in c20_weights)))
+print '        ))'
 
-print 'CPL <10 PERCENTS'
+print '        flags.extend(self.assess_cpl10_percents('
 print '            averg = '+str(c10_avg)+','
 print '            maxim = '+str(c10_max)+','
 print '            weights = '+str(minimise_weights(list(i[0] for i in c10_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in c10_weights)))+"\n"
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in c10_weights)))
+print '        ))'
+
+print '        flags.extend(self.assess_cpl5_percents('
+print '            averg = '+str(c5_avg)+','
+print '            maxim = '+str(c5_max)+','
+print '            weights = '+str(minimise_weights(list(i[0] for i in c5_weights)))+','
+print '            avgweights = '+str(minimise_weights(list(i[1] for i in c5_weights)))
+print '        ))'
