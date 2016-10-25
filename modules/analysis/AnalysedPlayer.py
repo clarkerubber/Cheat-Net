@@ -19,8 +19,8 @@ class AnalysedPlayer:
     def assess(self):
         flags = []
         if len(self.games) > 2:
-            flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) - 91.0)
-            flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 20) - 96.5)
+            flags.append(self.accuracy_given_advantage(advantage = 150, threshold = 10) - 96.0)
+            flags.append(self.accuracy_given_advantage(advantage = 200, threshold = 20) - 97.0)
 
         flags.extend(self.assess_rank_0_percents(
             averg = 58,
@@ -65,8 +65,8 @@ class AnalysedPlayer:
         ))
 
         flags.extend(self.assess_cpl10_percents(
-            averg = 81,
-            maxim = 96,
+            averg = 85,
+            maxim = 97,
             weights = {'mb': 19, 'homt': 99, 'mt': 10, 'ho': 99, 'mbmt': 99, 'hb': 19, 'hbmt': 99},
             avgweights = {'mb': 10, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 10, 'hbmt': 99}
         ))
