@@ -72,37 +72,36 @@ class AnalysedPlayer:
 
     # Assessors
     def assess_rank_0_percents(self, averg, maxim, weights, avgweights):
-        return self.assess_func(self.rank_0_percents(), averg, maxim, weights, avgweights)
+        return self.assess_func(self.rank_0_percents(), weights, avgweights)
 
-    def assess_rank_1_percents(self, averg, maxim, weights, avgweights):
-        return self.assess_func(self.rank_1_percents(), averg, maxim, weights, avgweights)
+    def assess_rank_1_percents(self, weights, avgweights):
+        return self.assess_func(self.rank_1_percents(), weights, avgweights)
 
-    def assess_rank_01_percents(self, averg, maxim, weights, avgweights):
-        return self.assess_func(self.rank_01_percents(), averg, maxim, weights, avgweights)
+    def assess_rank_01_percents(self, weights, avgweights):
+        return self.assess_func(self.rank_01_percents(), weights, avgweights)
 
-    def assess_rank_5less_percents(self, averg, maxim, weights, avgweights):
-        return self.assess_func(self.rank_5less_percents(), averg, maxim, weights, avgweights)
+    def assess_rank_5less_percents(self, weights, avgweights):
+        return self.assess_func(self.rank_5less_percents(), weights, avgweights)
 
-    def assess_rank_0_move20plus_percents(self, averg, maxim, weights, avgweights):
-        return self.assess_func(self.rank_0_move20plus_percents(), averg, maxim, weights, avgweights)
+    def assess_rank_0_move20plus_percents(self, weights, avgweights):
+        return self.assess_func(self.rank_0_move20plus_percents(), weights, avgweights)
 
-    def assess_cpl20_percents(self, averg, maxim, weights, avgweights):
-        return self.assess_func(self.cpl_percents(20), averg, maxim, weights, avgweights)
+    def assess_cpl20_percents(self, weights, avgweights):
+        return self.assess_func(self.cpl_percents(20), weights, avgweights)
 
-    def assess_cpl10_percents(self, averg, maxim, weights, avgweights):
-        return self.assess_func(self.cpl_percents(10), averg, maxim, weights, avgweights)
+    def assess_cpl10_percents(self, weights, avgweights):
+        return self.assess_func(self.cpl_percents(10), weights, avgweights)
 
-    def assess_cpl5_percents(self, averg, maxim, weights, avgweights):
-        return self.assess_func(self.cpl_percents(5), averg, maxim, weights, avgweights)
+    def assess_cpl5_percents(self, weights, avgweights):
+        return self.assess_func(self.cpl_percents(5), weights, avgweights)
 
     # Assessment Tools
-    def assess_func(self, func, averg, maxim, weights, avgweights):
-        flags = []
+    def assess_func(self, func, weights, avgweights):
+        flags = (0, 0)
         itergames = zip(func, self.mblurs(), self.hblurs(), self.holds(), self.move_times())
         if len(self.games) > 2:
-            flags.append(weighted_avg(itergames, avgweights) - averg)
-        for r, mb, hb, ho, mt in itergames:
-            flags.append(r - (maxim - weights_mask(weights, mb, hb, ho, mt)))
+            flags[0] = weighted_avg(itergames, avgweights)
+        flags[1] = max(list((r + weights_mask(weights, mb, hb, ho, mt)) for r, mb, hb, ho, mt in itergames))
         return flags
 
     # Data Collectors
