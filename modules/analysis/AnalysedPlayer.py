@@ -36,7 +36,6 @@ class AnalysedPlayer:
         return flags
 
     def assess_and_report(self, net):
-        assessment = net.activate(tuple(self.flags()))
         return (self.assess(net), self.report(net))
 
     def assess(self, net):
@@ -49,7 +48,7 @@ class AnalysedPlayer:
     def report(self, net):
         flags = self.flags()
         if len(flags) > 0:
-            return str(round(net.activate(tuple(flags))[0], 1))+'% confidence of cheating'
+            return str(round(100*net.activate(tuple(flags))[0], 1))+'% confidence of cheating'
         else:
             return 'not enough games to create assessment'
 
