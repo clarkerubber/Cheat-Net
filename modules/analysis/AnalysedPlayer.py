@@ -16,111 +16,63 @@ class AnalysedPlayer:
         self.cheater = cheater # True, False, None
         self.related = related # list(userId)
 
-    def assess(self):
+    def flags(self):
         flags = []
-        
-        flags.extend(self.assess_rank_0_percents(
-            averg = 69,
-            maxim = 74,
-            weights = {'mb': 0, 'homt': 99, 'mt': 2, 'ho': 99, 'mbmt': 99, 'hb': 4, 'hbmt': 99},
-            avgweights = {'mb': 0, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 0, 'hbmt': 99}
-        ))
-        flags.extend(self.assess_rank_1_percents(
-            averg = 29,
-            maxim = 42,
-            weights = {'mb': 18, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 18, 'hbmt': 99},
-            avgweights = {'mb': 8, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 8, 'hbmt': 99}
-        ))
-        flags.extend(self.assess_rank_01_percents(
-            averg = 62,
-            maxim = 93,
-            weights = {'mb': 2, 'homt': 99, 'mt': 9, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99},
-            avgweights = {'mb': 5, 'homt': 99, 'mt': 10, 'ho': 99, 'mbmt': 99, 'hb': 5, 'hbmt': 99}
-        ))
-        flags.extend(self.assess_rank_5less_percents(
-            averg = 93,
-            maxim = 100,
-            weights = {'mb': 2, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 7, 'hbmt': 99},
-            avgweights = {'mb': 0, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 2, 'hbmt': 99}
-        ))
-        flags.extend(self.assess_rank_0_move20plus_percents(
-            averg = 27,
-            maxim = 77,
-            weights = {'mb': 11, 'homt': 99, 'mt': 40, 'ho': 99, 'mbmt': 99, 'hb': 35, 'hbmt': 99},
-            avgweights = {'mb': 13, 'homt': 99, 'mt': 12, 'ho': 99, 'mbmt': 99, 'hb': 17, 'hbmt': 99}
-        ))
-        flags.extend(self.assess_cpl20_percents(
-            averg = 88,
-            maxim = 100,
-            weights = {'mb': 13, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 13, 'hbmt': 99},
-            avgweights = {'mb': 2, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 3, 'hbmt': 99}
-        ))
-        flags.extend(self.assess_cpl10_percents(
-            averg = 85,
-            maxim = 97,
-            weights = {'mb': 10, 'homt': 99, 'mt': 11, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99},
-            avgweights = {'mb': 4, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 5, 'hbmt': 99}
-        ))
-        flags.extend(self.assess_cpl5_percents(
-            averg = 80,
-            maxim = 97,
-            weights = {'mb': 14, 'homt': 99, 'mt': 15, 'ho': 99, 'mbmt': 99, 'hb': 14, 'hbmt': 99},
-            avgweights = {'mb': 3, 'homt': 99, 'mt': 0, 'ho': 99, 'mbmt': 99, 'hb': 4, 'hbmt': 99}
-        ))
-
-        return max(flags or [0]) > 0
-
-    # Assessors
-    def assess_rank_0_percents(self, averg, maxim, weights, avgweights):
-        return self.assess_func(self.rank_0_percents(), weights, avgweights)
-
-    def assess_rank_1_percents(self, weights, avgweights):
-        return self.assess_func(self.rank_1_percents(), weights, avgweights)
-
-    def assess_rank_01_percents(self, weights, avgweights):
-        return self.assess_func(self.rank_01_percents(), weights, avgweights)
-
-    def assess_rank_5less_percents(self, weights, avgweights):
-        return self.assess_func(self.rank_5less_percents(), weights, avgweights)
-
-    def assess_rank_0_move20plus_percents(self, weights, avgweights):
-        return self.assess_func(self.rank_0_move20plus_percents(), weights, avgweights)
-
-    def assess_cpl20_percents(self, weights, avgweights):
-        return self.assess_func(self.cpl_percents(20), weights, avgweights)
-
-    def assess_cpl10_percents(self, weights, avgweights):
-        return self.assess_func(self.cpl_percents(10), weights, avgweights)
-
-    def assess_cpl5_percents(self, weights, avgweights):
-        return self.assess_func(self.cpl_percents(5), weights, avgweights)
-
-    # Assessment Tools
-    def assess_func(self, func, weights, avgweights):
-        flags = (0, 0)
-        itergames = zip(func, self.mblurs(), self.hblurs(), self.holds(), self.move_times())
-        if len(self.games) > 2:
-            flags[0] = weighted_avg(itergames, avgweights)
-        flags[1] = max(list((r + weights_mask(weights, mb, hb, ho, mt)) for r, mb, hb, ho, mt in itergames))
+        if len(self.games) > 0:
+            self.games = self.games + (5 - len(self.games)) * [self.games[-1]]
+            flags.append(self.gamesPlayed)
+            flags.extend(self.mblurs())
+            flags.extend(self.hblurs())
+            flags.extend(self.holds())
+            flags.extend(self.move_times())
+            flags.extend(self.game_lengths())
+            flags.extend(self.rank_0_percents())
+            flags.extend(self.rank_1_percents())
+            flags.extend(self.rank_5more_percents())
+            flags.extend(self.rank_0_move20plus_percents())
+            flags.extend(self.cpl_percents(20))
+            flags.extend(self.cpl_percents(10))
+            flags.extend(self.cpl_greater_percents(100))
         return flags
+
+    def assess_and_report(self, net):
+        assessment = net.activate(tuple(self.flags()))
+        return (assessment > 0.65, assessment)
+
+    def assess(self, net):
+        flags = self.flags()
+        if len(flags) > 0:
+            return net.activate(tuple(flags)) > 0.65
+        else:
+            return False
+
+    def report(self, net):
+        flags = self.flags()
+        if len(flags) > 0:
+            return net.activate(tuple(flags))
+        else:
+            return 0
 
     # Data Collectors
         # Assessment
     def mblurs(self):
-        return list(i.analysed.assessment.flags.mbr for i in self.games)
+        return list(int(i.analysed.assessment.flags.mbr) for i in self.games)
 
     def hblurs(self):
-        return list(i.analysed.assessment.flags.hbr for i in self.games)
+        return list(int(i.analysed.assessment.flags.hbr) for i in self.games)
 
     def holds(self):
-        return list(i.analysed.assessment.hold for i in self.games)
+        return list(int(i.analysed.assessment.hold) for i in self.games)
 
     def move_times(self):
-        return list(i.analysed.assessment.flags.cmt for i in self.games)
+        return list(int(i.analysed.assessment.flags.cmt) for i in self.games)
 
         # Game
     def ranks(self):
         return sum(list(i.analysed.ranks() for i in self.games), [])
+
+    def game_lengths(self):
+        return list(i.analysed.length() for i in self.games)
 
     def rank_0_percents(self):
         return list(i.analysed.rank_0_percent() for i in self.games)
@@ -134,11 +86,14 @@ class AnalysedPlayer:
     def rank_0_move20plus_percents(self):
         return list(i.analysed.rank_0_move20plus_percent() for i in self.games)
 
-    def rank_5less_percents(self):
-        return list(i.analysed.rank_5less_percent() for i in self.games)
+    def rank_5more_percents(self):
+        return list(i.analysed.rank_5more_percent() for i in self.games)
 
     def cpl_percents(self, cp):
         return list(i.analysed.cpl_percent(cp) for i in self.games)
+
+    def cpl_greater_percents(self, cp):
+        return list(i.analysed.cpl_greater_percent(cp) for i in self.games)
 
     def accuracy_percentages(self, cp):
         return list(i.analysed.accuracy_percentage(cp) for i in self.games)

@@ -33,23 +33,25 @@ for i in legits_pkl:
 		print 'reading: '+str(i)
 		legits[os.path.splitext(i)[0]] = pickle.load(inputpkl)
 
-print 'LEGITS'
-print 'Incorrectly Marked'
-incorrect = [y.name for x, y in legits.items() if y.assess()]
-print len(incorrect)
-print incorrect
-correct = [y.name for x, y in legits.items() if not y.assess()]
-print 'Correctly Ignored'
-print len(correct)
-print [y.name for x, y in legits.items() if not y.assess()]
+with open('neuralnet.pkl', 'r') as net_pkl:
+	net = pickle.load(net_pkl)
+	print 'LEGITS'
+	print 'Incorrectly Marked'
+	incorrect = [y.name for x, y in legits.items() if y.assess(net)]
+	print len(incorrect)
+	print incorrect
+	correct = [y.name for x, y in legits.items() if not y.assess(net)]
+	print 'Correctly Ignored'
+	print len(correct)
+	print [y.name for x, y in legits.items() if not y.assess(net)]
 
-print ''
-print 'CHEATERS'
-print 'Correctly Marked'
-correct = [y.name for x, y in cheaters.items() if y.assess()]
-print len(correct)
-print correct
-print 'Missed'
-missed = [y.name for x, y in cheaters.items() if not y.assess()]
-print len(missed)
-print missed
+	print ''
+	print 'CHEATERS'
+	print 'Correctly Marked'
+	correct = [y.name for x, y in cheaters.items() if y.assess(net)]
+	print len(correct)
+	print correct
+	print 'Missed'
+	missed = [y.name for x, y in cheaters.items() if not y.assess(net)]
+	print len(missed)
+	print missed
