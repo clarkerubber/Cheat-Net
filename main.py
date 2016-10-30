@@ -15,7 +15,7 @@ from modules.bcolors.bcolors import bcolors
 from modules.analysis.AnalysableGame import recent_games
 from modules.analysis.AnalysedPlayer import AnalysedPlayer
 from modules.analysis.PlayerAssessment import PlayerAssessment
-from modules.api.tools import get_player_games
+from modules.api.tools import get_player_games, get_files
 from modules.api.api import get_player_data, get_new_user_id, post_report
 
 sys.setrecursionlimit(2000)
@@ -53,7 +53,7 @@ info_handler = chess.uci.InfoHandler()
 engine.info_handlers.append(info_handler)
 
 
-"""Start importing players"""
+"""Start doing things"""
 
 def collect_analyse_save(userId, net):
     try:
@@ -71,16 +71,16 @@ def collect_analyse_save(userId, net):
         [i.analyse(engine, info_handler) for i in ap.games]
         if ap.assess(net):
             logging.debug(bcolors.WARNING + userId + ' is likely cheating' + bcolors.ENDC)
-            post_report(userId, ap.assess_and_report(net), settings.token)
         else:
             logging.debug(bcolors.WARNING + userId + ' is unlikely cheating' + bcolors.ENDC)
-            post_report(userId, ap.assess_and_report(net), settings.token)
+
+        post_report(userId, ap.assess_and_report(net), settings.token)
 
         with open('test-data/saved/'+userId+'.pkl', 'w+') as output:
             pickle.dump(ap, output, pickle.HIGHEST_PROTOCOL)
     except KeyError:
         logging.debug(bcolors.WARNING + userId + ' has no report information available' + bcolors.ENDC)
-        post_report(userId, False, settings.token)
+        post_report(userId, (False, 'No info available'), settings.token)
 
 with open('neuralnet.pkl', 'r') as net_pkl:
     net = pickle.load(net_pkl)
