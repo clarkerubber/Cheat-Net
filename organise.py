@@ -3,6 +3,7 @@
 """Organise players in to cheaters and legit folders"""
 
 import argparse
+import sys
 import os
 import pickle
 from modules.bcolors.bcolors import bcolors

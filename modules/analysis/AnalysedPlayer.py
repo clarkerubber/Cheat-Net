@@ -37,19 +37,19 @@ class AnalysedPlayer:
 
     def assess_and_report(self, net):
         assessment = net.activate(tuple(self.flags()))
-        return (assessment > 0.65, assessment)
+        return (assessment[0] > 0.65, assessment[0])
 
     def assess(self, net):
         flags = self.flags()
         if len(flags) > 0:
-            return net.activate(tuple(flags)) > 0.65
+            return net.activate(tuple(flags))[0] > 0.65
         else:
             return False
 
     def report(self, net):
         flags = self.flags()
         if len(flags) > 0:
-            return net.activate(tuple(flags))
+            return net.activate(tuple(flags))[0]
         else:
             return 0
 
