@@ -1,21 +1,15 @@
 #!/usr/bin/env python
 
-"""Analysing players for lichess.org"""
+"""Optimise neural net"""
 
 import argparse
-import chess
-import chess.uci
-import chess.pgn
 import logging
 import os
-import sys
 import pickle
-from modules.analysis.AnalysedPlayer import AnalysedPlayer
-from modules.fishnet.fishnet import stockfish_command
 from modules.bcolors.bcolors import bcolors
-from modules.api.tools import get_files, get_player_games
-from modules.analysis.tools import avg
-from operator import itemgetter
+from pybrain.structure import FeedForwardNetwork, LinearLayer, SigmoidLayer, FullConnection
+from pybrain.supervised.trainers import BackpropTrainer
+from pybrain.datasets import SupervisedDataSet
 
 try:
     # Optionally fix colors on Windows and in journals if the colorama module
@@ -27,164 +21,80 @@ try:
 except ImportError:
     pass
 
-# Import Legits
-legits_pkl = get_files('test-data/saved/legits')
-legits = {}
-for i in legits_pkl:
-    with open('test-data/saved/legits/'+i, 'rb') as inputpkl:
-        print 'reading: '+str(i)
-        legits[os.path.splitext(i)[0]] = pickle.load(inputpkl)
+# Build Network
+n = FeedForwardNetwork()
+inLayer = LinearLayer(61)
+hidden_1 = SigmoidLayer(61)
+hidden_2 = SigmoidLayer(20)
+hidden_3 = SigmoidLayer(5)
+outLayer = LinearLayer(1)
 
-def maximise_weights(func, averg, maxim): # used to find the maximum weight value while not marking a legit player
-    weights = {'mb': 0, 'hb': 0, 'ho': 0, 'mt': 0, 'mbmt': 0, 'hbmt': 0, 'homt': 0}
-    avgweights = {'mb': 0, 'hb': 0, 'ho': 0, 'mt': 0, 'mbmt': 0, 'hbmt': 0, 'homt': 0}
-    for flag, val in weights.items():
-        while not max(func(averg = averg, maxim = maxim, weights = weights, avgweights = {}) or [0]) > 0 and weights[flag] < 100:
-            weights[flag] += 1
-        weights[flag] -= 1
-    for flag, val in avgweights.items():
-        while not max(func(averg = averg, maxim = maxim, weights = {}, avgweights = avgweights) or [0]) > 0 and avgweights[flag] < 100:
-            avgweights[flag] += 1
-        avgweights[flag] -= 1
-    return (weights, avgweights)
+n.addInputModule(inLayer)
+n.addModule(hidden_1)
+n.addModule(hidden_2)
+n.addModule(hidden_3)
+n.addOutputModule(outLayer)
 
-def minimise_weights(weights): # Find the maximum weight allowed to not mark any legit players
-    weights_output = {'mb': 100, 'hb': 100, 'ho': 100, 'mt': 100, 'mbmt': 100, 'hbmt': 100, 'homt': 100}
-    for w in weights:
-        for key, val in w.items():
-            if weights_output[key] > val:
-                weights_output[key] = val
-    return weights_output
+in_to_hidden_1 = FullConnection(inLayer, hidden_1)
+hidden_1_to_hidden_2 = FullConnection(hidden_1, hidden_2)
+hidden_2_to_hidden_3 = FullConnection(hidden_2, hidden_3)
+hidden_3_to_out = FullConnection(hidden_3, outLayer)
 
-def max_and_avg(func): # used to find the maximum averg and max values while not marking a legit player
-    averg = 100
-    while not max(func(averg = averg, maxim = 100, weights = {}, avgweights = {}) or [0]) > 0 and averg > 0:
-        averg -= 1
-    averg += 1
-    maxim = 100
-    while not max(func(averg = 100, maxim = maxim, weights = {}, avgweights = {}) or [0]) > 0 and maxim > 0:
-        maxim -= 1
-    maxim += 1
-    return (maxim, averg)
+n.addConnection(in_to_hidden_1)
+n.addConnection(hidden_1_to_hidden_2)
+n.addConnection(hidden_2_to_hidden_3)
+n.addConnection(hidden_3_to_out)
+
+n.sortModules()
 
 
+ds = SupervisedDataSet(61, 1)
 
-r0p_mxavgs = []
-r1p_mxavgs = []
-r01p_mxavgs = []
-r5lp_mxavgs = []
-r0m20p_mxavgs = []
-c20_mxavgs = []
-c10_mxavgs = []
-c5_mxavgs = []
+raw_flags = []
+# Import Flags
+with open('test-data/tensor_flags_dump.pkl', 'r') as input_pkl:
+    raw_flags = pickle.load(input_pkl)
+    for i in raw_flags:
+        print i
+        ds.addSample(i[0], i[1])
 
-for x, y in legits.items():
-    r0p_mxavgs.append(max_and_avg(y.assess_rank_0_percents))
-    r1p_mxavgs.append(max_and_avg(y.assess_rank_1_percents))
-    r01p_mxavgs.append(max_and_avg(y.assess_rank_01_percents))
-    r5lp_mxavgs.append(max_and_avg(y.assess_rank_5less_percents))
-    r0m20p_mxavgs.append(max_and_avg(y.assess_rank_0_move20plus_percents))
-    c20_mxavgs.append(max_and_avg(y.assess_cpl20_percents))
-    c10_mxavgs.append(max_and_avg(y.assess_cpl10_percents))
-    c5_mxavgs.append(max_and_avg(y.assess_cpl5_percents))
+trainer = BackpropTrainer(n, ds)
 
-r0p_max = max(r0p_mxavgs, key=itemgetter(0))[0]
-r0p_avg = max(r0p_mxavgs, key=itemgetter(1))[1]
+cycles = 2000
+for i in range(cycles):
+    error = trainer.train()
+    print str(i)+'/'+str(cycles)+': error '+str(error)
 
-r1p_max = max(r1p_mxavgs, key=itemgetter(0))[0]
-r1p_avg = max(r1p_mxavgs, key=itemgetter(1))[1]
+c_correct = 0
+c_incorrect = 0
+l_correct = 0
+l_incorrect = 0
 
-r01p_max = max(r01p_mxavgs, key=itemgetter(0))[0]
-r01p_avg = max(r01p_mxavgs, key=itemgetter(1))[1]
+threshold = 0.68
 
-r5lp_max = max(r5lp_mxavgs, key=itemgetter(0))[0]
-r5lp_avg = max(r5lp_mxavgs, key=itemgetter(1))[1]
+for i, o in raw_flags:
+    s = n.activate(i)
+    if (o[0] == 0 and s[0] < threshold) or (o[0] == 1 and s[0] >= threshold):
+        print bcolors.OKGREEN + 'Correct' + bcolors.ENDC
+    else:
+        print bcolors.WARNING + 'Incorrect' + bcolors.ENDC
 
-r0m20p_max = max(r0m20p_mxavgs, key=itemgetter(0))[0]
-r0m20p_avg = max(r0m20p_mxavgs, key=itemgetter(1))[1]
+    if o[0] == 0 and s[0] < threshold:
+        l_correct += 1
+    elif o[0] == 0 and s[0] >= threshold:
+        l_incorrect += 1
+    elif o[0] == 1 and s[0] >= threshold:
+        c_correct += 1
+    else:
+        c_incorrect += 1
 
-c20_max = max(c20_mxavgs, key=itemgetter(0))[0]
-c20_avg = max(c20_mxavgs, key=itemgetter(1))[1]
+    print o
+    print s
 
-c10_max = max(c10_mxavgs, key=itemgetter(0))[0]
-c10_avg = max(c10_mxavgs, key=itemgetter(1))[1]
+print 'Cheaters Correct: '+str(c_correct)
+print 'Cheaters Incorrect: '+str(c_incorrect)
+print 'Legits Correct: '+str(l_correct)
+print 'Legits incorrect: '+str(l_incorrect)
 
-c5_max = max(c5_mxavgs, key=itemgetter(0))[0]
-c5_avg = max(c5_mxavgs, key=itemgetter(1))[1]
-
-
-r0p_weights = []
-r1p_weights = []
-r01p_weights = []
-r5lp_weights = []
-r0m20p_weights = []
-c20_weights = []
-c10_weights = []
-c5_weights = []
-
-for x, y in legits.items():
-    r0p_weights.append(maximise_weights(y.assess_rank_0_percents, r0p_avg, r0p_max))
-    r1p_weights.append(maximise_weights(y.assess_rank_1_percents, r1p_avg, r1p_max))
-    r01p_weights.append(maximise_weights(y.assess_rank_01_percents, r01p_avg, r01p_max))
-    r5lp_weights.append(maximise_weights(y.assess_rank_5less_percents, r5lp_avg, r5lp_max))
-    r0m20p_weights.append(maximise_weights(y.assess_rank_0_move20plus_percents, r0m20p_avg, r0m20p_max))
-    c20_weights.append(maximise_weights(y.assess_cpl20_percents, c20_avg, c20_max))
-    c10_weights.append(maximise_weights(y.assess_cpl10_percents, c10_avg, c10_max))
-    c5_weights.append(maximise_weights(y.assess_cpl5_percents, c5_avg, c5_max))
-
-
-print '        flags.extend(self.assess_rank_0_percents('
-print '            averg = '+str(r0p_avg)+','
-print '            maxim = '+str(r0p_max)+','
-print '            weights = '+str(minimise_weights(list(i[0] for i in r0p_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r0p_weights)))
-print '        ))'
-
-print '        flags.extend(self.assess_rank_1_percents('
-print '            averg = '+str(r1p_avg)+','
-print '            maxim = '+str(r1p_max)+','
-print '            weights = '+str(minimise_weights(list(i[0] for i in r1p_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r1p_weights)))
-print '        ))'
-
-print '        flags.extend(self.assess_rank_01_percents('
-print '            averg = '+str(r01p_avg)+','
-print '            maxim = '+str(r01p_max)+','
-print '            weights = '+str(minimise_weights(list(i[0] for i in r01p_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r01p_weights)))
-print '        ))'
-
-print '        flags.extend(self.assess_rank_5less_percents('
-print '            averg = '+str(r5lp_avg)+','
-print '            maxim = '+str(r5lp_max)+','
-print '            weights = '+str(minimise_weights(list(i[0] for i in r5lp_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r5lp_weights)))
-print '        ))'
-
-print '        flags.extend(self.assess_rank_0_move20plus_percents('
-print '            averg = '+str(r0m20p_avg)+','
-print '            maxim = '+str(r0m20p_max)+','
-print '            weights = '+str(minimise_weights(list(i[0] for i in r0m20p_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in r0m20p_weights)))
-print '        ))'
-
-print '        flags.extend(self.assess_cpl20_percents('
-print '            averg = '+str(c20_avg)+','
-print '            maxim = '+str(c20_max)+','
-print '            weights = '+str(minimise_weights(list(i[0] for i in c20_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in c20_weights)))
-print '        ))'
-
-print '        flags.extend(self.assess_cpl10_percents('
-print '            averg = '+str(c10_avg)+','
-print '            maxim = '+str(c10_max)+','
-print '            weights = '+str(minimise_weights(list(i[0] for i in c10_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in c10_weights)))
-print '        ))'
-
-print '        flags.extend(self.assess_cpl5_percents('
-print '            averg = '+str(c5_avg)+','
-print '            maxim = '+str(c5_max)+','
-print '            weights = '+str(minimise_weights(list(i[0] for i in c5_weights)))+','
-print '            avgweights = '+str(minimise_weights(list(i[1] for i in c5_weights)))
-print '        ))'
+with open('neuralnet.pkl', 'w+') as output:
+    pickle.dump(n, output)

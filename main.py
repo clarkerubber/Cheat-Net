@@ -55,7 +55,7 @@ engine.info_handlers.append(info_handler)
 
 """Start importing players"""
 
-def collect_analyse_save(userId):
+def collect_analyse_save(userId, net):
     try:
         player_data = get_player_data(userId, settings.token)
         playerAssessments = [PlayerAssessment(i) for i in player_data['assessment']['playerAssessments']]
@@ -71,10 +71,10 @@ def collect_analyse_save(userId):
         [i.analyse(engine, info_handler) for i in ap.games]
         if ap.assess():
             logging.debug(bcolors.WARNING + userId + ' is likely cheating' + bcolors.ENDC)
-            post_report(userId, ap.assess(), settings.token)
+            post_report(userId, ap.assess_and_report(net), settings.token)
         else:
             logging.debug(bcolors.WARNING + userId + ' is unlikely cheating' + bcolors.ENDC)
-            post_report(userId, ap.assess(), settings.token)
+            post_report(userId, ap.assess_and_report(net), settings.token)
 
         with open('test-data/saved/'+userId+'.pkl', 'w+') as output:
             pickle.dump(ap, output, pickle.HIGHEST_PROTOCOL)
@@ -82,5 +82,7 @@ def collect_analyse_save(userId):
         logging.debug(bcolors.WARNING + userId + ' has no report information available' + bcolors.ENDC)
         post_report(userId, False, settings.token)
 
-while True:
-    collect_analyse_save(get_new_user_id(settings.token))
+with open('neuralnet.pkl', 'r') as net_pkl:
+    net = pickle.load(net_pkl)
+    while True:
+        collect_analyse_save(get_new_user_id(settings.token), net)

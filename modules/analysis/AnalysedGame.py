@@ -11,15 +11,18 @@ class AnalysedGame: # subjective to the player being analysed
     def move_numbers(self):
         return list(range(len(self.positions)))
 
+    def length(self):
+        return len(self.positions)
+
     def rank_0_percent(self):
         if len(self.positions) > 10:
-            return 100*sum(i.rank() == 0 for i in self.positions)/float(len(self.positions))
+            return 100*sum(i.rank() == 0 for i in self.positions)/float(self.length())
         else:
             return 0
 
     def rank_1_percent(self):
-        if len(self.positions) > 10:
-            return 100*sum(i.rank() == 1 for i in self.positions)/float(len(self.positions))
+        if self.length() > 10:
+            return 100*sum(i.rank() == 1 for i in self.positions)/float(self.length())
         else:
             return 0
 
@@ -36,17 +39,21 @@ class AnalysedGame: # subjective to the player being analysed
         else:
             return 0
 
-    def rank_5less_percent(self):
-        start = 0
-        if len(self.positions[start:]) > 10:
-            return 100*sum(i.rank() < 4 for i in self.positions[start:])/float(len(self.positions[start:]))
+    def rank_5more_percent(self):
+        if len(self.positions) > 10:
+            return 100*sum(i.rank() > 4 for i in self.positions)/float(self.length())
         else:
             return 0
 
     def cpl_percent(self, cp):
-        start = 0
-        if len(self.positions[start:]) > 10:
-            return 100*sum(i.actual_error() < cp for i in self.positions[start:])/float(len(self.positions[start:]))
+        if self.length() > 10:
+            return 100*sum(i.actual_error() < cp for i in self.positions)/float(self.length())
+        else:
+            return 0
+
+    def cpl_greater_percent(self, cp):
+        if self.length() > 10:
+            return 100*sum(i.actual_error() > cp for i in self.positions)/float(self.length())
         else:
             return 0
 
@@ -81,7 +88,7 @@ class AnalysedGame: # subjective to the player being analysed
         return avg(self.errors())
 
     def accuracy_percentage(self, cp):
-        if len(self.positions) > 0:
-            return 100*sum(i.accuracy_less_than(cp) for i in self.positions)/float(len(self.positions))
+        if self.length() > 0:
+            return 100*sum(i.accuracy_less_than(cp) for i in self.positions)/float(self.length())
         else:
             return 0
