@@ -6,7 +6,7 @@ This is a python application dedicated to analysing reported cheaters on lichess
 
 ## Installation
 
-This script requires the *Requests* and *Python-Chess* libraries to run, as well as a copy of *Stockfish*
+This script requires the *Requests*, *Python-Chess*, *PyBrain*, *SciPy* and *NumPy* libraries to run, as well as a copy of *Stockfish*
 
 ### Install Requests
 
@@ -15,6 +15,20 @@ This script requires the *Requests* and *Python-Chess* libraries to run, as well
 ### Install Python Chess
 
 `pip install python-chess`
+
+### Install SciPy
+
+`pip install scipy`
+
+### Install NumPy
+
+`pip install numpy`
+
+### Install PyBrain
+
+`git clone https://github.com/pybrain/pybrain.git`
+`cd pybrain`
+`python setup.py install`
 
 ### Setup
 
