@@ -23,8 +23,8 @@ except ImportError:
 
 # Build Network
 n = FeedForwardNetwork()
-inLayer = LinearLayer(61)
-hidden_1 = SigmoidLayer(61)
+inLayer = LinearLayer(66)
+hidden_1 = SigmoidLayer(66)
 hidden_2 = SigmoidLayer(20)
 hidden_3 = SigmoidLayer(5)
 outLayer = LinearLayer(1)
@@ -48,7 +48,7 @@ n.addConnection(hidden_3_to_out)
 n.sortModules()
 
 
-ds = SupervisedDataSet(61, 1)
+ds = SupervisedDataSet(66, 1)
 
 raw_flags = []
 # Import Flags
@@ -60,7 +60,7 @@ with open('test-data/tensor_flags_dump.pkl', 'r') as input_pkl:
 
 trainer = BackpropTrainer(n, ds)
 
-cycles = 10000
+cycles = 5000
 for i in range(cycles):
     error = trainer.train()
     print str(i)+'/'+str(cycles)+': error '+str(error)

@@ -25,6 +25,7 @@ class AnalysedPlayer:
             flags.extend(self.hblurs())
             flags.extend(self.holds())
             flags.extend(self.move_times())
+            flags.extend(self.move_times_average())
             flags.extend(self.game_lengths())
             flags.extend(self.rank_0_percents())
             flags.extend(self.rank_1_percents())
@@ -41,7 +42,9 @@ class AnalysedPlayer:
     def assess(self, net):
         flags = self.flags()
         if len(flags) > 0:
-            return net.activate(tuple(flags))[0] > 0.68
+            activation = net.activate(tuple(flags))[0]
+            if activation > 0.7:
+                return True
         else:
             return False
 
@@ -65,6 +68,9 @@ class AnalysedPlayer:
 
     def move_times(self):
         return list(int(i.analysed.assessment.flags.cmt) for i in self.games)
+
+    def move_times_average(self):
+        return list(int(i.analysed.assessment.mtAvg) for i in self.games)
 
         # Game
     def ranks(self):
