@@ -41,7 +41,7 @@ class AnalysedPlayer:
     def assess(self, net):
         flags = self.flags()
         if len(flags) > 0:
-            return net.activate(tuple(flags))[0] > 0.65
+            return net.activate(tuple(flags))[0] > 0.68
         else:
             return False
 

@@ -27,3 +27,5 @@ for i in unsorted_pkl:
         player_data = get_player_data(d.name, settings.token)
         if player_data['assessment']['user']['engine']:
             os.rename('test-data/saved/'+i, 'test-data/saved/cheaters/'+i)
+        elif player_data['history'][0]['data'].get('processedBy', None) is not None:
+            os.rename('test-data/saved/'+i, 'test-data/saved/legits/'+i)
