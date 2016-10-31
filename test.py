@@ -37,21 +37,29 @@ with open('neuralnet.pkl', 'r') as net_pkl:
 	net = pickle.load(net_pkl)
 	print 'LEGITS'
 	print 'Incorrectly Marked'
-	incorrect = [y.name for x, y in legits.items() if y.assess(net)]
+	incorrect = [y.name for x, y in legits.items() if y.assess(net) == 2]
 	print len(incorrect)
 	print incorrect
-	correct = [y.name for x, y in legits.items() if not y.assess(net)]
 	print 'Correctly Ignored'
+	correct = [y.name for x, y in legits.items() if y.assess(net) == 0]
 	print len(correct)
-	print [y.name for x, y in legits.items() if not y.assess(net)]
+	print correct
+	print 'Indeterminate'
+	unsure = [y.name for x, y in legits.items() if y.assess(net) == 1]
+	print len(unsure)
+	print unsure
 
 	print ''
 	print 'CHEATERS'
 	print 'Correctly Marked'
-	correct = [y.name for x, y in cheaters.items() if y.assess(net)]
+	correct = [y.name for x, y in cheaters.items() if y.assess(net) == 2]
 	print len(correct)
 	print correct
-	print 'Missed'
-	missed = [y.name for x, y in cheaters.items() if not y.assess(net)]
+	print 'Incorrectly Ignored'
+	missed = [y.name for x, y in cheaters.items() if y.assess(net) == 0]
 	print len(missed)
 	print missed
+	print 'Indeterminate'
+	unsure = [y.name for x, y in cheaters.items() if y.assess(net) == 1]
+	print len(unsure)
+	print unsure
