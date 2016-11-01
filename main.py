@@ -69,10 +69,6 @@ def collect_analyse_save(userId, net):
             player_data['assessment']['relatedUsers'])
 
         [i.analyse(engine, info_handler) for i in ap.games]
-        if ap.assess(net):
-            logging.debug(bcolors.WARNING + userId + ' is likely cheating' + bcolors.ENDC)
-        else:
-            logging.debug(bcolors.WARNING + userId + ' is unlikely cheating' + bcolors.ENDC)
 
         post_report(userId, ap.assess_and_report(net), settings.token)
 
