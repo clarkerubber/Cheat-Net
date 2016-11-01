@@ -21,16 +21,21 @@ cheaters_pkl = get_files('test-data/saved/cheaters')
 legits_pkl = get_files('test-data/saved/legits')
 
 def analyse_pkl(dr, pkl_names, net):
+	maxim = 0
 	marked = []
 	unmarked = []
 	for i in pkl_names:
 		with open(dr+i, 'rb') as inputpkl:
 			p = pickle.load(inputpkl)
 			assessment = p.assess(net)
+			activation = round(p.activation(net), 3)
+			if activation > maxim:
+				maxim = activation
 			if assessment:
-				marked.append(p.name)
+				marked.append((p.name, activation))
 			else:
-				unmarked.append(p.name)
+				unmarked.append((p.name, activation))
+	print 'Maxim: '+str(maxim)
 	print 'MARKED'
 	print len(marked)
 	print marked

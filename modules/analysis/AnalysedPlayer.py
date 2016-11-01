@@ -43,21 +43,23 @@ class AnalysedPlayer:
 
     def assess(self, net):
         flags = self.flags()
-        if len(flags) > 0:
-            activation = net.activate(tuple(flags))[0]
-            if activation > 0.6:
-                return True
-        else:
-            return False
+        if self.activation(net) > 0.7:
+            return True
+        return False
 
     def report(self, net):
-        flags = self.flags()
-        if len(flags) > 0:
-            output = str(round(100*net.activate(tuple(flags))[0], 1))+'% confidence of cheating'
+        if len(self.flags()) > 0:
+            output = str(round(100*self.activation(net), 1))+'% confidence of cheating'
             output += "\n PV 1 Selected " + str(avg(self.rank_01_percents()))+'% of the time on average'
             return 
         else:
             return 'not enough games to create assessment'
+
+    def activation(self, net):
+        flags = self.flags()
+        if len(flags) > 0:
+            return net.activate(tuple(flags))[0]
+        return 0.0
 
     # Data Collectors
         # Assessment

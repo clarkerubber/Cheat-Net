@@ -64,7 +64,7 @@ with open('test-data/tensor_flags_dump.pkl', 'r') as input_pkl:
 
 trainer = BackpropTrainer(n, ds)
 
-cycles = 5000
+cycles = 1000
 for i in range(cycles):
     error = trainer.train()
     print str(i)+'/'+str(cycles)+': error '+str(error)
@@ -74,7 +74,7 @@ c_incorrect = 0
 l_correct = 0
 l_incorrect = 0
 
-threshold = 0.68
+threshold = 0.7
 
 for i, o in raw_flags:
     s = n.activate(i)
