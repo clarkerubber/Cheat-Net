@@ -49,7 +49,7 @@ class AnalysedPlayer:
     def report(self, net):
         if len(self.flags()) > 0:
             output = str(round(100*self.activation(net), 1))+'% confidence of cheating, '+str(round(avg(self.rank_01_percents()), 1))+'% Rank 1 PV'
-            return 
+            return output
         else:
             return 'not enough games to create assessment'
 

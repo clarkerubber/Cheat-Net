@@ -29,12 +29,13 @@ def analyse_pkl(dr, pkl_names, net):
 			p = pickle.load(inputpkl)
 			assessment = p.assess(net)
 			activation = round(p.activation(net), 3)
+			report = p.report(net)
 			if activation > maxim:
 				maxim = activation
 			if assessment:
-				marked.append((p.name, activation))
+				marked.append((p.name, report, activation))
 			else:
-				unmarked.append((p.name, activation))
+				unmarked.append((p.name, report, activation))
 	print 'Maxim: '+str(maxim)
 	print 'MARKED'
 	print len(marked)
