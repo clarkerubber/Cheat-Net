@@ -26,6 +26,8 @@ class AnalysedPlayer:
             flags.extend(self.holds())
             flags.extend(self.move_times())
             flags.extend(self.move_times_average())
+            flags.extend(self.move_times_sd())
+            flags.extend(self.sf_average())
             flags.extend(self.game_lengths())
             flags.extend(self.rank_0_percents())
             flags.extend(self.rank_1_percents())
@@ -71,6 +73,12 @@ class AnalysedPlayer:
 
     def move_times_average(self):
         return list(int(i.analysed.assessment.mtAvg) for i in self.games)
+
+    def move_times_sd(self):
+        return list(int(i.analysed.assessment.mtSd) for i in self.games)
+
+    def sf_average(self):
+        return list(int(i.analysed.assessment.sfAvg) for i in self.games)
 
         # Game
     def ranks(self):

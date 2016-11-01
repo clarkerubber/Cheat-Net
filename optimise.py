@@ -23,32 +23,36 @@ except ImportError:
 
 # Build Network
 n = FeedForwardNetwork()
-inLayer = LinearLayer(66)
-hidden_1 = SigmoidLayer(66)
-hidden_2 = SigmoidLayer(20)
-hidden_3 = SigmoidLayer(5)
+inLayer = LinearLayer(76)
+hidden_1 = SigmoidLayer(76)
+hidden_2 = SigmoidLayer(30)
+hidden_3 = SigmoidLayer(20)
+hidden_4 = SigmoidLayer(10)
 outLayer = LinearLayer(1)
 
 n.addInputModule(inLayer)
 n.addModule(hidden_1)
 n.addModule(hidden_2)
 n.addModule(hidden_3)
+n.addModule(hidden_4)
 n.addOutputModule(outLayer)
 
 in_to_hidden_1 = FullConnection(inLayer, hidden_1)
 hidden_1_to_hidden_2 = FullConnection(hidden_1, hidden_2)
 hidden_2_to_hidden_3 = FullConnection(hidden_2, hidden_3)
-hidden_3_to_out = FullConnection(hidden_3, outLayer)
+hidden_3_to_hidden_4 = FullConnection(hidden_3, hidden_4)
+hidden_4_to_out = FullConnection(hidden_4, outLayer)
 
 n.addConnection(in_to_hidden_1)
 n.addConnection(hidden_1_to_hidden_2)
 n.addConnection(hidden_2_to_hidden_3)
-n.addConnection(hidden_3_to_out)
+n.addConnection(hidden_3_to_hidden_4)
+n.addConnection(hidden_4_to_out)
 
 n.sortModules()
 
 
-ds = SupervisedDataSet(66, 1)
+ds = SupervisedDataSet(76, 1)
 
 raw_flags = []
 # Import Flags

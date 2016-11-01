@@ -20,46 +20,28 @@ from collections import Counter
 cheaters_pkl = get_files('test-data/saved/cheaters')
 legits_pkl = get_files('test-data/saved/legits')
 
-cheaters = {}
-legits = {}
-
-for i in cheaters_pkl:
-	with open('test-data/saved/cheaters/'+i, 'rb') as inputpkl:
-		print 'reading: '+str(i)
-		cheaters[os.path.splitext(i)[0]] = pickle.load(inputpkl)
-
-for i in legits_pkl:
-	with open('test-data/saved/legits/'+i, 'rb') as inputpkl:
-		print 'reading: '+str(i)
-		legits[os.path.splitext(i)[0]] = pickle.load(inputpkl)
+def analyse_pkl(dr, pkl_names, net):
+	marked = []
+	unmarked = []
+	for i in pkl_names:
+		with open(dr+i, 'rb') as inputpkl:
+			p = pickle.load(inputpkl)
+			assessment = p.assess(net)
+			if assessment:
+				marked.append(p.name)
+			else:
+				unmarked.append(p.name)
+	print 'MARKED'
+	print len(marked)
+	print marked
+	print 'UNMARKED'
+	print len(unmarked)
+	print unmarked
 
 with open('neuralnet.pkl', 'r') as net_pkl:
 	net = pickle.load(net_pkl)
 	print 'LEGITS'
-	print 'Incorrectly Marked'
-	incorrect = [y.name for x, y in legits.items() if y.assess(net) == 2]
-	print len(incorrect)
-	print incorrect
-	print 'Correctly Ignored'
-	correct = [y.name for x, y in legits.items() if y.assess(net) == 0]
-	print len(correct)
-	print correct
-	print 'Indeterminate'
-	unsure = [y.name for x, y in legits.items() if y.assess(net) == 1]
-	print len(unsure)
-	print unsure
-
+	analyse_pkl('test-data/saved/legits/', legits_pkl, net)
 	print ''
 	print 'CHEATERS'
-	print 'Correctly Marked'
-	correct = [y.name for x, y in cheaters.items() if y.assess(net) == 2]
-	print len(correct)
-	print correct
-	print 'Incorrectly Ignored'
-	missed = [y.name for x, y in cheaters.items() if y.assess(net) == 0]
-	print len(missed)
-	print missed
-	print 'Indeterminate'
-	unsure = [y.name for x, y in cheaters.items() if y.assess(net) == 1]
-	print len(unsure)
-	print unsure
+	analyse_pkl('test-data/saved/cheaters/', cheaters_pkl, net)
