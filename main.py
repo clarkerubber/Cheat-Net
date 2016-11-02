@@ -83,6 +83,10 @@ def collect_analyse_save(userId, net):
 
 
 while True:
+    for i in range(50):
+        with open('neuralnet.pkl', 'r') as net_pkl:
+            net = pickle.load(net_pkl)
+            collect_analyse_save(get_new_user_id(settings.token), net)
     logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
     organise_training_data(settings.token)
     logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
@@ -90,7 +94,3 @@ while True:
     logging.debug(bcolors.OKBLUE + 'Retraining neural net...' + bcolors.ENDC)
     optimise()
     logging.debug(bcolors.OKBLUE + 'Analysing new players...' + bcolors.ENDC)
-    for i in range(50):
-        with open('neuralnet.pkl', 'r') as net_pkl:
-            net = pickle.load(net_pkl)
-            collect_analyse_save(get_new_user_id(settings.token), net)
