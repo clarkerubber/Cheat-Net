@@ -2,11 +2,8 @@
 
 """Analysing players for lichess.org"""
 
-import sys
 import pickle
 from modules.api.tools import get_files
-
-sys.setrecursionlimit(2000)
 
 def dump_dir(dr, engine):
     in_pkl = get_files(dr)

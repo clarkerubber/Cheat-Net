@@ -10,13 +10,6 @@ from modules.bcolors.bcolors import bcolors
 from modules.api.api import get_player_data
 from modules.api.tools import get_files
 
-sys.setrecursionlimit(2000)
-
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("token", metavar="TOKEN",
-                    help="secret token for the lichess api")
-settings = parser.parse_args()
-
 """Start importing players"""
 def organise_training_data(token):
     unsorted_pkl = get_files('test-data/saved/')
