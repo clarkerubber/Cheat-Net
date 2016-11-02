@@ -99,16 +99,5 @@ class AnalysedGame: # subjective to the player being analysed
         else:
             return 0
 
-    def tactics_seized(self, minadv, maxadv, threshold):
-        last_best = 0
-        total_tactics = 0
-        seized_tactics = 0
-        for best, position in zip(list(i.best_eval for i in self.positions), self.positions):
-            if (last_best + best) > minadv and (last_best + best) < maxadv:
-                total_tactics += 1
-                if position.actual_error() < threshold:
-                    seized_tactics += 1
-            last_best = best
-        if total_tactics > 2:
-            return 100*seized_tactics/float(total_tactics)
-        return 0.0
+    def avg_cpl_given_rank(self, rank):
+        return avg(list(i.actual_error() for i in self.positions if i.rank() == rank))

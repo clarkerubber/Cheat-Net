@@ -37,6 +37,8 @@ class AnalysedPlayer:
             flags.extend(self.cpl_percents(20))
             flags.extend(self.cpl_percents(10))
             flags.extend(self.cpl_greater_percents(100))
+            flags.extend(self.avg_cpl_given_rank(1))
+            flags.extend(self.avg_cpl_given_rank(2))
         return flags
 
     def assess_and_report(self, net):
@@ -90,6 +92,9 @@ class AnalysedPlayer:
     def game_lengths(self):
         return list(i.analysed.length() for i in self.games)
 
+    def avg_cpl_given_rank(self, rank):
+        return list(i.analysed.avg_cpl_given_rank(rank) for i in self.games)
+
     def rank_0_percents(self):
         return list(i.analysed.rank_0_percent() for i in self.games)
 
@@ -122,6 +127,3 @@ class AnalysedPlayer:
 
     def accuracy_percentages_20(self, cp):
         return list(i.analysed.accuracy_percentage_20(cp) for i in self.games)
-
-    def tactics_seized(self, minadv, maxadv, threshold):
-        return list(i.analysed.tactics_seized(minadv, maxadv, threshold) for i in self.games)
