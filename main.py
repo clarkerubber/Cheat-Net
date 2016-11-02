@@ -81,15 +81,16 @@ def collect_analyse_save(userId, net):
         logging.debug(bcolors.WARNING + userId + ' has no report information available' + bcolors.ENDC)
         post_report(userId, (False, 'No info available'), settings.token)
 
-with open('neuralnet.pkl', 'r') as net_pkl:
-    net = pickle.load(net_pkl)
-    while True:
-        logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
-        organise_training_data(settings.token)
-        logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
-        dump_training_data()
-        logging.debug(bcolors.OKBLUE + 'Retraining neural net...' + bcolors.ENDC)
-        optimise()
-        logging.debug(bcolors.OKBLUE + 'Analysing new players...' + bcolors.ENDC)
-        for i in range(50):
+
+while True:
+    logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
+    organise_training_data(settings.token)
+    logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
+    dump_training_data()
+    logging.debug(bcolors.OKBLUE + 'Retraining neural net...' + bcolors.ENDC)
+    optimise()
+    logging.debug(bcolors.OKBLUE + 'Analysing new players...' + bcolors.ENDC)
+    for i in range(50):
+        with open('neuralnet.pkl', 'r') as net_pkl:
+            net = pickle.load(net_pkl)
             collect_analyse_save(get_new_user_id(settings.token), net)
