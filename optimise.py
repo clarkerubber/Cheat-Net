@@ -11,16 +11,6 @@ from pybrain.structure import FeedForwardNetwork, LinearLayer, SigmoidLayer, Ful
 from pybrain.supervised.trainers import BackpropTrainer
 from pybrain.datasets import SupervisedDataSet
 
-try:
-    # Optionally fix colors on Windows and in journals if the colorama module
-    # is available.
-    import colorama
-    wrapper = colorama.AnsiToWin32(sys.stdout)
-    if wrapper.should_wrap():
-        sys.stdout = wrapper.stream
-except ImportError:
-    pass
-
 # Build Network
 def optimise():
     n = FeedForwardNetwork()
