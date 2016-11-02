@@ -17,6 +17,9 @@ from modules.analysis.AnalysedPlayer import AnalysedPlayer
 from modules.analysis.PlayerAssessment import PlayerAssessment
 from modules.api.tools import get_player_games, get_files
 from modules.api.api import get_player_data, get_new_user_id, post_report
+from organise import organise_training_data
+from dump import dump_training_data
+from optimise import optimise
 
 sys.setrecursionlimit(2000)
 
@@ -81,4 +84,12 @@ def collect_analyse_save(userId, net):
 with open('neuralnet.pkl', 'r') as net_pkl:
     net = pickle.load(net_pkl)
     while True:
-        collect_analyse_save(get_new_user_id(settings.token), net)
+        logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
+        organise_training_data(settings.token)
+        logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
+        dump_training_data()
+        logging.debug(bcolors.OKBLUE + 'Retraining neural net...' + bcolors.ENDC)
+        optimise()
+        logging.debug(bcolors.OKBLUE + 'Analysing new players...' + bcolors.ENDC)
+        for i in range(50):
+            collect_analyse_save(get_new_user_id(settings.token), net)

@@ -22,91 +22,84 @@ except ImportError:
     pass
 
 # Build Network
-n = FeedForwardNetwork()
-inLayer = LinearLayer(84)
-hidden_1 = SigmoidLayer(91)
-hidden_2 = SigmoidLayer(50)
-hidden_3 = SigmoidLayer(20)
-hidden_4 = SigmoidLayer(10)
-hidden_5 = SigmoidLayer(5)
-hidden_6 = SigmoidLayer(5)
-outLayer = LinearLayer(1)
+def optimise():
+    n = FeedForwardNetwork()
+    inLayer = LinearLayer(91)
+    hidden_1 = SigmoidLayer(91)
+    hidden_2 = SigmoidLayer(50)
+    hidden_3 = SigmoidLayer(20)
+    hidden_4 = SigmoidLayer(10)
+    hidden_5 = SigmoidLayer(5)
+    hidden_6 = SigmoidLayer(5)
+    outLayer = LinearLayer(1)
 
-n.addInputModule(inLayer)
-n.addModule(hidden_1)
-n.addModule(hidden_2)
-n.addModule(hidden_3)
-n.addModule(hidden_4)
-n.addModule(hidden_5)
-n.addModule(hidden_6)
-n.addOutputModule(outLayer)
+    n.addInputModule(inLayer)
+    n.addModule(hidden_1)
+    n.addModule(hidden_2)
+    n.addModule(hidden_3)
+    n.addModule(hidden_4)
+    n.addModule(hidden_5)
+    n.addModule(hidden_6)
+    n.addOutputModule(outLayer)
 
-in_to_hidden_1 = FullConnection(inLayer, hidden_1)
-hidden_1_to_hidden_2 = FullConnection(hidden_1, hidden_2)
-hidden_2_to_hidden_3 = FullConnection(hidden_2, hidden_3)
-hidden_3_to_hidden_4 = FullConnection(hidden_3, hidden_4)
-hidden_4_to_hidden_5 = FullConnection(hidden_4, hidden_5)
-hidden_5_to_hidden_6 = FullConnection(hidden_5, hidden_6)
-hidden_6_to_out = FullConnection(hidden_6, outLayer)
+    in_to_hidden_1 = FullConnection(inLayer, hidden_1)
+    hidden_1_to_hidden_2 = FullConnection(hidden_1, hidden_2)
+    hidden_2_to_hidden_3 = FullConnection(hidden_2, hidden_3)
+    hidden_3_to_hidden_4 = FullConnection(hidden_3, hidden_4)
+    hidden_4_to_hidden_5 = FullConnection(hidden_4, hidden_5)
+    hidden_5_to_hidden_6 = FullConnection(hidden_5, hidden_6)
+    hidden_6_to_out = FullConnection(hidden_6, outLayer)
 
-n.addConnection(in_to_hidden_1)
-n.addConnection(hidden_1_to_hidden_2)
-n.addConnection(hidden_2_to_hidden_3)
-n.addConnection(hidden_3_to_hidden_4)
-n.addConnection(hidden_4_to_hidden_5)
-n.addConnection(hidden_5_to_hidden_6)
-n.addConnection(hidden_6_to_out)
+    n.addConnection(in_to_hidden_1)
+    n.addConnection(hidden_1_to_hidden_2)
+    n.addConnection(hidden_2_to_hidden_3)
+    n.addConnection(hidden_3_to_hidden_4)
+    n.addConnection(hidden_4_to_hidden_5)
+    n.addConnection(hidden_5_to_hidden_6)
+    n.addConnection(hidden_6_to_out)
 
-n.sortModules()
+    n.sortModules()
 
 
-ds = SupervisedDataSet(84, 1)
+    ds = SupervisedDataSet(91, 1)
 
-raw_flags = []
-# Import Flags
-with open('test-data/tensor_flags_dump.pkl', 'r') as input_pkl:
-    raw_flags = pickle.load(input_pkl)
-    for i in raw_flags:
-        print i
-        ds.addSample(i[0], i[1])
+    raw_flags = []
+    # Import Flags
+    with open('test-data/tensor_flags_dump.pkl', 'r') as input_pkl:
+        raw_flags = pickle.load(input_pkl)
+        for i in raw_flags:
+            ds.addSample(i[0], i[1])
 
-trainer = BackpropTrainer(n, ds)
+    trainer = BackpropTrainer(n, ds)
 
-cycles = 1500
-for i in range(cycles):
-    error = trainer.train()
-    print str(i)+'/'+str(cycles)+': error '+str(error)
+    cycles = 2000
+    for i in range(cycles):
+        error = trainer.train()
 
-c_correct = 0
-c_incorrect = 0
-l_correct = 0
-l_incorrect = 0
+    c_correct = 0
+    c_incorrect = 0
+    l_correct = 0
+    l_incorrect = 0
 
-threshold = 0.7
+    threshold = 0.7
 
-for i, o in raw_flags:
-    s = n.activate(i)
-    if (o[0] == 0 and s[0] < threshold) or (o[0] == 1 and s[0] >= threshold):
-        print bcolors.OKGREEN + 'Correct' + bcolors.ENDC
-    else:
-        print bcolors.WARNING + 'Incorrect' + bcolors.ENDC
+    for i, o in raw_flags:
+        s = n.activate(i)
+        if o[0] == 0 and s[0] < threshold:
+            l_correct += 1
+        elif o[0] == 0 and s[0] >= threshold:
+            l_incorrect += 1
+        elif o[0] == 1 and s[0] >= threshold:
+            c_correct += 1
+        else:
+            c_incorrect += 1
 
-    if o[0] == 0 and s[0] < threshold:
-        l_correct += 1
-    elif o[0] == 0 and s[0] >= threshold:
-        l_incorrect += 1
-    elif o[0] == 1 and s[0] >= threshold:
-        c_correct += 1
-    else:
-        c_incorrect += 1
+    print 'Cheaters Correct: '+str(c_correct)
+    print 'Cheaters Incorrect: '+str(c_incorrect)
+    print 'Legits Correct: '+str(l_correct)
+    print 'Legits incorrect: '+str(l_incorrect)
 
-    print o
-    print s
+    with open('neuralnet.pkl', 'w+') as output:
+        pickle.dump(n, output)
 
-print 'Cheaters Correct: '+str(c_correct)
-print 'Cheaters Incorrect: '+str(c_incorrect)
-print 'Legits Correct: '+str(l_correct)
-print 'Legits incorrect: '+str(l_incorrect)
-
-with open('neuralnet.pkl', 'w+') as output:
-    pickle.dump(n, output)
+#optimise()
