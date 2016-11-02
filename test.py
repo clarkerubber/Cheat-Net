@@ -33,9 +33,9 @@ def analyse_pkl(dr, pkl_names, net):
 			if activation > maxim:
 				maxim = activation
 			if assessment:
-				marked.append((p.name, report, activation))
+				marked.append((p.name, activation))
 			else:
-				unmarked.append((p.name, report, activation))
+				unmarked.append((p.name, activation))
 	print 'Maxim: '+str(maxim)
 	print 'MARKED'
 	print len(marked)

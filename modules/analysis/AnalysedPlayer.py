@@ -33,6 +33,7 @@ class AnalysedPlayer:
             flags.extend(self.rank_1_percents())
             flags.extend(self.rank_5more_percents())
             flags.extend(self.rank_0_move20plus_percents())
+            flags.extend(self.rank_012_move20plus_percents())
             flags.extend(self.cpl_percents(20))
             flags.extend(self.cpl_percents(10))
             flags.extend(self.cpl_greater_percents(100))
@@ -101,6 +102,9 @@ class AnalysedPlayer:
     def rank_0_move20plus_percents(self):
         return list(i.analysed.rank_0_move20plus_percent() for i in self.games)
 
+    def rank_012_move20plus_percents(self):
+        return list(i.analysed.rank_012_move20plus_percent() for i in self.games)
+
     def rank_5more_percents(self):
         return list(i.analysed.rank_5more_percent() for i in self.games)
 
@@ -118,3 +122,6 @@ class AnalysedPlayer:
 
     def accuracy_percentages_20(self, cp):
         return list(i.analysed.accuracy_percentage_20(cp) for i in self.games)
+
+    def tactics_seized(self, minadv, maxadv, threshold):
+        return list(i.analysed.tactics_seized(minadv, maxadv, threshold) for i in self.games)
