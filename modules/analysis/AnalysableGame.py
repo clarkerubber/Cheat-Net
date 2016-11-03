@@ -41,7 +41,7 @@ class AnalysableGame:
                     position_copy = node.board().copy()
                     position_copy.push(p)
                     engine.position(position_copy)
-                    engine.go(nodes=1000000)
+                    engine.go(nodes=800000)
                     analysed_legals.append(AnalysedMove(p, info_handler.info["score"][1]))
 
                 analysed_legals = sorted(analysed_legals, key=methodcaller('sort_val'))
