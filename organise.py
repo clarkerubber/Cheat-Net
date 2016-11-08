@@ -17,12 +17,15 @@ def organise_training_data(token):
     unsorted = {}
     for i in unsorted_pkl:
         with open('test-data/saved/'+i, 'rb') as inputpkl:
-            d = pickle.load(inputpkl)
-            player_data = get_player_data(d.name, token)
-            processed = list([x for x in player_data['history'] if x['type'] == 'report'])[0].get('processedBy', None) is not None
-            if player_data['assessment']['user']['engine']:
-                os.rename('test-data/saved/'+i, 'test-data/saved/cheaters/'+i)
-            elif processed:
-                os.rename('test-data/saved/'+i, 'test-data/saved/legits/'+i)
+            try:
+                d = pickle.load(inputpkl)
+                player_data = get_player_data(d.name, token)
+                processed = list([x for x in player_data['history'] if x['type'] == 'report'])[0].get('processedBy', None) is not None
+                if player_data['assessment']['user']['engine']:
+                    os.rename('test-data/saved/'+i, 'test-data/saved/cheaters/'+i)
+                elif processed:
+                    os.rename('test-data/saved/'+i, 'test-data/saved/legits/'+i)
+            except EOFError:
+                pass
 
 #organise_training_data(settings.token)
