@@ -92,4 +92,5 @@ def optimise():
     with open('neuralnet.pkl', 'w+') as output:
         pickle.dump(n, output)
 
-#optimise()
+if __name__ == "__main__":
+    optimise()

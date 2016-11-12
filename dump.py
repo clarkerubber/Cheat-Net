@@ -21,4 +21,5 @@ def dump_training_data():
     with open('test-data/tensor_flags_dump.pkl', 'w+') as output:
         pickle.dump(dump, output, pickle.HIGHEST_PROTOCOL)
 
-#dump_training_data()
+if __name__ == "__main__":
+    dump_training_data()

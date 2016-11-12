@@ -20,7 +20,7 @@ def organise_training_data(token):
             try:
                 d = pickle.load(inputpkl)
                 player_data = get_player_data(d.name, token)
-                processed = list([x for x in player_data['history'] if x['type'] == 'report'])[0].get('processedBy', None) is not None
+                processed = list([x for x in player_data['history'] if x['type'] == 'report' and x['data']['reason'] == 'cheat'])[0]['data'].get('processedBy', None) is not None
                 if player_data['assessment']['user']['engine']:
                     os.rename('test-data/saved/'+i, 'test-data/saved/cheaters/'+i)
                 elif processed:
@@ -28,4 +28,9 @@ def organise_training_data(token):
             except EOFError:
                 pass
 
-#organise_training_data(settings.token)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("token", metavar="TOKEN",
+        help="secret token for the lichess api")
+    settings = parser.parse_args()
+    organise_training_data(settings.token)
