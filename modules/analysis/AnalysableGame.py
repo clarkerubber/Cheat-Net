@@ -53,9 +53,9 @@ class AnalysableGame:
         self.analysed = AnalysedGame(self.assessment, analysed_positions)
 
 def recent_games(assessments, pgns):
-    assessments = sorted(assessments, key = lambda x: (attrgetter('assessment'), attrgetter('date')), reverse=True)[:5]
-    assessments = assessments + [assessments[-1]] * (5 - len(assessments))
     try:
+        assessments = sorted(assessments, key = lambda x: (attrgetter('assessment'), attrgetter('date')), reverse=True)[:5]
+        assessments = assessments + [assessments[-1]] * (5 - len(assessments))
         retr = list(AnalysableGame(a, pgns[a.gameId]) for a in assessments if pgns[a.gameId].get('variant', False) == False)
         return retr + [retr[-1]] * (5 - len(retr))
     except ValueError:
