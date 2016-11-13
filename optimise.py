@@ -14,8 +14,8 @@ from pybrain.datasets import SupervisedDataSet
 # Build Network
 def optimise():
     n = FeedForwardNetwork()
-    inLayer = LinearLayer(91)
-    hidden_1 = SigmoidLayer(91)
+    inLayer = LinearLayer(76)
+    hidden_1 = SigmoidLayer(81)
     hidden_2 = SigmoidLayer(50)
     hidden_3 = SigmoidLayer(20)
     hidden_4 = SigmoidLayer(10)
@@ -51,7 +51,7 @@ def optimise():
     n.sortModules()
 
 
-    ds = SupervisedDataSet(91, 1)
+    ds = SupervisedDataSet(76, 1)
 
     raw_flags = []
     # Import Flags
