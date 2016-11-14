@@ -1,12 +1,20 @@
 import tensorflow as tf
 
+
 def combine_inputs(X):
-    with tf.name_scope("main graph"):
-        conv = tf.contrib.layers.convolution2d(X, 1,
-            kernel_size=(1,1),
-            stride=(1,1),
-            trainable=True)
-        return conv
+    player = tf.reshape(tf.slice(X, [0, 0], [-1, 5]), [-1, 5])
+    game = tf.reshape(tf.slice(X, [0, 5], [-1, 75]), [-1, 5, 15, 1])
+    conv = tf.contrib.layers.convolution2d(game, 4,
+        kernel_size=(1,15),
+        stride=(1,15),
+        activation_fn=tf.nn.relu,
+        trainable=True)
+    #convout = tf.shape(tf.pack([tf.map_fn(lambda x: tf.reshape(x, [1, -1]), conv), player]))
+
+    rs = tf.reshape(conv, [-1, 20])
+    fn = tf.contrib.layers.fully_connected(rs, 5)
+
+    return tf.contrib.layers.fully_connected(tf.concat(1, [player, fn]), 1)
 
 def inference(X):
     return tf.sigmoid(combine_inputs(X))
@@ -45,24 +53,19 @@ def read_csv(batch_size, record_defaults):
         num_threads=4,
         min_after_dequeue=batch_size*10)
 
-#saver = tf.train.Saver()
 config = tf.ConfigProto(inter_op_parallelism_threads=2)
 with tf.Session(config=config) as sess:
-    tf.initialize_all_variables().run()
+    
     X, Y = inputs()
+    ## initliase graph for running
+    tf.initialize_all_variables().run()
     coord = tf.train.Coordinator()
-    output = tf.map_fn(lambda img: tf.reshape(img[5:][:], [5, 15, 1]), X)
     threads = tf.train.start_queue_runners(sess=sess, coord=coord)
-    print sess.run([output])
-    #print sess.run([tf.reshape(X[5:], [200, 5, 15, 1])])
-    #print sess.run([combine_inputs(X)])
-    """
+    
     total_loss = loss(X, Y)
     train_op = train(total_loss)
-    """
-
-    """
     training_steps = 10000
+    saver = tf.train.Saver()
     for step in range(training_steps):
         sess.run([train_op])
         if step % 100 == 0:
@@ -74,7 +77,6 @@ with tf.Session(config=config) as sess:
     evaluate(sess, X, Y)
     
     saver.save(sess, 'my-model', global_step=training_steps)
-    """
     coord.request_stop()
     coord.join(threads)
     sess.close()

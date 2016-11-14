@@ -60,3 +60,5 @@ def recent_games(assessments, pgns):
         return retr + [retr[-1]] * (5 - len(retr))
     except ValueError:
         return []
+    except IndexError:
+        return []
