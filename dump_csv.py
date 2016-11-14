@@ -21,7 +21,7 @@ def add_row(writer, ap, status, token):
         else:
             c_to_l = 0
 
-    reports = len(list([x for x in player_data['history'] if x['type'] == 'report' and x['data']['reason'] == 'cheat' and x['data'].get('processedBy', None) is not None]))
+    reports = max(len(list([x for x in player_data['history'] if x['type'] == 'report' and x['data']['reason'] == 'cheat' and x['data'].get('processedBy', None) is not None]))-1, 0)
     titled = int(player_data['assessment']['user'].get('title', None) is not None)
     followers = player_data['relation']['followers']
     blockers = player_data['relation']['blockers']
@@ -33,8 +33,9 @@ def add_row(writer, ap, status, token):
             b_to_f = blockers
         else:
             b_to_f = 0
-    output = [int(status), ap.name, titled, reports, b_to_f, c_to_l] + ap.flags()
-    print [int(status), ap.name, titled, reports, b_to_f, c_to_l] + ap.flags()
+    flags = list([int(x) for x in ap.flags()])
+    output = [int(status), ap.name, titled, reports, b_to_f, c_to_l] + flags
+    print [int(status), ap.name, titled, reports, b_to_f, c_to_l] + flags
     writer.writerow(output)
 
 def dump_csv_training_data(token):
@@ -42,7 +43,7 @@ def dump_csv_training_data(token):
     cheaters_pkl = get_files('test-data/saved/cheaters')
 
     with open('test-data/player_data.csv', 'wb') as fh:
-        writer = csv.writer(fh, delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        writer = csv.writer(fh, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(['cheating', 'name', 'titled', 'closed_reports', 'blocker_to_followers', 'cheaters_to_legits',
             'games_played', 'mb1', 'mb2', 'mb3', 'mb4', 'mb5', 'hb1', 'hb2', 'hb3', 'hb4', 'hb5', 'h1', 'h2', 'h3', 'h4', 'h5',
             'm1', 'm2', 'm3', 'm4', 'm5', 's1', 's2', 's3', 's4', 's5', 'r01', 'r02', 'r03', 'r04', 'r05',
