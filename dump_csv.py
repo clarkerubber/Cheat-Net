@@ -33,16 +33,22 @@ def add_row(writer, ap, status, token):
             b_to_f = blockers
         else:
             b_to_f = 0
+
     flags = list([int(x) for x in ap.flags()])
-    output = [int(status), ap.name, titled, reports, b_to_f, c_to_l] + flags
-    print [int(status), ap.name, titled, reports, b_to_f, c_to_l] + flags
-    writer.writerow(output)
+
+    g_played = flags.pop(0)
+    games = [list([i for x, i in enumerate(flags) if x%5 == y]) for y in range(5)]
+
+    for g in games:
+        output = [int(status), ap.name, titled, reports, b_to_f, c_to_l, g_played] + g
+        print [int(status), ap.name, titled, reports, b_to_f, c_to_l, g_played] + g
+        writer.writerow(output)
 
 def dump_csv_training_data(token):
     legits_pkl = get_files('test-data/saved/legits')
     cheaters_pkl = get_files('test-data/saved/cheaters')
 
-    with open('test-data/player_data.csv', 'wb') as fh:
+    with open('test-data/player_single_game_data.csv', 'wb') as fh:
         writer = csv.writer(fh, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(['cheating', 'name', 'titled', 'closed_reports', 'blocker_to_followers', 'cheaters_to_legits',
             'games_played', 'mb1', 'mb2', 'mb3', 'mb4', 'mb5', 'hb1', 'hb2', 'hb3', 'hb4', 'hb5', 'h1', 'h2', 'h3', 'h4', 'h5',

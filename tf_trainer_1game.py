@@ -2,29 +2,9 @@ import tensorflow as tf
 from modules.bcolors.bcolors import bcolors
 
 def combine_inputs(X):
-    player = tf.reshape(tf.slice(X, [0, 0], [-1, 5]), [-1, 1, 1, 5])
-    game = tf.reshape(tf.slice(X, [0, 5], [-1, 75]), [-1, 5, 15, 1])
-
-    conv = tf.contrib.layers.convolution2d(game, 30,
-        kernel_size=(1,15),
-        stride=(1,15),
-        activation_fn=tf.nn.relu,
-        weights_initializer=tf.random_normal,
-        biases_initializer=tf.random_normal,
-        trainable=True)
-
-    gamesfnn = tf.contrib.layers.stack(tf.reshape(conv, [-1, 1, 1, 150]), tf.contrib.layers.fully_connected, [100, 90, 80, 50])
-
-    playerfnn = tf.contrib.layers.fully_connected(
-        player,
-        50,
-        biases_initializer=tf.random_normal
-        )
-
-    playerandgamesfnn = tf.contrib.layers.stack(
-        tf.concat(3, [playerfnn, gamesfnn]),
+    playerandgamesfnn = tf.contrib.layers.stack(X,
         tf.contrib.layers.fully_connected,
-        [100, 50, 10, 10, 2]
+        [100, 40, 10, 10, 2]
         )
 
     return tf.reshape(playerandgamesfnn, [-1, 2])
@@ -37,10 +17,10 @@ def loss(X, Y):
     loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(comb, Y))
     predicted = tf.round(tf.nn.softmax(comb))
     evaluation = tf.reduce_mean(tf.cast(tf.equal(predicted, Y), tf.float32))
-    return loss, evaluation, tf.concat(1, [predicted, Y, comb])
+    return loss, evaluation, tf.concat(1, [comb, Y])
 
 def inputs():
-    input_list = read_csv(300, [[0.0], [""], [0.0], [0.0], [0.0], [0.0], [0.0]] + [[0.0]] * 15*5)
+    input_list = read_csv(800, [[0.0], [""], [0.0], [0.0], [0.0], [0.0], [0.0]] + [[0.0]] * 15)
     features = tf.transpose(tf.pack(input_list[2:]))
     cheat = tf.to_float(tf.equal(input_list[0], [1]))
     legit = tf.to_float(tf.equal(input_list[0], [0]))
@@ -49,8 +29,8 @@ def inputs():
 
 def train(total_loss):
     learning_rate = 0.00001
-    #return tf.train.GradientDescentOptimizer(learning_rate).minimize(total_loss)
-    return tf.train.AdamOptimizer(learning_rate).minimize(total_loss)
+    return tf.train.GradientDescentOptimizer(learning_rate).minimize(total_loss)
+    #return tf.train.AdamOptimizer(learning_rate).minimize(total_loss)
 
 def evaluate(X, Y):
     with tf.name_scope("evaluate"):
@@ -59,7 +39,7 @@ def evaluate(X, Y):
         return loss
     
 def read_csv(batch_size, record_defaults):
-    filename_queue = tf.train.string_input_producer(['test-data/player_data_balanced.csv'])
+    filename_queue = tf.train.string_input_producer(['test-data/player_single_game_data.csv'])
     reader = tf.TextLineReader(skip_header_lines=1)
     key, value = reader.read(filename_queue)
     decoded = tf.decode_csv(value, record_defaults=record_defaults)
@@ -90,14 +70,11 @@ with graph.as_default():
         #print "comp", sess.run([Y])
         for step in range(training_steps):
             sess.run([train_op])
-            if step % 100 == 0:
+            if step % 1000 == 0:
                 loss, eva, compar = sess.run([total_loss, evaluation, comp])
                 #writer.add_summary(summary, global_step=step)
-                for i in compar:
-                    if i[0] == i[2]:
-                        print bcolors.OKGREEN + str(i) + bcolors.ENDC
-                    else:
-                        print bcolors.FAIL + str(i) + bcolors.ENDC
+                #for i in compar:
+                print compar
                 print "loss: ", loss
                 print "eval: ", eva
                 print " "
@@ -109,5 +86,5 @@ with graph.as_default():
         writer.flush()
         writer.close()
         saver.save(sess, 'my-model', global_step=training_steps)
-        
+        saver = tf.train.Saver(sharded=True)
         sess.close()
