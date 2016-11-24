@@ -7,20 +7,38 @@ import modules.analysis
 from modules.analysis.tools import avg, weights_mask, weighted_avg
 from modules.bcolors.bcolors import bcolors
 from operator import methodcaller
+from modules.analysis.tensorflow.tf_trainer_1game import apply_net
 
 class AnalysedPlayer:
-    def __init__(self, name, games, gamesPlayed, cheater, related):
+    def __init__(self, name, games, gamesPlayed, cheater, related_legits, related_cheaters, titled, blockers, followers, reports):
         self.name = name    # str
         self.games = games  # list(AnalysableGame)
         self.gamesPlayed = gamesPlayed # # of games played
         self.cheater = cheater # True, False, None
-        self.related = related # list(userId)
+        self.related_legits = len(related_legits)
+        self.related_cheaters = len(related_cheaters)
+        self.titled = int(titled)
+        self.blockers = blockers # int
+        self.followers = followers # int
+        self.reports = reports # int
+        try:
+            self.c_to_l = self.related_cheaters/float(self.related_legits)
+        except ZeroDivisionError:
+            if self.related_cheaters > 0:
+                self.c_to_l = self.related_cheaters
+            else:
+                self.c_to_l = 0
+        try:
+            self.b_to_f = self.blockers/float(self.followers)
+        except ZeroDivisionError:
+            if self.blockers > 0:
+                self.b_to_f = self.blockers
+            else:
+                self.b_to_f = 0
 
     def flags(self):
         flags = []
         if len(self.games) > 0:
-            self.games = self.games + (5 - len(self.games)) * [self.games[-1]]
-            flags.append(self.gamesPlayed)
             flags.extend(self.mblurs())
             flags.extend(self.hblurs())
             flags.extend(self.holds())
@@ -36,28 +54,31 @@ class AnalysedPlayer:
             flags.extend(self.cpl_greater_percents(100))
             flags.extend(self.avg_cpl_given_rank(1))
             flags.extend(self.avg_cpl_given_rank(2))
-        return flags
+            gamified = [list([i for x, i in enumerate(flags) if x%5 == y]) for y in range(5)]
+            for x, g in enumerate(gamified):
+                gamified[x] = [self.titled, self.reports, self.b_to_f, self.c_to_l, self.gamesPlayed] + g
+        return gamified
 
-    def assess_and_report(self, net):
-        return (self.assess(net), self.report(net))
+    def assess_and_report(self):
+        return (self.assess(), self.report())
 
-    def assess(self, net):
-        if self.activation(net) > 0.7:
+    def assess(self):
+        if self.activation() > 1:
             return True
         return False
 
-    def report(self, net):
+    def report(self):
         if len(self.flags()) > 0:
-            output = str(round(100*self.activation(net), 1))+'% confidence of cheating, '+str(round(avg(self.rank_01_percents()), 1))+'% Rank 1 PV'
+            output = str(self.activation())+'/5 games cheating, '+str(round(avg(self.rank_01_percents()), 1))+'% Rank 1 PV'
             return output
         else:
             return 'not enough games to create assessment'
 
-    def activation(self, net):
+    def activation(self):
         flags = self.flags()
         if len(flags) > 0:
-            return net.activate(tuple(flags))[0]
-        return 0.0
+            return count(g[0] < g[1] for g in a for a in apply_net(flags))
+        return 0
 
     # Data Collectors
         # Assessment

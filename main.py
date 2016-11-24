@@ -69,11 +69,16 @@ def collect_analyse_save(userId, net):
             recents,
             player_data['assessment']['user']['games'],
             player_data['assessment']['user']['engine'],
-            player_data['assessment']['relatedUsers'])
+            player_data['assessment']['relatedUsers'],
+            player_data['assessment']['relatedCheaters'],
+            (player_data['assessment']['user'].get('title', None) is not None),
+            player_data['relation']['blockers'],
+            player_data['relation']['followers'],
+            len(list([x for x in player_data['history'] if x['type'] == 'report' and x['data']['reason'] == 'cheat' and x['data'].get('processedBy', None) is not None])))
 
         [i.analyse(engine, info_handler) for i in ap.games]
 
-        post_report(userId, ap.assess_and_report(net), settings.token)
+        post_report(userId, ap.assess_and_report(), settings.token)
 
         with open('test-data/saved/'+userId+'.pkl', 'w+') as output:
             pickle.dump(ap, output, pickle.HIGHEST_PROTOCOL)
@@ -83,12 +88,12 @@ def collect_analyse_save(userId, net):
 
 
 while True:
-    logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
-    organise_training_data(settings.token)
-    logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
-    dump_training_data()
-    logging.debug(bcolors.OKBLUE + 'Retraining neural net...' + bcolors.ENDC)
-    optimise()
+    #logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
+    #organise_training_data(settings.token)
+    #logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
+    #dump_training_data()
+    #logging.debug(bcolors.OKBLUE + 'Retraining neural net...' + bcolors.ENDC)
+    #optimise()
     with open('neuralnet.pkl', 'r') as net_pkl:
         net = pickle.load(net_pkl)
         for i in range(20):
