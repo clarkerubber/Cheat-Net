@@ -54,7 +54,7 @@ class AnalysedPlayer:
             flags.extend(self.cpl_greater_percents(100))
             flags.extend(self.avg_cpl_given_rank(1))
             flags.extend(self.avg_cpl_given_rank(2))
-            gamified = [list([i for x, i in enumerate(flags) if x%5 == y]) for y in range(5)]
+            gamified = [list([i for x, i in enumerate(flags) if x%len(self.games) == y]) for y in range(len(self.games))]
             for x, g in enumerate(gamified):
                 gamified[x] = [self.titled, self.reports, self.b_to_f, self.c_to_l, self.gamesPlayed] + g
             return gamified
