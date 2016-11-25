@@ -1,8 +1,6 @@
 import tensorflow as tf
 import os
 
-graph = tf.Graph()
-
 def combine_inputs(X):
     playerandgamesfnn = tf.contrib.layers.stack(X,
         tf.contrib.layers.fully_connected,
@@ -40,7 +38,7 @@ def evaluate(X, Y):
         return loss
     
 def read_csv(batch_size, record_defaults):
-    filename_queue = tf.train.string_input_producer(['../../../test-data/player_single_game_data.csv'])
+    filename_queue = tf.train.string_input_producer(['test-data/player_single_game_data.csv'])
     reader = tf.TextLineReader(skip_header_lines=1)
     key, value = reader.read(filename_queue)
     decoded = tf.decode_csv(value, record_defaults=record_defaults)
@@ -51,6 +49,7 @@ def read_csv(batch_size, record_defaults):
         min_after_dequeue=batch_size*10)
 
 def learn():
+    graph = tf.Graph()
     global loss
     with graph.as_default():
         with tf.Session(graph=graph) as sess:
@@ -59,7 +58,6 @@ def learn():
             with tf.name_scope("global_ops"):
                 total_loss, evaluation, comp = loss(X, Y)
                 train_op = train(total_loss)
-                training_steps = 100000
                 saver = tf.train.Saver()
                 tf.initialize_all_variables().run()
                 coord = tf.train.Coordinator()
@@ -67,10 +65,15 @@ def learn():
 
             initial_step = 0
 
-            ckpt = tf.train.get_checkpoint_state(os.path.dirname(__file__))
+            ckpt = tf.train.get_checkpoint_state('./models')
             if ckpt and ckpt.model_checkpoint_path:
                 saver.restore(sess, ckpt.model_checkpoint_path)
                 initial_step = int(ckpt.model_checkpoint_path.rsplit('-', 1)[1])
+                
+            if initial_step >= 10000:
+                training_steps = initial_step + 1000
+            else: 
+                training_steps = 10000
 
             for step in range(initial_step, training_steps):
                 sess.run([train_op])
@@ -108,15 +111,16 @@ def learn():
                     print "loss: ", loss
                     print "eval: ", eva
                     print " "
-                    saver.save(sess, 'model', global_step=step)
+                    saver.save(sess, './models/model', global_step=step)
 
             coord.request_stop()
             coord.join(threads)
-            saver.save(sess, 'model', global_step=training_steps)
+            saver.save(sess, './models/model', global_step=training_steps)
             saver = tf.train.Saver(sharded=True)
             sess.close()
 
 def apply_net(batch):
+    graph = tf.Graph()
     with graph.as_default():
         with tf.Session(graph=graph) as sess:
             a = tf.placeholder(tf.float32, shape=[None, 20])
@@ -129,7 +133,7 @@ def apply_net(batch):
                 coord = tf.train.Coordinator()
                 threads = tf.train.start_queue_runners(sess=sess, coord=coord)
 
-            ckpt = tf.train.get_checkpoint_state(os.path.dirname(__file__))
+            ckpt = tf.train.get_checkpoint_state('models')
             if ckpt and ckpt.model_checkpoint_path:
                 saver.restore(sess, ckpt.model_checkpoint_path)
 

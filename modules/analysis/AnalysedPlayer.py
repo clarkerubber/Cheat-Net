@@ -38,7 +38,7 @@ class AnalysedPlayer:
 
     def flags(self):
         flags = []
-        if len(self.games) > 0:
+        if len(self.games) > 2:
             flags.extend(self.mblurs())
             flags.extend(self.hblurs())
             flags.extend(self.holds())
@@ -57,7 +57,8 @@ class AnalysedPlayer:
             gamified = [list([i for x, i in enumerate(flags) if x%5 == y]) for y in range(5)]
             for x, g in enumerate(gamified):
                 gamified[x] = [self.titled, self.reports, self.b_to_f, self.c_to_l, self.gamesPlayed] + g
-        return gamified
+            return gamified
+        return []
 
     def assess_and_report(self):
         return (self.assess(), self.report())
@@ -69,7 +70,7 @@ class AnalysedPlayer:
 
     def report(self):
         if len(self.flags()) > 0:
-            output = str(self.activation())+'/5 games cheating, '+str(round(avg(self.rank_01_percents()), 1))+'% Rank 1 PV'
+            output = str(self.activation())+'/'+str(len(self.games))+' games cheating, '+str(round(avg(self.rank_01_percents()), 1))+'% Rank 1 PV'
             return output
         else:
             return 'not enough games to create assessment'
@@ -77,7 +78,7 @@ class AnalysedPlayer:
     def activation(self):
         flags = self.flags()
         if len(flags) > 0:
-            return count(g[0] < g[1] for g in a for a in apply_net(flags))
+            return len(list([[g[0] < g[1] for g in a] for a in apply_net(flags)]))
         return 0
 
     # Data Collectors

@@ -18,8 +18,8 @@ from modules.analysis.PlayerAssessment import PlayerAssessment
 from modules.api.tools import get_player_games, get_files
 from modules.api.api import get_player_data, get_new_user_id, post_report
 from organise import organise_training_data
-from dump import dump_training_data
-from optimise import optimise
+from dump_csv import dump_csv_training_data
+from modules.analysis.tensorflow.tf_trainer_1game import apply_net, learn
 
 sys.setrecursionlimit(2000)
 
@@ -88,12 +88,11 @@ def collect_analyse_save(userId, net):
 
 
 while True:
-    #logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
-    #organise_training_data(settings.token)
-    #logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
-    #dump_training_data()
-    #logging.debug(bcolors.OKBLUE + 'Retraining neural net...' + bcolors.ENDC)
-    #optimise()
+    logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
+    organise_training_data(settings.token)
+    logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
+    dump_csv_training_data(settings.token)
+    learn()
     with open('neuralnet.pkl', 'r') as net_pkl:
         net = pickle.load(net_pkl)
         for i in range(20):
