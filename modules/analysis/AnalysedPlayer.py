@@ -78,7 +78,7 @@ class AnalysedPlayer:
     def activation(self):
         flags = self.flags()
         if len(flags) > 0:
-            return len(list([[g[0] < g[1] for g in a] for a in apply_net(flags)]))
+            return sum(g[0] < g[1] for g in apply_net(flags)[0])
         return 0
 
     # Data Collectors
