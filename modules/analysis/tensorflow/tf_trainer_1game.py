@@ -14,10 +14,10 @@ def inference(X):
 
 def loss(X, Y):
     comb = combine_inputs(X)
-    loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(comb, Y))
+    entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(comb, Y))
     predicted = tf.round(tf.nn.softmax(comb))
     evaluation = tf.reduce_mean(tf.cast(tf.equal(predicted, Y), tf.float32))
-    return loss, evaluation, tf.concat(1, [comb, predicted, Y])
+    return entropy, evaluation, tf.concat(1, [comb, predicted, Y])
 
 def inputs():
     input_list = read_csv(800, [[0.0], [""], [0.0], [0.0], [0.0], [0.0], [0.0]] + [[0.0]] * 15)
@@ -34,8 +34,7 @@ def train(total_loss):
 def evaluate(X, Y):
     with tf.name_scope("evaluate"):
         predicted = tf.cast(inference(X) > 0.5, tf.float32)
-        loss = tf.reduce_mean(tf.cast(tf.equal(predicted, Y), tf.float32))
-        return loss
+        return tf.reduce_mean(tf.cast(tf.equal(predicted, Y), tf.float32))
     
 def read_csv(batch_size, record_defaults):
     filename_queue = tf.train.string_input_producer(['test-data/player_single_game_data.csv'])
@@ -50,7 +49,6 @@ def read_csv(batch_size, record_defaults):
 
 def learn():
     graph = tf.Graph()
-    global loss
     with graph.as_default():
         with tf.Session(graph=graph) as sess:
             X, Y = inputs()
@@ -78,7 +76,7 @@ def learn():
             for step in range(initial_step, training_steps):
                 sess.run([train_op])
                 if step % 1000 == 0:
-                    loss, eva, compar = sess.run([total_loss, evaluation, comp])
+                    tloss, eva, compar = sess.run([total_loss, evaluation, comp])
                     p, n, tp, tn, fp, fn, ind = 1, 1, 0, 0, 0, 0, 0
                     for g in compar:
                         if g[4] == 1:
@@ -108,7 +106,7 @@ def learn():
                     print "False P:  " + str(100*fp/p) + "% (" + str(fp) + ")"
                     print "False N:  " + str(100*fn/n) + "% (" + str(fn) + ")"
                     print "Indecise: " + str(100*ind/800) + "% (" + str(ind) + ")"
-                    print "loss: ", loss
+                    print "loss: ", tloss
                     print "eval: ", eva
                     print " "
                     saver.save(sess, './models/model', global_step=step)
