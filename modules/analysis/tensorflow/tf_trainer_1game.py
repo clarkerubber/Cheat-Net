@@ -57,7 +57,7 @@ def learn():
                 total_loss, evaluation, comp = loss(X, Y)
                 train_op = train(total_loss)
                 saver = tf.train.Saver()
-                tf.initialize_all_variables().run()
+                tf.global_variables_initializer().run()
                 coord = tf.train.Coordinator()
                 threads = tf.train.start_queue_runners(sess=sess, coord=coord)
 
