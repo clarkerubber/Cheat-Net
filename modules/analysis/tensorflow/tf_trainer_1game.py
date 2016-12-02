@@ -127,7 +127,7 @@ def apply_net(batch):
             ## initliase graph for running
             with tf.name_scope("global_ops"):
                 saver = tf.train.Saver()
-                tf.initialize_all_variables().run()
+                tf.global_variables_initializer().run()
                 coord = tf.train.Coordinator()
                 threads = tf.train.start_queue_runners(sess=sess, coord=coord)
 
