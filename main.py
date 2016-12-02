@@ -26,6 +26,8 @@ sys.setrecursionlimit(2000)
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("token", metavar="TOKEN",
                     help="secret token for the lichess api")
+parser.add_argument("train", metavar="TRAIN",
+                    help="does this bot learn", nargs="?", type=int, default=1)
 parser.add_argument("threads", metavar="THREADS", nargs="?", type=int, default=4,
                     help="number of engine threads")
 parser.add_argument("memory", metavar="MEMORY", nargs="?", type=int, default=2048,
@@ -58,7 +60,7 @@ engine.info_handlers.append(info_handler)
 
 """Start doing things"""
 
-def collect_analyse_save(userId, net):
+def collect_analyse_save(userId):
     try:
         player_data = get_player_data(userId, settings.token)
         playerAssessments = [PlayerAssessment(i) for i in player_data['assessment']['playerAssessments']]
@@ -88,12 +90,11 @@ def collect_analyse_save(userId, net):
 
 
 while True:
-    logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
-    organise_training_data(settings.token)
-    logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
-    dump_csv_training_data(settings.token)
-    learn()
-    with open('neuralnet.pkl', 'r') as net_pkl:
-        net = pickle.load(net_pkl)
-        for i in range(20):
-            collect_analyse_save(get_new_user_id(settings.token), net)
+    if settings.train:
+        logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
+        organise_training_data(settings.token)
+        logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
+        dump_csv_training_data(settings.token)
+        learn()
+    for i in range(20):
+        collect_analyse_save(get_new_user_id(settings.token))
