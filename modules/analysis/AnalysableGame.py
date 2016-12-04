@@ -58,7 +58,7 @@ def game_length(pgn):
 def recent_games(assessments, pgns):
     try:
         assessments = sorted(assessments, key = lambda x: (attrgetter('assessment'), attrgetter('date')), reverse=True)
-        return list(AnalysableGame(a, pgns[a.gameId]) for a in assessments if pgns[a.gameId].get('variant', False) == False and game_length(pgns[a.gameId]) > 50)[:5]
+        return list(AnalysableGame(a, pgns[a.gameId]) for a in assessments if pgns[a.gameId].get('variant', False) == False and game_length(pgns[a.gameId].get('pgn', '')) > 50)[:5]
     except ValueError:
         return []
     except IndexError:
