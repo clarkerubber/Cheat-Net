@@ -20,22 +20,26 @@ from collections import Counter
 cheaters_pkl = get_files('test-data/saved/cheaters')
 legits_pkl = get_files('test-data/saved/legits')
 
-def analyse_pkl(dr, pkl_names, net):
+def analyse_pkl(dr, pkl_names):
 	maxim = 0
 	marked = []
 	unmarked = []
 	for i in pkl_names:
-		with open(dr+i, 'rb') as inputpkl:
-			p = pickle.load(inputpkl)
-			assessment = p.assess(net)
-			activation = round(p.activation(net), 3)
-			report = p.report(net)
-			if activation > maxim:
-				maxim = activation
-			if assessment:
-				marked.append((p.name, activation))
-			else:
-				unmarked.append((p.name, activation))
+		try:
+			with open(dr+i, 'rb') as inputpkl:
+				p = pickle.load(inputpkl)
+				assessment = p.assess()
+				activation = round(p.activation(), 3)
+				report = p.report()
+				print report
+				if activation > maxim:
+					maxim = activation
+				if assessment:
+					marked.append((p.name, activation))
+				else:
+					unmarked.append((p.name, activation))
+		except EOFError:
+			pass
 	print 'Maxim: '+str(maxim)
 	print 'MARKED'
 	print len(marked)
@@ -44,10 +48,8 @@ def analyse_pkl(dr, pkl_names, net):
 	print len(unmarked)
 	print unmarked
 
-with open('neuralnet.pkl', 'r') as net_pkl:
-	net = pickle.load(net_pkl)
-	print 'LEGITS'
-	analyse_pkl('test-data/saved/legits/', legits_pkl, net)
-	print ''
-	print 'CHEATERS'
-	analyse_pkl('test-data/saved/cheaters/', cheaters_pkl, net)
+print 'LEGITS'
+analyse_pkl('test-data/saved/legits/', legits_pkl)
+print ''
+print 'CHEATERS'
+analyse_pkl('test-data/saved/cheaters/', cheaters_pkl)
