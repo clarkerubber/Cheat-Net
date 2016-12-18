@@ -31,7 +31,6 @@ def analyse_pkl(dr, pkl_names):
 				assessment = p.assess()
 				activation = round(p.activation(), 3)
 				report = p.report()
-				print report
 				if activation > maxim:
 					maxim = activation
 				if assessment:
