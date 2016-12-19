@@ -11,7 +11,7 @@ def post_report(userId, report, token):
     success = False
     while not success:
         try:
-            r = requests.post('https://en.lichess.org/@/' + userId + '/clarkey-bot-note?api_key=' + token, json={'result': bool(report[0]), 'reason': report[1]})
+            r = requests.post('https://en.lichess.org/mod/' + userId + '/irwin?api_key=' + token, json={'result': bool(report[0]), 'reason': report[1]})
             success = True
         except requests.ConnectionError:
             logging.warning(bcolors.WARNING + "CONNECTION ERROR: Failed to post puzzle.")
@@ -47,7 +47,7 @@ def get_new_user_id(token):
     success = False
     while not success:
         try:
-            response = requests.get('https://en.lichess.org/report/clarkey-bot-next?api_key='+token)
+            response = requests.get('https://en.lichess.org/report/irwin-bot-next?api_key='+token)
             if response.status_code == 200:
                 success = True
             else:
