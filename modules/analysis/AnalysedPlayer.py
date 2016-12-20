@@ -64,7 +64,7 @@ class AnalysedPlayer:
         return (self.assess(), self.report())
 
     def assess(self):
-        if self.activation() > 1:
+        if self.activation() > 2:
             return True
         return False
 
