@@ -100,4 +100,4 @@ class AnalysedGame: # subjective to the player being analysed
             return 0
 
     def avg_cpl_given_rank(self, rank):
-        return avg(list(i.actual_error() for i in self.positions if i.rank() == rank))
+        return avg(list(i.actual_error() for i in self.positions if i.rank() <= rank and i.rank != 0))

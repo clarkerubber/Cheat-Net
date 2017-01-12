@@ -14,7 +14,7 @@ def add_row(writer, ap, status, token):
     for g in ap.flags():
         for x, _ in enumerate(g):
             g[x] = round(g[x], 3)
-        if len(g) == 20:
+        if len(g) == 11:
             writer.writerow([int(status), ap.name] + g)
 
 def dump_csv_training_data(token):
@@ -23,12 +23,11 @@ def dump_csv_training_data(token):
 
     with open('test-data/player_single_game_data.csv', 'wb') as fh:
         writer = csv.writer(fh, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(['cheating', 'name', 'titled', 'closed_reports', 'blocker_to_followers', 'cheaters_to_legits',
-            'games_played', 'mb1', 'hb1', 'h1','m1', 's1', 'r01', 'r11', 'r51', 'r020p1', 'r01220p1', 'cp201',
-            'cp101',  'cp1001','cpar11', 'cpar21'])
+        writer.writerow(['cheating', 'name', 'titled', 'mb1', 'h1','m1', 's1', 'r01', 'r11', 'cp201', 'cp101', 'cpar11', 'cpar21'])
         for i in legits_pkl:
             try:
                 with open('test-data/saved/legits/'+i, 'rb') as ap_f:
+                    print i
                     ap = pickle.load(ap_f)
                     add_row(writer, ap, False, token)
             except EOFError:
@@ -36,6 +35,7 @@ def dump_csv_training_data(token):
         for i in cheaters_pkl:
             try:
                 with open('test-data/saved/cheaters/'+i, 'rb') as ap_f:
+                    print i
                     ap = pickle.load(ap_f)
                     add_row(writer, ap, True, token)
             except EOFError:

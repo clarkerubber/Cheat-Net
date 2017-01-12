@@ -96,5 +96,5 @@ while True:
         logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
         dump_csv_training_data(settings.token)
         learn()
-    for i in range(20):
+    for i in range(100):
         collect_analyse_save(get_new_user_id(settings.token))

@@ -4,7 +4,7 @@ import os
 def combine_inputs(X):
     playerandgamesfnn = tf.contrib.layers.stack(X,
         tf.contrib.layers.fully_connected,
-        [100, 40, 10, 10, 2]
+        [40, 10, 10, 2]
         )
 
     return tf.reshape(playerandgamesfnn, [-1, 2])
@@ -20,7 +20,7 @@ def loss(X, Y):
     return entropy, evaluation, tf.concat(1, [comb, predicted, Y])
 
 def inputs():
-    input_list = read_csv(800, [[0.0], [""], [0.0], [0.0], [0.0], [0.0], [0.0]] + [[0.0]] * 15)
+    input_list = read_csv(800, [[0.0], [""], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]])
     features = tf.transpose(tf.pack(input_list[2:]))
     cheat = tf.to_float(tf.equal(input_list[0], [1]))
     legit = tf.to_float(tf.equal(input_list[0], [0]))
@@ -68,10 +68,10 @@ def learn():
                 saver.restore(sess, ckpt.model_checkpoint_path)
                 initial_step = int(ckpt.model_checkpoint_path.rsplit('-', 1)[1])
                 
-            if initial_step >= 10000:
-                training_steps = initial_step + 1000
+            if initial_step >= 500000:
+                training_steps = initial_step + 5000
             else: 
-                training_steps = 10000
+                training_steps = 500000
 
             for step in range(initial_step, training_steps):
                 sess.run([train_op])
@@ -121,7 +121,7 @@ def apply_net(batch):
     graph = tf.Graph()
     with graph.as_default():
         with tf.Session(graph=graph) as sess:
-            a = tf.placeholder(tf.float32, shape=[None, 20])
+            a = tf.placeholder(tf.float32, shape=[None, 11])
             infer = inference(a)
             feed_dict = {a: batch}
             ## initliase graph for running

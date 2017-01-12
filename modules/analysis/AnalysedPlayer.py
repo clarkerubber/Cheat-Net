@@ -40,23 +40,18 @@ class AnalysedPlayer:
         flags = []
         if len(self.games) > 2:
             flags.extend(self.mblurs())
-            flags.extend(self.hblurs())
             flags.extend(self.holds())
             flags.extend(self.move_times())
             flags.extend(self.sf_average())
             flags.extend(self.rank_0_percents())
-            flags.extend(self.rank_1_percents())
-            flags.extend(self.rank_5more_percents())
-            flags.extend(self.rank_0_move20plus_percents())
-            flags.extend(self.rank_012_move20plus_percents())
+            flags.extend(self.rank_01_percents())
             flags.extend(self.cpl_percents(20))
             flags.extend(self.cpl_percents(10))
-            flags.extend(self.cpl_greater_percents(100))
-            flags.extend(self.avg_cpl_given_rank(1))
-            flags.extend(self.avg_cpl_given_rank(2))
+            flags.extend(self.rank_5more_percents())
+            flags.extend(self.avg_cpl_given_rank(3)) #3 or less
             gamified = [list([i for x, i in enumerate(flags) if x%len(self.games) == y]) for y in range(len(self.games))]
             for x, g in enumerate(gamified):
-                gamified[x] = [self.titled, self.reports, self.b_to_f, self.c_to_l, self.gamesPlayed] + g
+                gamified[x] = [self.titled] + g
             return gamified
         return []
 
