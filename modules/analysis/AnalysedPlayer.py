@@ -66,7 +66,7 @@ class AnalysedPlayer:
     def report(self):
         if len(self.flags()) > 0:
             output = str(self.activation())+'/'+str(len(self.games))+' games cheating, '+str(round(avg(self.rank_01_percents()), 1))+"% Rank 1 PV\n"
-            output += "\n".join([('https://lichess.org/' + g.assessment.id + " " + str(round(100*a[1], 1)) + '%') for g, a in zip(self.games, self.activations())])
+            output += "\n".join([('https://lichess.org/' + g.assessment.id + " Confidence: " + str(round(100*a[1], 1)) + '%' + " PV0 or 1: " + str(round(g.analysed.rank_01_percent())) + '%') for g, a in zip(self.games, self.activations())])
             return output
         else:
             return 'not enough games to create assessment'

@@ -27,7 +27,7 @@ class AnalysedGame: # subjective to the player being analysed
             return 0
 
     def rank_01_percent(self):
-        start = 20
+        start = 0
         if len(self.positions[start:]) > 10:
             return 100*sum(i.rank() < 2 for i in self.positions[start:])/float(len(self.positions[start:]))
         else:
