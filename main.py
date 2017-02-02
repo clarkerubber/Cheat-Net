@@ -91,10 +91,10 @@ def collect_analyse_save(userId):
 
 while True:
     if settings.train:
-        #logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
-        #organise_training_data(settings.token)
-        #logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
-        #dump_csv_training_data(settings.token)
+        logging.debug(bcolors.OKBLUE + 'Organising test data...' + bcolors.ENDC)
+        organise_training_data(settings.token)
+        logging.debug(bcolors.OKBLUE + 'Loading organised test data to file...' + bcolors.ENDC)
+        dump_csv_training_data(settings.token)
         learn()
     for i in range(100):
         collect_analyse_save(get_new_user_id(settings.token))
