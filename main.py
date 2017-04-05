@@ -51,7 +51,7 @@ logging.basicConfig(format="%(message)s", level=settings.loglevel, stream=sys.st
 logging.getLogger("requests.packages.urllib3").setLevel(logging.WARNING)
 logging.getLogger("chess.uci").setLevel(logging.WARNING)
 
-engine = chess.uci.popen_engine(stockfish_command(settings.train))
+engine = chess.uci.popen_engine(stockfish_command(False))
 engine.setoption({'Threads': settings.threads, 'Hash': settings.memory})
 engine.uci()
 info_handler = chess.uci.InfoHandler()
